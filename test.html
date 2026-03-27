@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8"/>
+<title>CoachCore – Test</title>
+<style>
+  body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; background: #0f172a; color: #f1f5f9; }
+  h1 { color: #E3000F; }
+  textarea { width: 100%; height: 120px; background: #1e293b; color: #f1f5f9; border: 1px solid #334155; border-radius: 8px; padding: 12px; font-size: 14px; }
+  button { background: #E3000F; color: white; border: none; padding: 12px 24px; border-radius: 8px; font-size: 16px; cursor: pointer; margin-top: 12px; }
+  button:hover { background: #ff4d57; }
+  button:disabled { opacity: 0.5; cursor: default; }
+  #svar { margin-top: 24px; background: #1e293b; border-radius: 8px; padding: 20px; white-space: pre-wrap; line-height: 1.7; min-height: 100px; border: 1px solid #334155; }
+  .laddning { color: #94a3b8; font-style: italic; }
+  label { display: block; margin-bottom: 6px; color: #94a3b8; font-size: 13px; }
+  select, input { background: #1e293b; color: #f1f5f9; border: 1px solid #334155; border-radius: 6px; padding: 8px 12px; font-size: 14px; width: 100%; margin-bottom: 12px; }
+</style>
+</head>
+<body>
+<h1>CoachCore – Testverktyg</h1>
+
+<label>Spelform</label>
+<select id="format">
+  <option value="5v5">5v5</option>
+  <option value="4v4" selected>4v4</option>
+  <option value="3v3">3v3</option>
+</select>
+
+<label>Lagets svagheter (kommaseparerat)</label>
+<input id="svagheter" value="passningsprecision_under_press, spelbarhet_utan_boll" />
+
+<label>Halltid (minuter)</label>
+<input id="halltid" type="number" value="60" />
+
+<label>Fritext till AI (valfritt)</label>
+<textarea id="fritext" placeholder="T.ex. Vi har problem med centerpositionen och vill fokusera på styrspelet..."></textarea>
+
+<button id="btn" onclick="skicka()">Generera träningsförslag</button>
+
+<div id="svar"><span class="laddning">Svaret visas här...</span></div>
+
+<script>
+async function skicka() {
+  const btn = document.getElementById("btn");
+  const svarEl = document.getElementById("svar");
+  btn.disabled = true;
+  svarEl.innerHTML = '<span class="laddning">CoachCore tänker...</span>';
+
+  const svagheter = document.getElementById("svagheter").value
+    .split(",").map(s => s.trim()).filter(Boolean);
+  const fritext = document.getElementById("fritext").value;
+
+  const body = {
+    mode: "quick",
+    tacticalData: {
+      format: document.getElementById("format").value,
+      system_name: "Testat system",
+      players: [],
+      zones: [],
+      tracks: []
+    },
+    teamProfile: {
+      player_count: 8,
+      team_weaknesses: svagheter,
+      players: []
+    },
+    logistics: {
+      hall_time: parseInt(document.getElementById("halltid").value) || 60,
+      area: "helplan"
+    }
+  };
+
+  if (fritext) {
+    body.mode = "chat";
+    body.history = [{ role: "user", content: fritext }];
+    body.teamProfile = body.teamProfile;
+  }
+
+  try {
+    const res = await fetch("/.netlify/functions/ai-motor", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body)
+    });
+    const data = await res.json();
+    svarEl.textContent = data.response || data.error || "Inget svar";
+  } catch (err) {
+    svarEl.textContent = "Fel: " + err.message;
+  } finally {
+    btn.disabled = false;
+  }
+}
+</script>
+</body>
+</html>
