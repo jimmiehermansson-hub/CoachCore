@@ -1,9 +1,10 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { readFileSync } from "fs";
-import { join, dirname } from "path";
 import { fileURLToPath } from "url";
+import { dirname, join } from "path";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // Läs KNOWLEDGE.md en gång vid cold start
 const KNOWLEDGE = readFileSync(
