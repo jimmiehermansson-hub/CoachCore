@@ -25,7 +25,7 @@ Du hämtar inspiration från basket, ishockey, fotboll och dansk relationism nä
 - 4v4 Boxen (2-2): Parspel, backpar säkrar hemåt, forwards hugger på kontringar
 - 4v4 Diamanten (1-2-1): Defensiv point, två vingar box-till-box, spjutspets högt
 - 3v3 Triangeln (1-2): En spelbar back, två forwards byter ständigt plats
-- Powerplay Paraplyet (1-2-2): Point styr tempo, halvarna söker one-timers, innebrännarens i slottet, crease vid stolpen
+- Powerplay Paraplyet (1-2-2): Point styr tempo, halvarna söker one-timers, innebrännarens i slottet
 - 6v5 Överbelastning (2-2-2): Max två tillslag, snabb bolltransport
 - Boxplay (4v5): Kompakt box, täck skottlinjen, stäng mitten
 - Styrspel (1-2-2): Styr motståndare mot sargen
@@ -83,62 +83,53 @@ MATCHÖVNINGAR:
 ### EXTERNA INSPIRATIONSKÄLLOR
 
 ISHOCKEY:
-- Forecheck (pressing): Triangelns styrspel = hockeys 2-1-2 forecheck
+- Forecheck: Triangelns styrspel = hockeys 2-1-2 forecheck
 - Breakout patterns: Dina uppspelsövningar 1-3
-- Linjespel och byten för energihantering
 - CLA: Max ett tillslag i defensiv zon, Uppspel via back
 
 BASKET:
-- Off-ball movement: Kärnan i din relationism, rörelse utan boll skapar passningsvinkel
-- Spacing (1-2-1 diamant): Sprider ut försvaret, skapar ytor
+- Off-ball movement: Rörelse utan boll skapar passningsvinkel
 - Drive and kick: Innebrännarens driver in, kick ut till halvarna
-- Overload: Alla till ena sidan, snabb överspelning
 - CLA: Tre pass innan avslut, Bollen stannar max 2 sekunder
 
 FOTBOLL:
-- Constraint-Led Approach (CLA): Designa regler som tvingar beteende utan verbal instruktion
-- 4 faser: Anfall, defensiv omställning, försvar, offensiv omställning
+- CLA: Designa regler som tvingar beteende utan verbal instruktion
 - Gegenpressing: Vinn bollen inom 5 sekunder efter förlust
-- Rondo (4v1, 5v2): Dina Possession- och Ruta-övningar
-- CLA: Minst 3 spelare rör bollen innan avslut, Boll via pass över mittlinjen
+- CLA: Minst 3 spelare rör bollen innan avslut
 
-DANSK RELATIONISM (FC Midtjylland/DBU):
-- Opdag det selv: Tränaren instruerar minimalt, designar övningen så spelaren hittar lösningen
+DANSK RELATIONISM:
+- Opdag det selv: Tränaren designar, spelaren hittar lösningen
 - Positionsbyte som princip: Alla ska kunna spela alla positioner
-- Frihed under ansvar: Egna beslut inom strukturerat ramverk
-- Coachingprincip: Ställ frågor istället för att ge svar, fråga Vad såg du?
-- CLA: Spelare som passar måste byta position, Direktkontring vid bollvinst inget stopp
+- CLA: Spelare som passar måste byta position
 
 ### CLA-REGELBIBLIOTEK
+- Direktspel: Max 1 tillslag, Max 2 tillslag, Direktpass = 2 poäng
+- Rörelse: Spelare som passar byter position, 3 spelare rör bollen innan avslut
+- Struktur: Avslut enbart från slottet, Alla korridorer måste användas
+- Press: Vinn bollen inom 5 sek, Direktkontring vid bollvinst
+- Svårighetsgrad: Stillastående hinder, passiva, aktiva motståndare`;
 
-Tvingar direktspel: Max 1 tillslag, Max 2 tillslag, Direktpass = 2 poäng
-Tvingar rörelse: Spelare som passar byter position, 3 spelare rör bollen innan avslut
-Tvingar struktur: Avslut enbart från slottet, Boll via pass över mittlinjen, Alla korridorer
-Tvingar press: Vinn bollen inom 5 sek, Direktkontring vid bollvinst
-Svårighetsgrad: Stillastående hinder, passiva, aktiva motståndare, aktiva med tidsgräns`;
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type",
+  "Content-Type": "application/json",
+};
 
-export default async function handler(event, context) {
-  const headers = {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type",
-    "Content-Type": "application/json",
-  };
-
-  if (event.httpMethod === "OPTIONS") {
-    return { statusCode: 200, headers, body: "" };
+export default async function handler(req) {
+  if (req.method === "OPTIONS") {
+    return new Response("", { status: 200, headers: corsHeaders });
   }
 
-  if (event.httpMethod !== "POST") {
-    return {
-      statusCode: 405,
-      headers,
-      body: JSON.stringify({ error: "Method not allowed" }),
-    };
+  if (req.method !== "POST") {
+    return new Response(JSON.stringify({ error: "Method not allowed" }), {
+      status: 405,
+      headers: corsHeaders,
+    });
   }
 
   try {
-    const body = JSON.parse(event.body || "{}");
+    const body = await req.json();
     const mode = body.mode || "quick";
     let messages = [];
 
@@ -152,12 +143,12 @@ export default async function handler(event, context) {
       ];
     } else if (mode === "chat") {
       const { history, teamProfile } = body;
-      if (teamProfile && history.length > 0) {
+      if (teamProfile && history && history.length > 0) {
         history[0].content =
           `[Lagkontext: ${JSON.stringify(teamProfile)}]\n\n` +
           history[0].content;
       }
-      messages = history;
+      messages = history || [];
     }
 
     const response = await client.messages.create({
@@ -172,21 +163,19 @@ export default async function handler(event, context) {
       .map((b) => b.text)
       .join("\n");
 
-    return {
-      statusCode: 200,
-      headers,
-      body: JSON.stringify({ response: text, mode }),
-    };
+    return new Response(JSON.stringify({ response: text, mode }), {
+      status: 200,
+      headers: corsHeaders,
+    });
   } catch (error) {
     console.error("CoachCore AI error:", error);
-    return {
-      statusCode: 500,
-      headers,
-      body: JSON.stringify({
+    return new Response(
+      JSON.stringify({
         error: "AI-motorn svarade inte. Försök igen.",
         details: error.message,
       }),
-    };
+      { status: 500, headers: corsHeaders }
+    );
   }
 }
 
