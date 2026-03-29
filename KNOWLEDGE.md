@@ -910,3 +910,318 @@ En spelbok beskriver lagets samlade taktiska tänkande och är uppbyggd kring:
 ### Tillämpning i CoachCore
 
 Taktiktavlans `snap()`-funktion kan generera taktik-JSON som mappas mot dessa kategorier. Coachen definierar vilken fas av spelet som beskrivs, och AI:n kan ge rekommendationer utifrån spelidén och valt system.
+
+# KNOWLEDGE.md — Block 4 Tillägg
+# Källmaterial: Svenska Innebandyförbundets tränarutbildning, Block 4
+# + Coaching by Scotty (Bowman/Smith) + Kommunikation (kognitivt förhållningssätt) + Mindset (Dweck)
+
+---
+
+## TRÄNARENS FILOSOFI & GRUNDPRINCIPER
+
+### Scotty Bowmans Fem Gyllene Principer
+1. **Omgärda dig med bästa möjliga personal** — Att leda ett lag är ett lagarbete.
+2. **Var uppfinningsrik** — Du kan bara få en fullträff om du försöker skapa en fullträff.
+3. **Bygg en kärntrupp av starka ledartyper** — Utan 5–6 spelare du alltid kan lita på kan du inte omsätta några initiativ.
+4. **Ta tag i motsättningar och våga konfrontera** — Lösta kontroverser stärker sammanhållningen.
+5. **Var kritisk, men kritisera inte** — För att komma ur svackor krävs styrka, inte att tryckas djupare ner. Tränarens uppgift är att bygga upp de egenskaper och färdigheter spelaren ska besitta — inte poängtera avsaknaden av dem.
+
+### Bench Management (matchledning)
+- Skillnad mellan **träna/utbilda** (träning, förberedelser) och **leda under match** (bench management / båsledarskap).
+- Nordamerikansk coachning är mer situationsanpassad: rätt spelare, på rätt sätt, vid rätt tillfälle. Europeisk tradition har historiskt utgått från turordning.
+- Tränaren kontrollerar inte vad motståndaren gör — men har full kontroll över det egna laget.
+- *"Jag föredrar att inte förlita mig på min erfarenhet när jag tar beslut under matchens gång. Tiden är för knapp."* (Bowman, 2005)
+
+---
+
+## MATCHFÖRBEREDELSER
+
+### Matchanalys & Spelarvärdering
+- Förberedelserna för nästa match börjar direkt när föregående match slutar.
+- Analysera: hur systemet och justeringarna fungerade, vad motståndaren gjorde för att motverka, framförallt spel i numerärt över- och underläge.
+- Spelarvärdering på skala 1–5 (1 = bäst) — alltid i relation till spelarens kapacitet, förutsättningar och tilldelade roll. Bedömningen är personlig, hängs inte upp på anslagstavlan.
+- Efter ~10 matcher: individuellt möte med varje spelare. Fokus: bygga självaktning, motivation, hitta vad spelaren kan se fram emot.
+
+### Matchplan
+- Matchplanens viktigaste uppgift: **organisera det egna laget och göra spelarna redo**.
+- Baseras på: föregående matchens analys, scoutens rapport, videoobservationer, spelarnas prestationer, speciella färdigheter, senaste mötet.
+- Innehåller ofta **Plan B** (alternativ matchplan) — förberedd före matchen, behålls hos tränaren, kommuniceras inte till spelarna.
+- *"Om Plan A inte fungerar kan du inte vänta till nästa match."*
+
+### Inför matchen — gruppindelning
+Genomgångar ~1 h 45 min före match, uppdelade i fem grupper (max 10 min/grupp):
+1. Spel i numerärt överläge
+2. Spel i numerärt underläge
+3. Backarna och målvakten
+4. 1:a och 2:a kedjan
+5. 3:e och 4:e kedjan
+
+Fördelen: spelarna slipper information som inte berör dem. Totalt 45–60 min.
+
+### Spelarnas roller
+- Varje spelare måste ha en klart definierad roll **och acceptera den**.
+- Det räcker inte att spelaren är medveten om rollen — han måste helhjärtat identifiera sig med den.
+- Tuffaste gruppen att hålla motiverad: 3:e och 4:e kedjan (minst speltid).
+- Lösningen börjar vid rekrytering: rätt typ av spelare med rätt karaktär.
+
+### Tränarens personliga förberedelse
+- Lär känna motståndarens tränare — tendenser återkommer.
+- Alltid ett pappkort med laguppställning, formationer och möjliga ändringar under matchen.
+- Deltag i alla genomgångar även om du inte leder dem — bygger fokus och kunnande.
+
+---
+
+## UNDER MATCH
+
+### Tränarstab och organisation
+- I moderna ishockey/innebandy: head coach leder byten av forwards, assistent leder backbyten, tredje tränare ger djupgående feedback och observerar motståndaren.
+- *"Tre par ögon ser mer än ett par."*
+- Chefstränaren kan styra assistenten: matcha backar mot viss kedja, ge mer speltid åt specifik spelare, ta bort någon från penalty killing, ge någon chans i powerplay.
+
+### Kedjor, backpar och femmor
+- En bra kedjesammansättning hittar **två spelare som spelar bra tillsammans** — den tredje är utväxlingsbar.
+- Inga fasta regler om att en kedja måste innehålla vissa spelartyper. Sammansättningen beror på vilka impulser som behövs.
+- Viktigt att alla backar kan spela med varandra — oavsett vem som är inne.
+- Att träna spelare till att vara **flexibla** är viktigare än att hålla ihop fasta konstellationer.
+- Inför match: kan ibland spela med 3 kedjor — dina 6 bästa forwards spelar då vart tredje byte (~20 min/match), övriga sex vart sjätte byte (~10 min).
+
+### Byteslängd
+- 5 mot 5: ~40 sekunder.
+- Powerplay: något längre.
+- Boxplay: något kortare.
+- Viktigt: **det är den sista aktionen före bytet** som avgör kvaliteten på nästa byte, inte antalet sekunder.
+- Backars flygande byten är mer kritiska än forwardsbyten — ett misstag kan ge motståndaren en målchans.
+
+### Matchning — rätt spelare mot rätt motståndare
+**Grundprincipen:** våra bästa försvarsspelare mot motståndarens bästa anfallsspelare, våra bästa anfallsspelare mot motståndarens svagaste försvarsspelare.
+
+**Fördelar med matchning:** kortare byten, fräscha spelare, bra bytesdisciplin, motståndarens toppspelare ur balans, bryter motståndarens rytm och tempo, påverkar tempot i matchen.
+
+**Nackdelar:** förvirring, ojämn rytm arbete/vila, backar i defensiv roll tappar offensiv verkan, varje flygande byte = tillfälligt 4 mot 5.
+
+**Förutsättningar för att matcha:** smarta spelare, tränat flygande byten, disciplinerade spelare, spelare som ser helhetsbilden, mentalt starka spelare.
+
+**Gynnsamma tillfällen att ändra matchning:** tekning i offensiv zon, after time-out (alla utvilade), motståndaren i en förutsägbar rytm.
+
+**Tillfällen för ökad vaksamhet:** i början av varje period, efter time-out, tekning i försvarszon, efter boxplay.
+
+### Energi och flyt (momentum)
+- Korta, snabba, intensiva byten med korta vilopauser höjer energinivån.
+- Långa byten, långa viloperioder och baklängesmål sänker energinivån.
+- *"Generellt kan sägas att göra någonting är alltid bättre än att inte göra någonting alls."*
+- Bästa tidpunkten att samla laget: periodpausen. Men ingripa direkt sparar 5–10 min ineffektivitet.
+
+### Steget före — förutse motståndarens byten
+- Alla tränare har återkommande tendenser — kartlägg dem.
+- Observera motståndarens bås: vilka gör sig redo?
+- Bortaplan = nästan alltid flygande byten. Hemmaplan = vänta tills motståndaren bytt, byt sedan in önskad matchning.
+
+### Kommunikation i båset
+- Inga fasta rutiner — kommunikation sker löpande mellan tränarna.
+- Spelarna informeras om nästa byte så fort pucken sätts i spel.
+- Använd spelares smeknamn, inte förnamn (många spelare kan ha samma).
+- Den tredje tränaren ger djupgående feedback och förslag inför kommande byten.
+- Kritik (positiv och negativ) under match: extremt ovanlig. Spelarna vet själva.
+
+### Periodpaus
+- Statistik: spelarnas speltid och procent vunna tekningar per zon — de två viktigaste kategorierna.
+- Genomgången: korta justeringar, aldrig ändra grundsystemet.
+- Vanliga teman: aggressivitet vid inläggning, forechecking-intensitet, justeringar i boxplay/powerplay, tekningsuppställningar.
+
+---
+
+## SPELARUTVECKLING & PSYKOLOGI
+
+### Personlighet och beteende
+- Personlighet = utmärkande drag, egenskaper, stil, behov och motiv som skapar en persons identitet.
+- **Värderingar → attityder → beteenden**: värderingar styr handlingar, attityder är åsikter om personer/saker, beteende är vad som visas utåt.
+- Som tränare har du störst chans att påverka **beteendet** direkt (via feedback och samtal). Attityder är lättare att ändra än värderingar.
+- Man lär känna en spelare genom: kommunikation, aktivt lyssnande, observation av agerande.
+- Ingen personlighetstyp har visat sig vara överlägsen inom idrotten — men positiv mental hälsa och positiv självuppfattning korrelerar med framgång.
+
+### Stress och stresshantering
+- Stress uppstår när spelaren upplever att kraven överstiger den egna förmågan.
+- **Inverterade U-hypotesen**: lagom stress = optimal prestation. För lite = slö. För mycket = nervös och prestationshämmad. "Lagom" är individuellt.
+- Inlärningsfas: låg stressnivå för att befästa grunderna, sedan öka intensiteten gradvis.
+- **Copingstrategier:**
+  - *Problemfokuserad*: ta tag i problemet, öka ansträngning, söka alternativa lösningar, be om hjälp.
+  - *Emotionsfokuserad*: ändra uppfattning om situationen, humor, prata av sig, fokusera på annat.
+  - *Konfronterande vs undvikande*: tränaren kan hjälpa spelaren att konfrontera istället för förneka.
+
+### Koncentration och mental träning
+- Koncentration är träningsbar och situationsspecifik.
+- Mental träning inkluderar: avslappning, visualisering, målsättningsarbete, aktiveringsreglering.
+
+### Statiskt vs. dynamiskt tankesätt (Dweck)
+**Statiskt tankesätt (fixed mindset):**
+- Ser intelligens/talang som medfödd och oföränderlig.
+- Undviker utmaningar de inte vet om de klarar.
+- Vid motgång: ifrågasätter snabbt sin kapacitet, tappar historisk minnesbild av framgångar.
+- Ansträngning = bevis på att man inte är bra nog.
+- Beröm för "vara duktig" förstärker detta mönster.
+
+**Dynamiskt tankesätt (growth mindset):**
+- Ser kapacitet som påverkbar och träningsbar.
+- Söker utmaningar aktivt — enkla uppgifter = bortkastad tid.
+- Vid motgång: fokuserar på strategier och lösningar, inte kapacitetsifrågasättande.
+- Ansträngning, misstag och motgångar ses som en del av processen.
+
+**Implikationer för tränaren:**
+- Feedback riktad mot ansträngning och strategi skapar expert-orienterade reaktioner.
+- Feedback riktad mot personlighetsegenskaper ("du är bra/dålig") skapar hjälplöshetsrespons vid motgång — även hos normalt starka spelare.
+- Kunskapsmål > Prestationsmål på lång sikt. Fokus på att lära sig, inte bevisa.
+- Resultat mäter nuläget — inte potentialen.
+
+---
+
+## KOMMUNIKATION & LEDARSKAP
+
+### Grundprinciper för kommunikation
+- All kommunikation: sändare → budskap (verbalt + icke-verbalt) → mottagare tolkar med egna mentala kartor.
+- **Icke-verbal kommunikation** är svårare att dölja och upplevs som mer trovärdig.
+- Vi upplever bara ca 16–40 bit/sekund av verkligheten (av 11 miljoner inkommande signaler) — vi skapar mentala bilder filtrerade av grundantaganden.
+
+### Sända tydliga budskap (som tränare)
+1. Var direkt — ta inte för givet att spelaren förstår indirekt.
+2. Äg ditt budskap — använd "Jag", inte "man".
+3. Var fullständig och specifik.
+4. Separera fakta från slutsatser.
+5. Leverera omedelbart — vänta inte med feedback.
+6. Var stödjande — hot, sarkasm och ironi stänger av lyssning.
+7. Förstärk med upprepning.
+
+### Aktivt lyssnande
+- Stödja idéer, bekräfta och respondera, ge feedback, uppmärksamma total kommunikation.
+- Ögonkontakt, nicka, inte avbryta.
+- Återge spelarens tankar: *"Om jag förstår dig rätt menar du..."*
+
+### Sokratisk dialogteknik (kognitivt förhållningssätt)
+Fyra steg: **Identifiera → Ifrågasätta → Ersätta → Realisera**
+
+Nyckelprinciper:
+- Fokusera i **tid** (före/under/efter situationen) och **rum** (minnesbilder från konkreta situationer).
+- Undvik "varför"-frågor — de skapar förklaringar, inte reflektion.
+- Ställ öppna frågor: *"Kan du beskriva en situation...? Hur tänkte du...? Vad hände...?"*
+- Ifrågasätt sanningar: *"Hur vet du det? Gäller det alltid? Vad har du för bevis?"*
+- Låt spelaren se alternativ: *"Kan du göra på något annat sätt? Om du gjorde X, vad skulle hända?"*
+
+### Tankefällor att känna igen hos spelare
+- **Svart-vitt tänkande**: perfekt eller totalt misslyckat, inga nyanser.
+- **Övergeneralisering**: en händelse blir mall för allt ("jag vet att det inte funkar").
+- **Katastrofiering**: negativt utfall uppförstoras till undergång.
+- **Spådomar**: "jag vet att jag kommer misslyckas" — agerar redan som om det hänt.
+- **Etikettering**: ett misstag = "jag är värdelös" (blandar person och handling).
+- **Måste/bör/ska-tänkande**: ser inga alternativ, upplever tvång.
+- **Känslotänkande**: "jag känner mig rädd, alltså är situationen farlig."
+
+### Konflikthantering
+Konflikthanteringsmodellens fem lägen:
+1. **Underkastelse** — relationen prioriteras, målet släpps.
+2. **Besegra motparten** — uppgiften prioriteras, relationen sekundär.
+3. **Kompromiss** — halvvägs på båda dimensionerna.
+4. **Undvika** — varken relation eller mål prioriteras (skjuter problemet framåt).
+5. **Samförstånd (win-win)** — båda relationen och målet uppfylls 100%.
+
+Sex steg vid konfliktlösning:
+1. Identifiera problemet, skaffa faktabas.
+2. Lyssna på alla parter (enskilt, sedan tillsammans).
+3. Ta fram lösningsalternativ gemensamt.
+4. Välj lösning alla ställer sig bakom, skapa ett "kontrakt".
+5. Genomför överenskommelsen.
+6. Följ upp och utvärdera.
+
+Tre perspektiv: **sakperspektivet** (vad hände?), **värderingsperspektivet** (vad tyckte parterna?), **känsloperspektivet** (hur mår parterna?).
+
+### Utvecklingssamtal
+- Genomför minst **två per år** per spelare, 30–60 minuter, på lugn och avskild plats.
+- Tre faser: **Före** (informera i god tid, ge förberedelsepunkter), **Under** (lyhörd, tvåvägskommunikation), **Efter** (dokumentation, uppföljningsplan).
+- Punkter att ta upp: teknik, taktik, fysiologi, psykologi, laganda, individuella mål, lagets mål, tränarens syn.
+- Koppla till laguttagning — klargör spelarens roll och position i truppen.
+
+### Laguttagning
+- Tränaren måste kunna **motivera sin uttagning** — varför just dessa spelare.
+- Ha rutiner: kommunicera uttagningen i samband med sista träningen.
+- Visa empati — spelarna värdesätter att tränaren ser och förstår varje individ.
+- Vid barnidrott: **alla ska spela** är den självklara principen.
+- Uttagning kan skapa konflikter på individ-, grupp- och organisationsnivå — förbered enskilda samtal.
+
+---
+
+## TAKTIK — MATCHFÖRBEREDELSER & ANALYS
+
+### Spelarscouting
+Bedöm spelare i fyra dimensioner:
+- **Taktiskt**: spelförståelse med/utan boll, förmåga att följa taktiken offensivt/defensivt, spelbarhet.
+- **Tekniskt**: brytningar, mottagningar, passningar (korta/långa/direkt), dribbling, skotttyper (drag, kombi, direkt, backhand, frislag), 1-1 offensivt/defensivt.
+- **Fysiskt**: snabbhet (riktningsförändringar, med/utan boll), spänst, grundkondition, innebandykondition, benstyrka, bålstyrka, smidighet.
+- **Psykosocialt/karaktär**: inställning, motivation, självförtroende, uppträdande på/utanför plan, vinnarinstinkt, ledaregenskaper, laglojalitet, kommunikation, temperament.
+
+### Scouting av motståndarlag
+Checklista (välj vad som är relevant):
+1. **Organisation**: allmänt intryck, sifferkombination (ex. 2-1-2).
+2. **Spelsystem**: uppspel, anfallszon (varifrån avslut, hur man söker avslut), kontringar, försvarsspel (var börjar det, mittzon, defensiv zon).
+3. **Balans**: offensiva/defensiva egenskaper i lagdelarna.
+4. **Nyckelspelare**: speciella egenskaper, position, hur de utnyttjas, svaga kort.
+5. **Målvakt**: styrkor, svagheter, sidledsrörlighet, var går skotten in, utkast.
+6. **Power Play**: uppställning, var söks avslut.
+7. **Box Play**: uppställning och syfte.
+8. **Fasta situationer**: frislag (hörn/centralt), tekningar, straff.
+9. **Förändringar under match**: ändrades spelsystem/taktik, hur och varför?
+
+### Statistik — vad man för
+1. Skott (M=mål, X=träff på mål, T=täckt, U=utanför, Ö=över) — egna och motståndarnas, varifrån, vem tar.
+2. Plus/minus (5v5, 5v4, 4v5).
+3. Tekningar (vunna/förlorade, per zon).
+4. Frislag (erhållna/dragna, typ).
+5. Målträffbild (var i målet).
+6. Mål, assist, utvisningar.
+7. Var vinner/förlorar man boll.
+8. Returer (offensiva/defensiva, vunna/förlorade).
+9. Målvaktsutkast (till rätt/fel adress).
+
+### Matchanalys — struktur
+**Anfallsspel:** uppspel, kontringar, spel i anfallszonen (var/hur avslut), spel i mittzon, tappade bollar.
+**Försvarsspel:** störning i anfallszonen, försvar i egen zon (var tog motståndarna avslut), mittzonsspel, bollerövring, motståndarnas kontringar.
+
+**Tre grundfrågor för spelarna:**
+- Vad är bra? (ska vi fortsätta med)
+- Vad kan bli bättre? (ska vi utveckla)
+- Vad är dåligt? (ska vi sluta med)
+
+**Hjälpmedel:** video (mest objektivt, tar tid), statistik, anteckningar, minnebilder, spelarnas åsikter, assisterande tränares synpunkter.
+
+---
+
+## TRÄNINGSLÄRA — FYSIOLOGISKA PRINCIPER
+
+### Träningsplanering (repetition av grundprinciper)
+- **Säsongsplanering** → **Periodplanering** → **Veckoplanering** → **Träningspasset**.
+- Identifiera lagets fysiologiska brister via matchanalys, sätt mål (kort och lång sikt), välj åtgärder och övningar.
+
+### Energiprocesser
+- **Aerob förbränning**: uthållighet, hjärtmuskelkapacitet, minutvolym, förbränningskapacitet.
+- **Anaerob spjälkning**: kortvarig hög intensitet.
+- Innebandyrelevant intervallträning: arbetsperiod ~60 sek, vila ~20 sek, puls 160–180, 12–15 intervaller.
+
+### Nerv- och muskelprocesser
+- Koordinationsövningar: säkerställer att nervimpulsen når rätt motoriska enheter (viktigt för skott på rörlig boll).
+- Styrketräning: bål, armar, ben — välj efter identifierade brister.
+- Power, rörlighet och skadeförebyggande ingår i helhetsperspektivet.
+
+### Inlärningsprogression
+1. Stillastående teknisk träning (låg stress) — befäst grunderna.
+2. I fart, med passivt motstånd.
+3. Med aktivt motstånd.
+4. Tillämpning i matchspel (hög stress).
+
+---
+
+## AI-MOTORNS TILLÄMPNING AV DENNA KUNSKAP
+
+### Hur AI:n använder dessa ramar
+- Vid tränarfrågor om matchberedning: utgå från Bowmans matchplan-struktur (analys → plan A → plan B).
+- Vid frågor om spelarutveckling: kombinera Dwecks dynamiska tankesätt med kognitiv dialogteknik (identifiera → ifrågasätt → ersätt → realisera).
+- Vid konflikter i truppen: tillämpa konflikthanteringsmodellens fem lägen och tre perspektiv.
+- Vid stresshantering: inverterade U-hypotesen, copingstrategier, lagom aktivering.
+- Vid scouting: erbjud checklistorna för spelare och motståndarlag.
+- **Tränarens auktoritet är absolut** — AI stödjer, föreslår och analyserar, men beslutar aldrig om uppställning, roller eller strategi åt tränaren.
