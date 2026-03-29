@@ -1162,7 +1162,7 @@ Planen delas i 8 numrerade zoner. Visar var laget vinner och förlorar boll.
 - Genomgången: korta justeringar, ändra aldrig grundsystemet i paus
 - Vanliga teman: aggressivitet vid inläggning, forechecking-intensitet, justeringar i boxplay/powerplay, tekningsuppställningar
 
----
+### Förberedelser inför match
 - Förberedelserna börjar direkt när föregående match slutar
 - Matchplanens viktigaste uppgift: organisera det egna laget — du har ingen kontroll över motståndaren
 - Plan B förbereds INNAN match — kommuniceras inte till spelarna
@@ -1201,7 +1201,7 @@ Planen delas i 8 numrerade zoner. Visar var laget vinner och förlorar boll.
 
 ---
 
-## F8. Spelarpsykologi – Personlighet, Stress och Mindset
+## F3. Spelarpsykologi – Personlighet, Stress och Mindset
 
 ### Personlighet och beteende
 - **Värderingar → attityder → beteenden:** Värderingar styr handlingar, attityder är åsikter om personer/saker, beteende är vad som visas utåt
@@ -1229,6 +1229,8 @@ Vid motgång delar sig reaktionerna i två mönster:
 
 ---
 
+## F4. Gruppdynamik – Lagets utvecklingsfaser
+
 En grupp genomgår typiskt fem faser under en säsong:
 
 | Fas | Vad som händer | Tränarens roll |
@@ -1243,7 +1245,7 @@ En grupp genomgår typiskt fem faser under en säsong:
 
 ---
 
-## F4. Kommunikation som tränare
+## F5. Kommunikation som tränare
 
 ### Sända tydliga budskap
 1. Var direkt — ta inte för givet att spelaren förstår indirekt
@@ -1261,7 +1263,7 @@ En grupp genomgår typiskt fem faser under en säsong:
 
 ---
 
-## F5. Konflikthantering
+## F6. Konflikthantering
 
 **Fem lägen:**
 1. Underkastelse — relationen prioriteras, målet släpps
@@ -1285,7 +1287,7 @@ En grupp genomgår typiskt fem faser under en säsong:
 
 ---
 
-## F6. Laguttagning & Utvecklingssamtal
+## F7. Laguttagning & Utvecklingssamtal
 
 ### Laguttagning
 - Tränaren måste kunna motivera sin uttagning
@@ -1301,7 +1303,7 @@ En grupp genomgår typiskt fem faser under en säsong:
 
 ---
 
-## F7. Stresshantering
+## F8. Stresshantering
 
 **Inverterade U-hypotesen:** Lagom stress = optimal prestation. För lite = slö. För mycket = prestationshämmad. "Lagom" är individuellt.
 
