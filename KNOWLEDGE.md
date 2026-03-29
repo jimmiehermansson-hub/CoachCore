@@ -678,3 +678,96 @@ Referensprotokoll från Sveriges Olympiska Kommitté för att mäta och indexera
 - Fysindex totalt: 6,8 (Styrka 6,6 · Power 6,6 · Aerobt 7,1 · Anaerobt 6,7)
 
 **CoachCores användning:** Fysprofilprotokollet används för avancerade tränare som vill benchmarka spelarnas fysiska kapacitet och följa individuell progression över säsongen. CoachCore kan hjälpa till att tolka resultaten och koppla dem till träningsinriktning.
+
+## 9. MATCHANALYS, STATISTIK & GRUPPDYNAMIK
+
+### 9A. MATCHSTATISTIK – VERKTYG OCH FORMULÄR
+
+CoachCore kan hjälpa tränare att sätta upp och tolka matchstatistik. Följande
+formulär används inom svensk innebandyträning:
+
+#### Skottstatistik (planritning per period)
+Planen delas i zoner och varje skott markeras med:
+- **M** = mål
+- **X** = skott på mål
+- **T** = täckt skott
+- **U** = skott utanför
+- **Ö** = skott över
+
+Statistiken förs separat för anfall och försvar, per period (1–3).
+Numerära överlägen markeras med ring runt bokstav (5-4 i anfall) och
+fyrkant runt bokstav (5-4 i försvar). Totaler summeras per period och match.
+
+**Vad man kan utläsa:**
+- Varifrån tas de flesta skotten?
+- Hur effektivt är powerplay vs boxplay?
+- Hur väl täcker försvaret skottlinjerna?
+
+#### Målvakt/Träffbild
+Målet delas in i 6 zoner (3 kolumner × 2 rader). Per målvakt noteras:
+- Utkast: positiva (+) och negativa (−)
+- Utrull: positiva (+) och negativa (−)
+- Träffbild för eget mål och motståndar-mål (X=skott, Y=mål)
+
+**Vad man kan utläsa:**
+- Var släpps skotten in? (höga/låga, vänster/höger)
+- Hur hanterar målvakten utkast och utrullningar?
+- Vilka skottvinklar är svåra?
+
+#### Vunna/Förlorade bollar (zonkarta)
+Planen delas in i 8 numrerade zoner (4 längs × 2 på bredd).
+Separata formulär för vunna bollar och förlorade bollar.
+Zoner markeras med + (vunna) per zon.
+
+**Vad man kan utläsa:**
+- I vilka zoner vinner/förlorar laget mest bollar?
+- Förlorar vi bollar i farliga zoner (nära eget mål)?
+- Vinner vi bollar i lägen som skapar kontringsmöjligheter?
+
+---
+
+### 9B. GRUPPDYNAMIK OCH LAGETS UTVECKLINGSFASER
+
+Som ledare är det avgörande att förstå hur grupper utvecklas över tid — och
+anpassa sitt ledarskap efter var laget befinner sig i sin utveckling.
+
+#### Grundprincip
+En grupp genomgår olika utvecklingsfaser under en säsong. Varje fas har
+specifika behov och kräver olika ledarstil. Tränaren måste kunna:
+- Avläsa var gruppen befinner sig i sin mognad
+- Förstå vilka behov som är kopplade till den aktuella fasen
+- Justera sin ledarroll utifrån detta
+
+#### Säsongsloggbok som verktyg
+Ett konkret verktyg för att följa lagets utveckling är att föra **loggbok** under
+säsongen — notera händelser (positiva och negativa), grupprocesser, individuella
+reaktioner och förändringar i lagkänslan. I slutet av säsongen kan dessa
+anteckningar ligga till grund för en analys av:
+- Hur har laget utvecklats?
+- Var stagnerade vi, och varför?
+- Vilka individer och roller drev gruppen framåt?
+- Vad ska vi göra annorlunda nästa säsong?
+
+#### Faser i gruppers utveckling (allmänt)
+Grupper genomgår typiskt dessa faser:
+1. **Formering** — osäkerhet, försiktighet, beroende av ledaren
+2. **Storming** — konflikter, rollkamp, ifrågasättande av strukturer
+3. **Normering** — sammanhållning växer, gemensamma normer etableras
+4. **Prestering** — gruppen fungerar effektivt, fokus på gemensamma mål
+5. **Avslutning** — säsongens slut, reflektion och uppvärdering
+
+#### Ledarens roll i varje fas
+- **Formering:** Tydlig, strukturerad, skapar trygghet och tydliga ramar
+- **Storming:** Lyssnar aktivt, hanterar konflikter konstruktivt, håller fokus på mål
+- **Normering:** Delegerar mer, uppmuntrar laganda och gemensamt ansvar
+- **Prestering:** Coachande, ger frihet under ansvar, utmanar laget vidare
+- **Avslutning:** Summerar, lyfter fram individers bidrag, skapar avslut
+
+#### CoachCores stöd kring gruppdynamik
+CoachCore kan hjälpa tränaren med frågor som:
+- "Laget verkar ha tappat energin efter ett par förluster — vad gör jag?"
+- "Två spelare konfliktar och påverkar resten av gruppen"
+- "Hur skapar jag laganda i en grupp som aldrig spelat ihop förut?"
+- "Hur hanterar jag att några spelare dominerar och andra tystnar?"
+
+Principen är alltid: **tränaren fattar besluten, CoachCore ger verktyg och perspektiv.**
