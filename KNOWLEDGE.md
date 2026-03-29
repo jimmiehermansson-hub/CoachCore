@@ -438,3 +438,243 @@ CLA-regel att träna detta: 'Avslut enbart från insidan av halvlinjerna' – tv
 - Mellannivå: passiva motståndare (ingen aktiv tryckning)
 - Utmaningsnivå: aktiva motståndare
 - Elitnivå: aktiva motståndare + tidsbegränsning
+
+## 8. SPELARUTVECKLING & TRÄNINGSVETENSKAP (Svenska IBF)
+
+### 8A. TEKNIKINLÄRNING – STEG FÖR STEG
+
+Teknikinlärning sker bäst progressivt i sju steg:
+1. Stillastående inlärning
+2. Under rörelse utan motståndare
+3. Under hastig rörelse utan motståndare
+4. Övningar med passiva motståndare
+5. Övningar med aktiva motståndare
+6. Spel med bestämda förutsättningar
+7. Spel utan bestämda förutsättningar
+
+**Principer för teknikträning:**
+- Träna teknik tidigt i passet — inlärning går snabbare när spelaren är pigg
+- Träna i långsamt tempo så att rörelserna utförs korrekt
+- Efterlikna matchsituationen så mycket som möjligt
+- Alla spelare ska ges gott om plats och tid
+- Undvik att träna skott på liggande boll — det skiljer sig för mycket från spelsituationen
+
+**Övningsformer:**
+- **Smålagsspel** (3v3, 2v2): mer bollkontakt, fler avslutningslägen, många kampmoment
+- **Stationsträning:** små grupper, möjlighet till individuell träning, lätt att ge instruktion
+- **Löpande-band (teknikbana):** hög aktivitet, snabba skiftningar, många moment tränas simultant
+
+**Planindelning:**
+- Planindelning 1: två halvor (mittlinjen) — vanligast
+- Planindelning 2: diagonalt, lämpar sig för 2v1, uppspel, teknikbanor
+- Planindelning 3: tre delar — mittpartiet för teknik/fys, ändzonerna för målvakt och skott
+
+---
+
+### 8B. BEGREPPSLÄRA – INNEBANDYTERMER
+
+**Tekniktermer – Skotteknik:**
+Slagskott · Dragskott · Handledskott · Volleyskott · Backhandskott · Släpskott · Direktskott · Knackskott · Kombiskott
+
+**Tekniktermer – Passningsteknik:**
+Flipp · Direktpass · Överlämning · Sargpass · Djupledspass · Diagonalpass · Sidledspass · Utkast · Väggpass
+
+**Tekniktermer – Bollbehandling:**
+Mottagning · Bolltäckning · Dribbling under fart · Kroppsfint · Klubbfint · Skottfint · Passningsfint · Fotfint · Snurrfint · Dubbelfint · Fartvariation · Riktningsförändring
+
+**Tekniktermer – Målvakt:**
+Utkast · Rull · Greppa · Mota · Reaktion · Sidledsförflytta · Skära av vinkel · Grundställning
+
+**Taktiktermer – Anfall:**
+- **Andra våg:** Spelare bakom bollföraren som understödjer och säkrar vid bollförlust
+- **Anfallsspel:** Bedrivs då egna laget har bollen under kontroll
+- **Ficka/passningsficka:** Ytan vid sargen mellan motståndarnas backar och forwards
+- **Kontring:** Laget vänder spelet snabbt från försvar till anfall via djupledspass direkt efter bollerövrandet
+- **Skapad spelyta:** Fria ytor skapas via placering eller löpning (ex. v-löpning)
+- **Spelbredd:** Förmåga att utnyttja hela banans bredd
+- **Speldjup:** Bollförande spelare har passningsbara medspelare både framför och bakom
+- **Spärr (screen):** Spelare utan boll ställer sig så att motståndarens löpväg hindras
+- **Tillbakaspel:** Pass bakåt för avlastning när bollföraren är trängd
+- **Triangelspel:** Tre anfallsspelare i rörlig triangelform ger bredd och djup
+- **V-löpning:** Spelare rycker mot mål, försvarare följer, spelare vänder tvärt och är spelbar i skottsektorn
+- **Väggspel:** Bollföraren utmanar, passar till "väggen" som direktpassar tillbaka i löpriktningen
+- **Överlämning:** Två spelare rör sig mot varandra — bollföraren lämnar bollen bakom sig
+
+**Taktiktermer – Försvar:**
+- **Brytning:** Försvarsspelare tar bollen korrekt från motståndaren
+- **Dubbling:** Två försvarsspelare låser bollföraren vid sargen
+- **Fördröjning:** Närmaste försvarsspelare angriper avvaktande för att hindra farlig passning medan övriga tar positioner
+- **Försvarssida:** Försvarsspelaren ska befinna sig mellan motspelaren och eget mål
+- **Man-man-försvar:** Varje spelare ansvarar för en bestämd motspelare oavsett var denne befinner sig
+- **Omställning från anfall till försvar:** Samtliga spelare söker sin försvarsposition direkt vid bollförlust
+- **Press:** Offensivt försvarsspel — alla samarbetar för att återerövra bollen i motståndarnas försvarzon
+- **Försvar i anfallszon (forechecking):** Aggressiv press omedelbart efter bollförlust i anfallszon
+- **Zonförsvar:** Varje spelare ansvarar för ett bestämt område beroende på bollens placering
+
+**Allmänna innebandytermer:**
+- **Anfallszon:** Motståndarnas planhalva
+- **Försvarszon:** Egna lagets planhalva
+- **Mittzon:** Området vid mittlinjen — kontringar i mittzon skapar farliga lägen
+- **Passningsskugga:** Området bakom motspelaren dit bollföraren ej kan spela
+- **Slottet/skottsektorn:** Centralt område framför mål, rakt ut — därifrån tas skott med fördel
+- **Splitvision:** Bollföraren har uppsikt över med- och motspelare samtidigt som han kontrollerar bollen
+- **Fasta situationer:** Inslag, frislag, tekning, straff — ska tränas extra
+
+---
+
+### 8C. SPELSYSTEM – GRUNDPRINCIPER
+
+**Tränaren bör ställa sig dessa frågor vid val av spelsystem:**
+- Vilket spelarmaterial har jag att tillgå?
+- Vilken taktisk skolning har spelarna?
+- Påverkar yttre förutsättningar mitt val? (hallens utformning, motståndarnas system)
+
+**Grunduppställningar för uppspel:**
+- **1-2-2:** Triangel mellan backar och center. Toppforwards skapar speldjup. Uppspelet utgår från backen längst bak
+- **2-1-2:** Toppforward skapar speldjup via högt utgångsläge. Backarna spelar på linje och kan skapa bredd. Centern antingen rörlig eller fast
+- **2-2-1:** Backar och ytterforwards bildar bred kvadrat. Toppforward som mottagare. Skapar ytor för kantuppspel eller långa uppspel i mitten
+
+**Anfallsspelet – tre typer av uppspel:**
+- **Improviserat uppspel:** Spelarnas spelförståelse räcker för att spela bollen från försvar till anfall utan förutbestämt mönster
+- **Fördröjt uppspel:** Motståndarna har organiserat sig i sina försvarpositioner. Kräver genomarbetat mönster hela vägen från grunduppställning till avslut
+- **Snabbt uppspel:** Utgår från motståndarnas planerade brytningstäcken — utnyttjar deras tillfälliga oorganisation direkt vid bollerövrandet
+
+**Kontringens grundprinciper:**
+- Bolltempot är avgörande — bollens fart bestämmer anfallets snabbhet
+- Första passningen spelas på "första intuition" — instinktivt, ingen fördröjning
+- Minst en anfallsspelare löper i djupled — drar isär försvaret
+- Samtliga spelare deltar — ger understöd om bollen förloras
+- Bollföraren vågar avsluta direkt när chansen uppstår
+
+**Försvarsspelet – grundregler:**
+- Vinn slottet — styr motståndarna ut mot sargen, bort från slottet och målet
+- Ge understöd — spelare som pressar bollföraren måste ha hjälp vid risk för avdribblas
+- Håll ihop laget — avståndet mellan lagdelarna får inte bli för stort
+- Aldrig "fel" frislag — när bollföraren är vänd mot sargen ska man INTE dra på sig frislag
+- Behåll försvarssdjupet — minst en spelare bibehåller djupet för markering av motståndarbackar
+
+**Försvar i anfallszon (forechecking) — två varianter:**
+- **Aggressiv press (2-1-2):** Tätt man-man-försvar. Pressande forward styr bollföraren mot centrum
+- **Fördröjande (2-2-1):** Toppforwards täcker passvägarna, boxen förflyttas vid kantval, toppforward dubblar
+- **Aggressivt (1-3-1):** Toppforward pressar och styr mot kanten, vänsterytter dubblar, centern täcker mittzon, vänsterback täcker djupled, högerback beredd att backa hem
+
+**Analys och statistik — vad att följa:**
+- Lagets skott: täckta, på mål, bredvid — per position och spelare
+- Motståndarnas skott: täckning och insläppta mål per skottyp
+- Plus/minus per spelare vid mål och insläppta
+- Tekningar: vunna, avgjorda, förlorade
+- Frislag: egna och dragna mot laget
+- Målträffbild (var släpps skotten in)
+- Statistik från Örnsköldsviks SK elit (referens): kantskott 12% i mål, slottskott 33%, målvaktsreturer 38%, backskott 10%. Snitt 36 skott/match, mål var 5:e skott totalt
+
+---
+
+### 8D. SPELFÖRSTÅELSE OCH PROBLEMLÖSNING
+
+**Spelförståelse** = spelarens förmåga att läsa och analysera spelet på planen, värdera situationer och fatta rätt beslut i rätt ögonblick. Tränas bäst i matchlika övningar.
+
+**Problemlösningsträning — tränarens roll:**
+1. Anger ramarna och målsättningen för övningen
+2. Låter spelarna först försöka lösa problemet självständigt
+3. Avvaktar spelarnas försök
+4. Ger korta anvisningar/feedback
+5. Ger "direktiv" om spelarna inte klarar lösa situationen
+6. Diskuterar lösningarna med spelarna
+
+**Mål:** Skapa spelare som tänker självständigt, tar initiativ, tar ansvar och analyserar. Lyft fram när spelare hittar egna lösningar — det inspirerar övriga.
+
+---
+
+### 8E. BARN OCH UNGDOMARS UTVECKLING (SIBF)
+
+#### Lågstadieåldern 7–9 år
+**Fysiologiskt:** Skelettet skört och inte färdigutvecklat. Ingen styrketräning med vikter. Grovmotoriska rörelser förbättras kraftigt under perioden.
+
+**Psykosocialt:** Stort trygghetsbehov, stort kontaktbehov, begränsat minne, behov av kontinuitet (fasta ritualer). Lär sig bäst genom att se det rätta utförandet och härma efter.
+
+**Träningsinriktning:**
+- Lek dominerar — lekar som bygger på samarbete, inte utslagning
+- Allsidighet — stimulera grovmotorik: hoppa, springa, kasta, fånga, krypa, åla, rulla
+- Kombinationsmotorik — kombinera grovmotoriska grundfärdigheter
+- Rätt anpassad klubblängd (naveln som referens)
+- Rakt blad — undvik att barnen "hookar" bladet
+- Smålagsspel: 2v2, 3v3, 4v4 på liten plan
+- Inga tävlingsmoment i början
+
+**Rekommenderade övningsområden (7–9):** Bollbehandling · Klubbteknik · Passningar · Passingsmottagningar · Rytmträning · Bollföring · Koordination och balans · Motoriska övningar · 1v1 situationer · Samarbetsövningar · Allsidig träning (andra idrotter)
+
+---
+
+#### Mellanstadieåldern 10–12 år
+**Fysiologiskt:** Koordinationsförmågan i armar och ben förbättras avsevärt. Cirkulationsorganen utvecklas. Mycket gynnsam inlärningsålder — snabbast kan uppfatta förevisad övning.
+
+**Psykosocialt:** Disciplinerade och samarbetsvilliga. Tävlingsintresset ökar. Börjar förstå abstrakt resonemang. Socialt medvetande ökar.
+
+**Träningsinriktning:**
+- Allsidighet och lek fortfarande mycket viktigt
+- Mycket teknikträning
+- Spelmomentsövningar: 1v1 och 2v1 — introducera grundpositioner
+- Spelbredd, speldjup och triangelspel kan introduceras
+- Alla spelar lika mycket och på alla platser (rotation)
+- Spelförståelseträning begränsas till smålagsspel
+
+**Rekommenderade övningsområden (10–12):** Bollbehandling · Klubbteknik · Skottekniker inkl. backhand · Passningar inkl. backhand · Koordinationsträning · Balansträning · Tvåmålsspel · Smålagsspel · Enklare individuellt taktiskt agerande · Spelarnas arbetsområden · 1v1 och 2v1
+
+---
+
+#### Högstadieåldern 13–15 år (puberteten)
+**Fysiologiskt:** Kroppen genomgår stora förändringar. Viss tillbakagång i koordination och rörlighet. Stor muskelstyrkeutveckling (särskilt pojkar). Uthålligheten utvecklas från puberteten. Flickor inträder puberteten ca 2 år tidigare.
+
+**Psykosocialt:** Identitetssökande. Kamratkretsen får stort inflytande. Ledaren kan vara den enda vuxna som ungdomen respekterar. Mer mottagliga för teoretiska resonemang och språkliga instruktioner.
+
+**Träningsinriktning:**
+- Befästa basfärdigheter i ökande tempo och svårighetsgrad
+- Konditionsträning kan intensifieras
+- Styrketräning i lite större omfattning mot slutet av perioden — med korrekt teknik
+- Rörlighetsträning som självklart inslag
+- Introduktion av lagtaktiska begrepp mot slutet av perioden
+- Spelförståelseträning i 2v1, 3v2, 2v2, 3v3 situationer
+- Leken och allsidigheten har fortfarande sin plats
+
+**Flickor specifikt:** Kan tröttna vid upplevd stagnation i puberteten. Mer sociala, känsliga för kritik, tenderar att framhålla begränsningar. Kräver stöd och motivering under perioden.
+
+**Pojkar specifikt:** Fortsätter utvecklas ca 2–3 år längre. Problem med röstförändringar, acne, självförtroendekris kan uppstå — ledaren kan vara till stor hjälp.
+
+**Rekommenderade övningsområden (13–15):** Befästa tekniska moment · Bollbehandling · Passningar · Skott · Täcka skott · Målvakt: grundställning, fånga, mota, utkast, sidledsförflyttningar · Spelförståelseträning: 3v1, 2v2, 3v3 · Grunderna i forechecking, backchecking, markering, man-mot-man · Numerära över/underlägen · Frislagsuppställningar
+
+---
+
+#### Gymnasieåldern 16–18 år
+**Fysiologiskt:** Koordinationsförmågan stabiliseras efter puberteten. Uthållighet och styrka utvecklas. Kroppen växer färdigt. Förmåga att tåla mjölksyra påbörjas.
+
+**Psykosocialt:** Intellektet färdigutvecklat. Abstrakt tänkande helt färdigt. Större ifrågasättande. Ungdomarna frigör sig. Tävlingsmomentet jätteviktigt.
+
+**Träningsinriktning:**
+- Öka träningsdosen i takt med övrig utveckling
+- Organiserad styrketräning — kräver utbildade instruktörer
+- Rörelseträning viktigt för att bibehålla naturlig rörlighet och minska skaderisken
+- Konditionsträning mer självklar
+- Taktisk teori nu en viktig del — diskutera lagets gemensamma spel med spelarna
+- Spelsystemträning — femmans gemensamma agerande och rörelsemönster
+
+**Rekommenderade övningsområden (16–18):** Grundläggande teknikträning på alla moment · Målvakt: alla grundmoment · Konditionsträning · Rörlighetsträning · Styrketräning · Koordination · Spelförståelseträning (femmans agerande) · Forechecking, backchecking, försvarsspel, anfallsspel · Specialinriktad taktisk träning · Träning i stressituationer under matchliknande former
+
+---
+
+### 8F. FYSPROFIL FÖR INNEBANDYSPELARE
+
+Referensprotokoll från Sveriges Olympiska Kommitté för att mäta och indexera en spelares fysiska kapacitet.
+
+**Fysindex-komponenter:**
+- **Styrka:** Knäböj · Bänkpress · Grip
+- **Power:** Harres · Squat Jumps · CMJ (Counter Movement Jump) · Sprint 10m / 20m / 30m
+- **Aerob kapacitet:** Cooper (3000m)
+- **Anaerob kapacitet:** Chins · Dips · Brutalbänk · 150m sprint (x2)
+
+**Referensvärden (elitnivå, exempel):**
+- Knäböj: 110 kg · Bänkpress: 75 kg · Grip: 51,6 kg
+- Squat Jumps: 36,7 cm · CMJ: 42,7 cm · Sprint 10m: 1,63 sek · Sprint 30m: 3,96 sek
+- Cooper (3000m): 11:30
+- Fysindex totalt: 6,8 (Styrka 6,6 · Power 6,6 · Aerobt 7,1 · Anaerobt 6,7)
+
+**CoachCores användning:** Fysprofilprotokollet används för avancerade tränare som vill benchmarka spelarnas fysiska kapacitet och följa individuell progression över säsongen. CoachCore kan hjälpa till att tolka resultaten och koppla dem till träningsinriktning.
