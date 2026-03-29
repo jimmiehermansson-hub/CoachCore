@@ -771,3 +771,142 @@ CoachCore kan hjälpa tränaren med frågor som:
 - "Hur hanterar jag att några spelare dominerar och andra tystnar?"
 
 Principen är alltid: **tränaren fattar besluten, CoachCore ger verktyg och perspektiv.**
+
+## TRÄNARSKAP & MATCHLEDNING — Scotty Bowman / Barry Smith
+
+*Källa: "Coaching by Scotty" – Konsten att leda ett lag under match (Svenska Ishockeyförbundet, 2005)*
+
+### Förberedelser inför match
+
+**Matchanalys:** Förberedelsen börjar direkt när föregående match är slut. Tränarstaben analyserar vad som fungerade och vad som inte fungerade – med stöd av video och statistik. Prioritet läggs på spel i numerärt över- och underläge. En scoutrapport på motståndaren inhämtas alltid (kedjor, uppspel, forechecking, mittzonsförsvar, powerplay, boxplay, tekningar).
+
+**Matchplan:** Matchplanens viktigaste uppgift är att organisera det egna laget. "Du har ingen kontroll över vad motståndaren gör, men du har kontroll över vad ditt eget lag gör." (Bowman, 2005). Planen baseras på: förra matchens analys, scoutrapport, videomaterial, spelarnas prestationer, speciella färdigheter och senaste mötet med motståndaren. Ha alltid en Plan B klar INNAN matchen – inte som en reaktion under spelets gång.
+
+**Inför matchen:** Dela upp laget i smågrupper ~45 min före match (powerplay, boxplay, backar+MV, kedja 1–2, kedja 3–4). Varje grupp får max 10 min riktad genomgång. Fokus på det som berör just den gruppen.
+
+**Spelarnas roller:** Varje spelare måste ha klart definierade roller och *acceptera* sin roll. Det räcker inte att veta – de måste äga rollen. Det är tränarens uppgift att få varje spelare att känna att deras roll är vital för lagets framgång, oavsett hur liten den är.
+
+### Under match – Bench Management
+
+**Byten:** Den viktigaste enskilda åtgärden en tränare gör under match är hur och när spelare byts in och ut. Idealbytelängd 5v5: ~40 sek. Powerplay: något längre. Boxplay: något kortare. Kvalitén på bytena är en direkt indikator på hur fokuserat laget är.
+
+**Matchning av lagdelar:** Sätt dina bästa försvarsspelare mot motståndarens bästa anfallsspelare. Sätt dina bästa anfallsspelare mot motståndarens svagaste försvarsspelare. Ha alltid två alternativa enheter redo för varje uppdrag.
+
+**Steget före:** Samla löpande info om motståndarens mönster – deras turordning, vilka spelare de värmer upp inför nästa byte, repetitiva tekningsuppställningar. På bortaplan: bygg strategi på flygande byten.
+
+**Energi och flyt (momentum):** Korta, snabba, intensiva byten höjer energinivån. Långa byten med långa vilopauser sänker den. Som tränare har du kontroll över detta. Om laget saknar flyt – ingrip direkt, vänta inte till periodpausen. Att göra *något* är alltid bättre än att inte göra något alls.
+
+**Kommunikation i båset:** Tre tränare är idealt – en leder forwardsbytena, en backarnas, en tredje observerar motståndaren och ger djupare feedback till spelare. Kommunicera ständigt inom tränarstaben. Använd smeknamn för att undvika förväxlingar. Bekräfta alltid nästa byte verbalt.
+
+### Scotty Bowmans 5 Gyllene Principer
+
+1. **Omgärda dig med bästa möjliga personal** – att leda ett lag är alltid ett lagarbete.
+2. **Var uppfinningsrik** – du kan bara få en fullträff om du försöker skapa en.
+3. **Bygg en kärntrupp av starka ledartyper** – utan 5–6 spelare du alltid kan lita på kan du inte omsätta några initiativ.
+4. **Ta tag i motsättningar och våga konfrontera** – lösta kontroverser stärker sammanhållningen.
+5. **Var kritisk, men kritisera inte** – din uppgift som tränare är att bygga upp de egenskaper och färdigheter du vill att spelarna ska besitta. Inte att påpeka avsaknaden av dem.
+
+---
+
+## KOMMUNIKATION & KOGNITIVT FÖRHÅLLNINGSSÄTT
+
+*Källa: "Minnesanteckningar om Kognitivt Förhållningssätt" – UMEDIA/J.Jansson, 2000*
+
+### Hur vi uppfattar verkligheten
+
+Av de ~11 miljoner signaler/sekund som hjärnan tar emot hanterar vi medvetet bara 16–40 bit/s. Det vi upplever är alltså en kraftigt filtrerad och personligt konstruerad bild av verkligheten. Denna bild formas av våra **kognitiva grundantaganden** – mentala kartor byggda av biologi, psykologi, sociala erfarenheter och kulturella faktorer.
+
+### Tanke → Känsla → Handling
+
+Allt beteende följer cirkeln: en tanke (automatisk eller medveten) ger upphov till en känsla, som styr en handling. Handlingen skapar i sin tur nya tankar. Spiralen kan vara negativ eller positiv. Tränarens uppgift är att bryta negativa spiraler tidigt och förstärka positiva.
+
+### Sokratisk dialogteknik – 4 steg
+
+1. **Identifiera** – Konkreta exempel med fokus på tankar, känslor, handlingar. Använd frågor som *när, var, vad, hur* (undvik *varför* – det triggar förklaringar istället för reflektion).
+2. **Ifrågasätta** – Undersök bevisen för spelarens antaganden. "Hur vet du det? Gäller det alltid? Kan det bli annorlunda?"
+3. **Ersätta** – Hjälp spelaren hitta alternativa, mer funktionella tankemönster.
+4. **Realisera** – Uppmana spelaren att öva de nya tankevanorna i verkligheten.
+
+### Aktiv kommunikation – att sända tydliga budskap
+
+- Var direkt och fullständig
+- Äg dina budskap ("jag" inte "man")
+- Separera fakta från slutsatser
+- Undvik dubbla budskap
+- Ge feedback omedelbart – inte efter
+- Var stödjande, inte hotande
+- Anpassa språket till mottagarens verklighet
+
+### Tankefällor att känna igen hos spelare
+
+| Tankefälla | Vad det låter som |
+|------------|-------------------|
+| Svart-vitt tänkande | "Antingen gör jag perfekt eller så misslyckas jag" |
+| Övergeneralisering | "Jag har försökt – det funkar inte" |
+| Dömer ut det positiva | "Jag hade tur" / "Det spelar ingen roll" |
+| Tankeläsning | "De tycker säkert att jag är dålig" |
+| Spådom | "Jag vet att det kommer gå åt skogen" |
+| Katastrofiering | "Om jag missar det här är allt kört" |
+| Känslotänkande | "Jag känner mig rädd, något farligt måste hända" |
+| Etikettering | "Jag är värdelös / ingen bra spelare" |
+| Måste/bör/ska | "Jag *måste* göra mål annars..." |
+
+**Tränarens verktyg vid tankefällor:** Namnge dem utan att döma. Ifrågasätt bevisen. Hjälp spelaren se alternativ. Bygg små hemuppgifter – dela upp elefanten i portioner.
+
+---
+
+## MINDSET — STATISKT VS DYNAMISKT
+
+*Källa: "Tankesätt – Statisk vs. Dynamisk" – Stefan Holmström (baserat på Dweck, 1999/2006)*
+
+### Kärnan
+
+Carol Dweck identifierar två grundläggande tankesätt:
+
+**Statiskt tankesätt (Fixed Mindset):** Intelligens och förmåga ses som medfödd och fast. Framgång = bevis på talang. Misslyckande = bevis på bristande förmåga. Leder till att spelaren undviker utmaningar, ger upp vid motgång och söker enkla uppgifter de redan vet de klarar.
+
+**Dynamiskt tankesätt (Growth Mindset):** Förmåga kan utvecklas genom ansträngning och träning. Misslyckanden och motgångar är information, inte domar. Leder till uthållighet, nyfikenhet och vilja att söka svårare utmaningar.
+
+### Hjälplöshet vs. expert-orienterad respons
+
+Vid motgång delar sig reaktionerna i två mönster:
+
+- **Hjälplöshetsrespons:** Spelaren börjar ifrågasätta sin intelligens/kapacitet ("jag är inte smart nog"), minns sina misslyckanden överdrivet och sina framgångar för lite, och tappar de inlärningsstrategier de normalt använder.
+- **Expert-orienterad respons:** Spelaren fokuserar på att hitta lösningar, behåller positiv attityd, intensifierar ansträngningen ("ju svårare det blir, ju hårdare försöker jag").
+
+### Feedback som påverkar tankesätt
+
+Feedback riktad mot *personen* ("du är smart/duktig") leder till statiskt tankesätt och hjälplöshetsrespons vid motgång. Feedback riktad mot *processen* ("bra strategi / du jobbade hårt / vad kan du prova annorlunda?") stärker dynamiskt tankesätt och expert-orienterade reaktioner.
+
+**Konsekvens för CoachCore:** AI:ns feedback till spelare och tränare bör alltid riktas mot process, strategi och ansträngning – aldrig mot personens inneboende förmåga.
+
+### Prestationsmål vs. kunskapsmål
+
+- **Prestationsmål:** Handlar om att mäta och bevisa kompetens. Risk: vid motgång faller spelaren in i hjälplöshet.
+- **Kunskapsmål:** Handlar om att lära sig och utvecklas. Ger djupare inlärning, bättre strategianvändning och mer uthållighet.
+
+En övervikt mot prestationsmål är ett varningstecken. Tränaren bör aktivt rama in situationer som kunskapstillfällen, inte bedömningstillfällen.
+
+---
+
+## SPELBOK — TAKTISK STRUKTUR (FLOORBALL/INNEBANDY)
+
+*Källa: Spelboksuppgift presentationsbilder*
+
+### Vad en spelbok innehåller
+
+En spelbok beskriver lagets samlade taktiska tänkande och är uppbyggd kring:
+
+1. **Spelidé** – Lagets övergripande filosofi och vision för hur spelet ska spelas
+2. **Spelsystem** – Lagets gemensamma strategier i försvar och anfall för att nå spelidén
+3. **Grunduppställningar** – Hur laget formeras i utgångsläget i specifika delar av spelet (anges i sifferkombinationer, t.ex. 2-1-2, 1-3-1, 1-2-2, 2-2-1)
+4. **Uppspelsvarianter** – Hur laget startar och bygger upp spel från målvakt/försvarszon
+5. **Spel i anfallszon** – Rörelsemönster och positionering i offensiv fas
+6. **Spelvändning** – Transition från försvar till anfall och tvärtom
+7. **Försvar i anfallszon (pressing)** – Hur laget avslutar motståndares uppspel högt upp
+8. **Försvar i försvarszon** – Grunduppställning och principer i defensiv fas
+9. **Anfall → försvar** – Övergångsprinciper när bolltapp sker
+
+### Tillämpning i CoachCore
+
+Taktiktavlans `snap()`-funktion kan generera taktik-JSON som mappas mot dessa kategorier. Coachen definierar vilken fas av spelet som beskrivs, och AI:n kan ge rekommendationer utifrån spelidén och valt system.
