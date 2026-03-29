@@ -1218,6 +1218,267 @@ Checklista (välj vad som är relevant):
 
 ## AI-MOTORNS TILLÄMPNING AV DENNA KUNSKAP
 
+---
+
+## 10. MÅLVAKTSSTRATEGI – ZONBASERAT POSITIONSSPEL
+
+*Källa: Målvaktsstrategi.pdf*
+
+Målvaktens positionering styrs av tre zoner som definieras utifrån bollens placering på planen. Varje zon kräver en specifik kroppshållning och mental beredskap.
+
+---
+
+### Zonöversikt
+
+| Zon | Bollens läge | MV-position | Syfte |
+|---|---|---|---|
+| **Ståzonen** | Långt från mål | Stående, långt ut | 6:e utespelare, överblick, dirigera |
+| **Paradzonen** | Hotfullt avstånd | Grundställning (sittande) | Hinner reagera och parera |
+| **Täckzonen** | Akut nära mål | Täckställning (sittande, stor) | Täcker ytan, "får bollen på sig" |
+
+---
+
+### Ståzonen – detaljer
+
+**Kriterium:** Bollen befinner sig på långt avstånd — MV hinner sätta sig ned i grundställning och utföra normala parader på eventuellt skott härifrån.
+
+**Grundtanke:**
+- MV står upp, placerad långt ut → agerar som 6:e utespelare
+- Bättre vy i upprätt position → överblick över eventuella hot
+- Bra utgångsläge att dirigera försvaret verbalt
+- Chans att aktivt ta "förlupna" bollar
+- **Ready Position:** enkla och snabba förflyttningar till grundställning när bollen når Paradzonen
+
+---
+
+### Paradzonen – detaljer
+
+**Kriterium:** Bollen är inom hotfullt avstånd — MV hinner reagera samt göra parader på eventuellt avslut. MV hinner inte med normala parader från stående position.
+
+**Grundtanke:**
+- MV sitter i sin **GRUNDSTÄLLNING**: symmetri och balans (ska klara förflyttning och parad åt båda sidor)
+- Positionen anpassad till bollföraren (BF) och primärhotet (PH) i Täckzonen
+- **Ansvar för BF:** Koll på PH:s blad
+- Position: så långt ut mot BF som möjligt, men så att en lång förflyttning når täckläge framför PH:s blad
+
+---
+
+### Täckzonen – detaljer
+
+**Kriterium:** Bollen i akut närhet av målet — MV förväntas inte hinna göra parader. Räddningar sker mestadels genom att MV "får bollen på sig".
+
+**Grundtanke:**
+- MV sitter i sin **TÄCKSTÄLLNING**: gör sig så stor som möjligt
+- Sitter i täckställning även när egna laget har bollen i denna zon
+- 100% fokus på bollen: sitt framför bladet, försök komma "över bollen" med kroppen så att eventuell retur hamnar inom plockhåll
+
+---
+
+### CoachCore-tillämpning av Målvaktsstrategin
+
+CoachCore kan hjälpa tränaren att:
+- Förklara zonmodellen för nya målvakter
+- Designa övningar som tränar zonväxling (ex. MV:s 8 zoner-övning kombinerat med Ståzon/Paradzon-rörelse)
+- Coacha MV att läsa bollens rörelse och proaktivt byta zon INNAN hotet uppstår — inte reaktivt
+- Koppla MV:s dirigering (Ståzonen) till lagets defensiva struktur och styrspel
+
+**Coachingfrågor till MV:**
+- "I vilken zon var bollen när du stod upp — och var den fortfarande där?"
+- "Vad såg du från Ståzonen som du inte skulle sett från grundställning?"
+- "Hur tidigt läste du att bollen var på väg mot Täckzonen?"
+
+---
+
+## 11. SMART TRÄNING – ÖVNINGSKVALITETSMODELLEN
+
+*Källa: Smart_träning_föreläsning.pdf (Peter Svensson, Riksgymnasium Innebandy Umeå)*
+
+### Grundprincip
+
+Utveckling = antal träningstimmar × smarthetsfaktorn i träningen.
+
+Smarthetsfaktorn styrs av fyra variabler som multipliceras för att ge övningens **kvalitetspoäng**:
+
+**Kvalitetspoäng = Matchlikhet × Frekvens × Svårighetsgrad × Motivation**
+
+- **Ok träning:** > 1 000 poäng
+- **Smart träning:** > 3 000 poäng
+
+---
+
+### De fyra variablerna (skala 1–10)
+
+#### 1. Matchlikhet / Relevans
+| Poäng | Övningsform |
+|---|---|
+| 10 | Spel |
+| 9 | Komplex motstånd |
+| 8 | Aktiv motstånd |
+| 7 | Komplex övning |
+| 6 | Passiv motstånd |
+| 5 | Max fart |
+| 4 | Hög fart |
+| 3 | Låg fart |
+| 2 | Stilla stående |
+| 1 | Prova oengagerat |
+
+#### 2. Antal Reps / Frekvens
+| Poäng | Antal repetitioner |
+|---|---|
+| 10 | 51+ st |
+| 9 | 41–51 st |
+| 8 | 33–40 st |
+| 7 | 26–32 st |
+| 6 | 20–25 st |
+| 5 | 15–19 st |
+| 4 | 10–14 st |
+| 3 | 6–9 st |
+| 2 | 3–5 st |
+| 1 | 1–2 st |
+
+#### 3. Svårighetsgrad / Kravnivå
+*Matchlikhet anger hur snabbt situationen uppstår i match. Notera: spel (10) är inte den svåraste situationen — det är 4 av 10 spelare som befinner sig i just den situation man tränar per tillfälle.*
+
+| Poäng | Andel matchlik situation |
+|---|---|
+| 10 | 4 av 10 |
+| 9 | 3 av 10 |
+| 8 | 5 av 10 |
+| 7 | 2 av 10 |
+| 6 | 6 av 10 |
+| 5 | 7 av 10 |
+| 4 | 1 av 10 |
+| 3 | 8–9 av 10 |
+| 2 | 0 av 10 |
+| 1 | 10 av 10 |
+
+#### 4. Drivkraft / Motivation
+| Poäng | Spelarens motivationsnivå |
+|---|---|
+| 10 | Fullständigt målinriktad |
+| 9 | Fokuserad |
+| 8 | Vill verkligen |
+| 7 | Inspirerad |
+| 6 | Försöker |
+| 5 | Intresserad |
+| 4 | Glömmer |
+| 3 | Kan vara viktigt |
+| 2 | Inte så viktigt |
+| 1 | Bryr mig inte |
+
+---
+
+### Räkneexempel från föreläsningen
+
+**Hörnet 5 min (traditionellt):**
+Matchlikhet 4 × Frekvens 3 × Svårighet 1 × Motivation 5 = **60 poäng** → ingen bra träning
+
+**Hörnet med extra väggpass:**
+Matchlikhet 6 × Frekvens 6 × Svårighet 3 × Motivation 6 = **648 poäng** → börjar likna träning
+
+**Bara direktpass 10 min:**
+Matchlikhet 6 × Frekvens 10 × Svårighet 6 × Motivation 9 = **3 240 poäng** → KANON
+
+**Forward: inbryt → skott (under match):**
+Matchlikhet 10 × Frekvens 4 × Svårighet 9 × Motivation 7 = **2 520 poäng** → ganska bra match
+
+**Matchpunkt: uppspel (hela laget):**
+Matchlikhet 10 × Frekvens 7 × Svårighet 8 × Motivation 6 = **3 660 poäng** → Smart uppspelsnötning!
+
+---
+
+### Spelutveckling och matchpunkter
+
+- **Prestation → resultat:** Spelaren påverkar resultatet genom att prestera
+- **"Matchpunkter"** styr prestation — ge spelare konkreta mätbara moment att prestera på
+- **Individuella matchpunkter:** skott, närkamp, löpning, utglidning och liknande
+- **Lagpunkter:** uppspel, spelvändning, frislag, forechecking m.m.
+- Smart träning ger feedback genom att likna matchsituationen så nära som möjligt
+
+---
+
+### CoachCore-tillämpning av Smart Träning-modellen
+
+CoachCore kan använda kvalitetspoängmodellen för att:
+
+**Utvärdera befintliga övningar:**
+"Din Hörnet-övning ger ca 60 poäng. Lägg till ett väggpass och en tidsbegränsning — du kan nå 600+ utan att byta övning."
+
+**Föreslå justeringar:**
+- Öka Frekvens: minska kötid, lägg till fler parallella banor
+- Öka Matchlikhet: lägg till passivt motstånd → aktivt motstånd → spel
+- Öka Motivation: sätt poängsystem, tävlingsmoment, tidtagning
+
+**Sätta träningsmål:**
+"För ett P16/17-lag sikta på minst 2 000 poäng per övning — annars är dötiden för stor."
+
+**Koppla till CLA:**
+Smart Träning-modellen är direkt kompatibel med CLA — CLA-regler höjer Matchlikhet och Svårighet utan att sänka Frekvens.
+
+---
+
+## 12. FRÅN SPELIDÉ TILL ÖVNING – PEDAGOGISK STRUKTUR
+
+*Källa: Från_spelbok_till_övning.pptx*
+
+### Grundprincip
+
+Alla övningar i CoachCore bör kunna härledas till ett konkret moment i spelidén/spelboken. Kedjan är:
+
+**Spelidé → Spelmoment → Övningsserie (stegvis)**
+
+Varje övningsserie ska:
+- Ha ett tydligt syfte kopplat till spelmomentet
+- Vara stegvis progressiv (minst 4 steg)
+- Gå från **enkelt → svårare** och från **förbestämt → problemlösande**
+
+---
+
+### Konkret exempel från materialet: Spelvändning vid Brytpunkt 6
+
+**Spelmoment:** Spelvändning – 2-1-2 med styrspel via höger forward
+
+**De 4 alternativa 1:a passningarna från brittningssituationen:**
+1. Pass samma kant → styrande högerforward möter på ytan
+2. Pass in i mitten → center
+3. Pass bakom mål → bortre back
+4. Kort pass samma kant → vänster forward
+
+**Övningsprogression (4 steg):**
+
+| Steg | Format | Innehåll |
+|---|---|---|
+| 1 | Uppvärmningsövning | "Snett inåt pass" – 2 varianter utan motstånd |
+| 2 | Statisk positions-övning | Spelare i fasta positioner, väljer passningsalternativ |
+| 3 | 3v2 med fasta backar | Vändning i hörnet – oförutsägbara förutsättningar |
+| 4 | Matchspel | Hela systemet i spel – fritt beslutsfattande |
+
+---
+
+### Designprinciper för CoachCore-övningar
+
+Utifrån materialet gäller följande när CoachCore föreslår övningsserier:
+
+1. **Alltid börja utan motstånd** — spelare lär sig rörelsen/beslutet i lugn miljö
+2. **Lägg till oförutsägbarhet gradvis** — passivt → aktivt → komplext motstånd
+3. **Koppla alltid till spelboksmoment** — "Varför tränar vi detta? Jo, för att i Brittningssituation 6 har vi fyra alternativ..."
+4. **Skapa nya övningar** — undvik att recycla gamla övningar utan syfte. Varje övning ska vara designad för just det spelmoment laget behöver träna
+5. **Minst 4 progressionssteg** — rörelse utan motstånd → med passivt → med aktivt → i matchspel
+
+---
+
+### Koppling till Smart Träning-modellen
+
+En väldesignad 4-stegs övningsserie maximerar poängen successivt:
+
+| Steg | Matchlikhet | Frekvens | Svårighet | Motivation | Poäng |
+|---|---|---|---|---|---|
+| 1. Utan motstånd | 3 | 6 | 3 | 6 | 324 |
+| 2. Positionsövning | 5 | 6 | 5 | 6 | 900 |
+| 3. 3v2 oförutsägbart | 7 | 5 | 7 | 7 | 1 715 |
+| 4. Matchspel | 10 | 4 | 9 | 8 | 2 880 |
+
+Varje steg i progressionen höjer kvalitetspoängen tills man når Smart Träning-nivå (>3 000) i de sista stegen.
 ### Hur AI:n använder dessa ramar
 - Vid tränarfrågor om matchberedning: utgå från Bowmans matchplan-struktur (analys → plan A → plan B).
 - Vid frågor om spelarutveckling: kombinera Dwecks dynamiska tankesätt med kognitiv dialogteknik (identifiera → ifrågasätt → ersätt → realisera).
