@@ -289,63 +289,62 @@ Erfaren/avancerad: Full terminologi, taktiskt djup. Ton: professionell, direkt.
 6. Föreslå EXAKT 1 övning – håll texten kort och konkret (max 20 rader)
 7. Inkludera INTE VIZ-block – visualiseringen hanteras separat`;
 
-// System prompt för VIZ-generering – roller och pilar, INGA koordinater
-const SYSTEM_PROMPT_VIZ = `Du är en taktiktavle-generator för innebandy. Din uppgift är att generera ett JSON-objekt som beskriver en övning med roller och pilar.
+// System prompt för VIZ-generering – explicita x/y-koordinater per steg
+const SYSTEM_PROMPT_VIZ = `Du är en taktiktavle-generator för innebandy. Din uppgift är att generera ett JSON-objekt med exakta spelarpositioner för varje steg i en övning.
 
 Svara ENBART med ett JSON-objekt. Inga förklaringar, ingen text före eller efter. Bara JSON.
 
-## VIKTIGT – INGA KOORDINATER
-Du anger INTE x/y-koordinater för spelare eller boll. Taktiktavlan placerar spelarna automatiskt baserat på formation och rollnamn.
+## KOORDINATSYSTEM
+- Plan: x=50–750, y=50–430. Mittlinje: x=400.
+- Vänster mål: x≈103. Höger mål: x≈697.
+- Slottet höger: x=607–697, y=200–280.
+- Backzon vänster: x=103–280.
 
-## ROLLNAMN – använd EXAKT dessa:
-Lag A (röda, anfallare): VB, HB, C, C1, C2, F, VF, HF, CF, MV
-Lag B (blå, motståndare): M1, M2, M3, M4, M5
-Använd ALDRIG BF eller IB.
+## SPELARPOSITIONER
+Du får startpositionerna för varje roll i formationen (se nedan i prompten).
+För varje steg anger du VAR spelarna befinner sig – utgå från startpositionerna och flytta spelare realistiskt baserat på övningens rörelse.
+Bollen placeras alltid hos den spelare som har den (samma x/y som den spelaren).
 
-## PILAR – ange vem som passar/rör sig:
-- typ "arrow" = passning (streckad linje)
-- typ "run" = rörelse/löpning (heldragen linje)
-- "fran" och "till" = rollnamn (t.ex. "VB", "C", "VF")
-- "till" kan också vara en riktningsbeskrivning: "framåt", "höger", "vänster", "djup", "backzon"
+## REGLER FÖR RÖRELSE
+- Backar (VB/HB) rör sig max 150px per steg
+- Center (C/C1/C2) rör sig max 200px per steg  
+- Forwards (F/VF/HF) rör sig max 200px per steg
+- Motståndare (M1-M5) rör sig bara om de aktivt pressar
+- Koordinater får ALDRIG gå utanför x=50–750, y=50–430
 
-## KONER – ange antal och placering relativt planen:
-- placering: "backzon-vänster", "backzon-höger", "mittzon", "slott", "sargen-vänster", "sargen-höger"
-
-## ZONER:
-- typ: "backzon", "slott", "mittzon" – taktiktavlan ritar dem på rätt plats automatiskt
+## PILAR
+- typ "arrow" = passning (streckad linje) – rita från avsändare till mottagare
+- typ "run" = rörelse/löpning (heldragen linje) – rita spelarens rörelseväg
+- x1/y1 = startpunkt, x2/y2 = slutpunkt
 
 ## JSON-FORMAT:
 {
   "namn": "övningens namn",
   "spelform": "4v4",
-  "formation": "Boxen 2-2",
+  "formation": "Backbytet 2-1-1",
   "steg": [
     {
-      "beskrivning": "VB har boll i backzon. IB klivar upp som center. VF söker djup.",
-      "bollhos": "VB",
-      "pilar": [
-        {"fran": "VB", "till": "IB", "typ": "arrow"},
-        {"fran": "VB", "till": "backzon", "typ": "run"},
-        {"fran": "IB", "till": "framåt", "typ": "run"},
-        {"fran": "VF", "till": "djup", "typ": "run"}
+      "beskrivning": "VB har boll. C är spelbar. F söker djup.",
+      "spelare": [
+        {"id": "VB", "team": "A", "label": "VB", "x": 150, "y": 175},
+        {"id": "HB", "team": "A", "label": "HB", "x": 150, "y": 305},
+        {"id": "C",  "team": "A", "label": "C",  "x": 310, "y": 240},
+        {"id": "F",  "team": "A", "label": "F",  "x": 450, "y": 240},
+        {"id": "M1", "team": "B", "label": "M1", "x": 530, "y": 175},
+        {"id": "M2", "team": "B", "label": "M2", "x": 530, "y": 305}
       ],
-      "koner": ["backzon-vänster", "backzon-vänster"],
+      "boll": {"x": 150, "y": 175},
+      "pilar": [
+        {"x1": 150, "y1": 175, "x2": 310, "y2": 240, "typ": "arrow"},
+        {"x1": 450, "y1": 240, "x2": 580, "y2": 200, "typ": "run"}
+      ],
       "zoner": ["backzon"]
-    },
-    {
-      "beskrivning": "IB tar emot som center och spelar till VF i anfallszonen.",
-      "bollhos": "IB",
-      "pilar": [
-        {"fran": "IB", "till": "VF", "typ": "arrow"},
-        {"fran": "VB", "till": "framåt", "typ": "run"}
-      ],
-      "koner": [],
-      "zoner": ["slott"]
     }
   ]
 }
 
-Generera MAX 3 steg. Fokusera på att beskriva rörelsen korrekt med rätt rollnamn och pilriktningar.`;
+Generera MAX 3 steg. Varje steg ska visa en meningsfull rörelse i övningen.
+Alla koordinater MÅSTE vara inom x=50–750, y=50–430.`;
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -373,6 +372,131 @@ export default async function handler(req) {
     // VIZ-läge: generera bara JSON för taktiktavlan
     if (mode === "viz") {
       const { ovningsnamn, spelform, formation, beskrivning } = body;
+
+      // Positionskartor per formation – skickas med till AI:n
+      const POSITIONER = {
+        '3v3': {
+          'Triangeln 1-2': [
+            {id:'VB',team:'A',label:'VB',x:130,y:240},
+            {id:'VF',team:'A',label:'VF',x:340,y:170},
+            {id:'HF',team:'A',label:'HF',x:340,y:310},
+            {id:'M1',team:'B',label:'M1',x:520,y:170},
+            {id:'M2',team:'B',label:'M2',x:520,y:310},
+            {id:'M3',team:'B',label:'M3',x:610,y:240}
+          ],
+          'Triangeln 2-1': [
+            {id:'VB',team:'A',label:'VB',x:130,y:175},
+            {id:'HB',team:'A',label:'HB',x:130,y:305},
+            {id:'F', team:'A',label:'F', x:340,y:240},
+            {id:'M1',team:'B',label:'M1',x:520,y:175},
+            {id:'M2',team:'B',label:'M2',x:520,y:305},
+            {id:'M3',team:'B',label:'M3',x:610,y:240}
+          ],
+        },
+        '4v4': {
+          'Boxen 2-2': [
+            {id:'VB',team:'A',label:'VB',x:130,y:170},
+            {id:'HB',team:'A',label:'HB',x:130,y:310},
+            {id:'VF',team:'A',label:'VF',x:340,y:170},
+            {id:'HF',team:'A',label:'HF',x:340,y:310},
+            {id:'M1',team:'B',label:'M1',x:500,y:170},
+            {id:'M2',team:'B',label:'M2',x:500,y:310},
+            {id:'M3',team:'B',label:'M3',x:620,y:170},
+            {id:'M4',team:'B',label:'M4',x:620,y:310}
+          ],
+          'Diamanten 1-2-1': [
+            {id:'VB',team:'A',label:'VB',x:130,y:240},
+            {id:'C1',team:'A',label:'C1',x:280,y:155},
+            {id:'C2',team:'A',label:'C2',x:280,y:325},
+            {id:'F', team:'A',label:'F', x:430,y:240},
+            {id:'M1',team:'B',label:'M1',x:520,y:155},
+            {id:'M2',team:'B',label:'M2',x:520,y:325},
+            {id:'M3',team:'B',label:'M3',x:610,y:240},
+            {id:'M4',team:'B',label:'M4',x:650,y:170}
+          ],
+          'Backbytet 2-1-1': [
+            {id:'VB',team:'A',label:'VB',x:150,y:175},
+            {id:'HB',team:'A',label:'HB',x:150,y:305},
+            {id:'C', team:'A',label:'C', x:310,y:240},
+            {id:'F', team:'A',label:'F', x:450,y:240},
+            {id:'M1',team:'B',label:'M1',x:530,y:175},
+            {id:'M2',team:'B',label:'M2',x:530,y:305},
+            {id:'M3',team:'B',label:'M3',x:620,y:175},
+            {id:'M4',team:'B',label:'M4',x:620,y:305}
+          ],
+        },
+        '5v5': {
+          'Klassisk 2-1-2': [
+            {id:'VB',team:'A',label:'VB',x:120,y:160},
+            {id:'HB',team:'A',label:'HB',x:120,y:320},
+            {id:'C', team:'A',label:'C', x:260,y:240},
+            {id:'VF',team:'A',label:'VF',x:400,y:160},
+            {id:'HF',team:'A',label:'HF',x:400,y:320},
+            {id:'M1',team:'B',label:'M1',x:500,y:160},
+            {id:'M2',team:'B',label:'M2',x:500,y:320},
+            {id:'M3',team:'B',label:'M3',x:580,y:240},
+            {id:'M4',team:'B',label:'M4',x:630,y:160},
+            {id:'M5',team:'B',label:'M5',x:630,y:320}
+          ],
+          'Styrspel 2-2-1': [
+            {id:'VB',team:'A',label:'VB',x:120,y:160},
+            {id:'HB',team:'A',label:'HB',x:120,y:320},
+            {id:'C1',team:'A',label:'C1',x:260,y:175},
+            {id:'C2',team:'A',label:'C2',x:260,y:305},
+            {id:'F', team:'A',label:'F', x:390,y:240},
+            {id:'M1',team:'B',label:'M1',x:500,y:160},
+            {id:'M2',team:'B',label:'M2',x:500,y:320},
+            {id:'M3',team:'B',label:'M3',x:580,y:240},
+            {id:'M4',team:'B',label:'M4',x:630,y:160},
+            {id:'M5',team:'B',label:'M5',x:630,y:320}
+          ],
+        },
+        '5v4 Powerplay': {
+          'Paraplyet 1-2-2': [
+            {id:'VB',team:'A',label:'VB',x:200,y:240},
+            {id:'C1',team:'A',label:'C1',x:340,y:160},
+            {id:'C2',team:'A',label:'C2',x:340,y:320},
+            {id:'VF',team:'A',label:'VF',x:490,y:160},
+            {id:'HF',team:'A',label:'HF',x:490,y:320},
+            {id:'M1',team:'B',label:'M1',x:540,y:185},
+            {id:'M2',team:'B',label:'M2',x:540,y:295},
+            {id:'M3',team:'B',label:'M3',x:620,y:155},
+            {id:'M4',team:'B',label:'M4',x:620,y:325}
+          ],
+        },
+        '4v5 Boxplay': {
+          'Boxplay': [
+            {id:'VB',team:'A',label:'VB',x:190,y:170},
+            {id:'HB',team:'A',label:'HB',x:190,y:310},
+            {id:'VF',team:'A',label:'VF',x:330,y:170},
+            {id:'HF',team:'A',label:'HF',x:330,y:310},
+            {id:'M1',team:'B',label:'M1',x:440,y:240},
+            {id:'M2',team:'B',label:'M2',x:530,y:170},
+            {id:'M3',team:'B',label:'M3',x:530,y:310},
+            {id:'M4',team:'B',label:'M4',x:620,y:170},
+            {id:'M5',team:'B',label:'M5',x:620,y:310}
+          ],
+        },
+        '6v5': {
+          'Överbelastning 2-1-3': [
+            {id:'VB',team:'A',label:'VB',x:120,y:160},
+            {id:'HB',team:'A',label:'HB',x:120,y:320},
+            {id:'C', team:'A',label:'C', x:260,y:240},
+            {id:'VF',team:'A',label:'VF',x:390,y:140},
+            {id:'CF',team:'A',label:'CF',x:390,y:240},
+            {id:'HF',team:'A',label:'HF',x:390,y:340},
+            {id:'M1',team:'B',label:'M1',x:500,y:160},
+            {id:'M2',team:'B',label:'M2',x:500,y:320},
+            {id:'M3',team:'B',label:'M3',x:580,y:200},
+            {id:'M4',team:'B',label:'M4',x:580,y:280},
+            {id:'M5',team:'B',label:'M5',x:635,y:240}
+          ],
+        },
+      };
+
+      const startPos = POSITIONER[spelform]?.[formation] || POSITIONER['4v4']['Boxen 2-2'];
+      const startPosStr = JSON.stringify(startPos, null, 2);
+
       const prompt = `Generera en taktiktavle-visualisering för följande innebandyövning:
 
 Namn: ${ovningsnamn || "okänd övning"}
@@ -380,8 +504,13 @@ Spelform: ${spelform || "4v4"}
 Formation: ${formation || "Boxen 2-2"}
 Beskrivning: ${beskrivning || ""}
 
+STARTPOSITIONER FÖR DENNA FORMATION (använd dessa som utgångspunkt):
+${startPosStr}
+
 Inkludera "spelform" och "formation" exakt som angivna ovan i JSON-svaret.
-Generera MAX 3 steg med rollnamn och pilar.`;
+Generera MAX 3 steg med explicita x/y-koordinater för varje spelare i varje steg.
+Flytta spelarna realistiskt baserat på övningsbeskrivningen.
+Bollen placeras hos den spelare som har den (samma x/y).`;
 
       const response = await client.messages.create({
         model: "claude-sonnet-4-5",
