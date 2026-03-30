@@ -229,7 +229,7 @@ Erfaren: Full terminologi, taktiskt djup, direkt.
 ## VISUALISERINGS-JSON – OBLIGATORISKT FORMAT
 
 Efter varje övning i svaret MÅSTE du inkludera ett visualiserings-JSON-block.
-Blocket ska börja med <<<VIZ>>> och sluta med <<<END>>>.
+Blocket ska börja med ##VIZ_START## och sluta med ##VIZ_END##.
 
 Koordinatsystemet för taktiktavlan:
 - Plan: x=40 till x=760, y=40 till y=440
@@ -248,7 +248,7 @@ Steg 2 = nästa moment (spelare har flyttat sig).
 Etc.
 
 Exempel på korrekt format:
-<<<VIZ>>>
+##VIZ_START##
 {
   "namn": "B-A2 Backparet 2v1",
   "format": "3v1",
@@ -295,7 +295,7 @@ Exempel på korrekt format:
     }
   ]
 }
-<<<END>>>
+##VIZ_END##
 
 Generera ett sådant VIZ-block per övning du föreslår. Koordinaterna ska vara realistiska för en innebandyplan. Alla x-koordinater mellan 40-760, alla y-koordinater mellan 40-440.`;
 
@@ -336,7 +336,7 @@ export default async function handler(req) {
 
     const response = await client.messages.create({
       model: "claude-sonnet-4-5",
-      max_tokens: 1500,
+      max_tokens: 1800,
       system: SYSTEM_PROMPT,
       messages,
     });
@@ -348,7 +348,7 @@ export default async function handler(req) {
 
     // Extrahera VIZ-block från svaret
     const vizBlocks = [];
-    const vizRegex = /<<<VIZ>>>([\s\S]*?)<<<END>>>/g;
+    const vizRegex = /##VIZ_START##([\s\S]*?)##VIZ_END##/g;
     let match;
     while ((match = vizRegex.exec(fullText)) !== null) {
       try {
@@ -360,7 +360,7 @@ export default async function handler(req) {
     }
 
     // Rensa VIZ-block från texten som visas för tränaren
-    const cleanText = fullText.replace(/<<<VIZ>>>[\s\S]*?<<<END>>>/g, "").trim();
+    const cleanText = fullText.replace(/##VIZ_START##[\s\S]*?##VIZ_END##/g, "").trim();
 
     return new Response(
       JSON.stringify({
