@@ -292,76 +292,78 @@ Erfaren/avancerad: Full terminologi, taktiskt djup. Ton: professionell, direkt.
 // System prompt för VIZ-generering – explicita x/y-koordinater per steg
 const SYSTEM_PROMPT_VIZ = `Du är en taktiktavle-generator för innebandy. Generera ENBART ett JSON-objekt. Ingen text före eller efter. Bara JSON.
 
-## ABSOLUT KRAV – ROLLNAMN
-Du MÅSTE använda exakt samma id och label som i startpositionerna du får (t.ex. "VB", "HB", "C", "F", "M1").
-Använd ALDRIG egna namn som "A1", "A2", "B1" etc. – det är fel och bryter systemet.
+## REGEL 1 – ROLLNAMN (ABSOLUT KRAV)
+Du MÅSTE använda exakt samma id och label som i startpositionerna du får.
+Exempel: om startpositionerna har "VB", "HB", "C1", "C2", "F" så använder du EXAKT dessa.
+Använd ALDRIG egna namn som "A1", "A2", "B1", "4" etc. – det bryter systemet.
+Varje spelare i varje steg måste ha samma id och label som i steg 1.
 
-## KOORDINATSYSTEM
-- Plan: x=50–750, y=50–430. Mittlinje: x=400.
-- Vänster mål: x≈103. Höger mål: x≈697.
-- Slottet höger: x=607–697, y=200–280.
-- Backzon vänster: x=103–280.
+## REGEL 2 – KOORDINATER
+- Plan: x=120–680, y=80–400. Mittlinje: x=400.
+- Vänster mål: x≈150, y=200–280. Höger mål: x≈650, y=200–280.
+- Slottet höger: x=580–680, y=180–300.
+- Backzon vänster: x=120–280.
+- INGEN spelare får ha x<120 eller x>680, y<80 eller y>400.
+- Backar (VB/HB) startar ALDRIG vid x<130 – de riskerar att hamna bakom målet.
 
-## SPELARPOSITIONER
-Du får startpositionerna i prompten. Kopiera dessa exakt för steg 1.
-I steg 2 och 3 – flytta spelare realistiskt baserat på övningsbeskrivningen.
-Bollen placeras alltid hos den spelare som har den (samma x/y).
-Bollen startar ALDRIG i mitten – den är alltid hos en spelare.
+## REGEL 3 – BOLL
+- Bollen är ALLTID hos en spelare – samma x/y som den spelare som har bollen.
+- Bollen startar hos VB i steg 1 (x=VB.x, y=VB.y).
+- Bollen ALDRIG vid mittlinjen (x=390–410) om ingen spelare står där.
 
-## RÖRELSE PER STEG
-- Backar rör sig max 150px per steg
-- Center/Forwards rör sig max 200px per steg
-- Motståndare rör sig bara om de aktivt pressar
-- Koordinater ALDRIG utanför x=50–750, y=50–430
+## REGEL 4 – PILAR (OBLIGATORISKT)
+Varje steg MÅSTE ha minst 2 pilar.
+- typ "arrow" = passning (streckad linje) – från bollhållaren till mottagaren
+- typ "run" = rörelse/löpning (heldragen linje) – spelarens rörelseväg
+- x1/y1 = spelarens startposition, x2/y2 = dit pilen pekar
 
-## PILAR – OBLIGATORISKT
-Varje steg MÅSTE ha minst 1 pil. Utan pilar syns ingen rörelse.
-- typ "arrow" = passning (streckad linje)
-- typ "run" = rörelse/löpning (heldragen linje)
-- x1/y1 = startpunkt (spelarens position), x2/y2 = slutpunkt
+## REGEL 5 – STEG 1 = STARTPOSITIONER
+I steg 1: kopiera startpositionerna EXAKT som du fick dem. Ändra ingenting.
+I steg 2–3: flytta spelare realistiskt. Max 160px per spelare per steg.
 
-## JSON-FORMAT – följ detta EXAKT:
+## JSON-FORMAT:
 {
   "namn": "övningens namn",
   "spelform": "4v4",
   "formation": "Backbytet 2-1-1",
   "steg": [
     {
-      "beskrivning": "VB har boll. Passar till C. F söker djup.",
+      "beskrivning": "VB har boll i backzon. Passar till C. F söker djup mot slottet.",
       "spelare": [
         {"id": "VB", "team": "A", "label": "VB", "x": 150, "y": 175},
         {"id": "HB", "team": "A", "label": "HB", "x": 150, "y": 305},
         {"id": "C",  "team": "A", "label": "C",  "x": 310, "y": 240},
         {"id": "F",  "team": "A", "label": "F",  "x": 450, "y": 200},
-        {"id": "M1", "team": "B", "label": "M1", "x": 530, "y": 175},
-        {"id": "M2", "team": "B", "label": "M2", "x": 530, "y": 305},
-        {"id": "M3", "team": "B", "label": "M3", "x": 620, "y": 175},
-        {"id": "M4", "team": "B", "label": "M4", "x": 620, "y": 305}
+        {"id": "M1", "team": "B", "label": "M1", "x": 500, "y": 175},
+        {"id": "M2", "team": "B", "label": "M2", "x": 500, "y": 305},
+        {"id": "M3", "team": "B", "label": "M3", "x": 600, "y": 175},
+        {"id": "M4", "team": "B", "label": "M4", "x": 600, "y": 305}
       ],
       "boll": {"x": 150, "y": 175},
       "pilar": [
         {"x1": 150, "y1": 175, "x2": 310, "y2": 240, "typ": "arrow"},
-        {"x1": 150, "y1": 175, "x2": 150, "y2": 305, "typ": "run"},
-        {"x1": 450, "y1": 200, "x2": 560, "y2": 180, "typ": "run"}
+        {"x1": 450, "y1": 200, "x2": 560, "y2": 190, "typ": "run"},
+        {"x1": 150, "y1": 305, "x2": 220, "y2": 280, "typ": "run"}
       ],
       "zoner": ["backzon"]
     },
     {
-      "beskrivning": "C tar emot och passar till F vid slottet. VB byter plats med HB.",
+      "beskrivning": "C tar emot och passar till F vid slottet. VB kliver framåt.",
       "spelare": [
-        {"id": "VB", "team": "A", "label": "VB", "x": 150, "y": 305},
-        {"id": "HB", "team": "A", "label": "HB", "x": 150, "y": 175},
+        {"id": "VB", "team": "A", "label": "VB", "x": 220, "y": 175},
+        {"id": "HB", "team": "A", "label": "HB", "x": 150, "y": 305},
         {"id": "C",  "team": "A", "label": "C",  "x": 310, "y": 240},
         {"id": "F",  "team": "A", "label": "F",  "x": 560, "y": 200},
-        {"id": "M1", "team": "B", "label": "M1", "x": 480, "y": 175},
-        {"id": "M2", "team": "B", "label": "M2", "x": 530, "y": 305},
-        {"id": "M3", "team": "B", "label": "M3", "x": 580, "y": 200},
-        {"id": "M4", "team": "B", "label": "M4", "x": 620, "y": 305}
+        {"id": "M1", "team": "B", "label": "M1", "x": 460, "y": 175},
+        {"id": "M2", "team": "B", "label": "M2", "x": 500, "y": 305},
+        {"id": "M3", "team": "B", "label": "M3", "x": 580, "y": 210},
+        {"id": "M4", "team": "B", "label": "M4", "x": 600, "y": 305}
       ],
       "boll": {"x": 310, "y": 240},
       "pilar": [
         {"x1": 310, "y1": 240, "x2": 560, "y2": 200, "typ": "arrow"},
-        {"x1": 310, "y1": 240, "x2": 450, "y2": 240, "typ": "run"}
+        {"x1": 220, "y1": 175, "x2": 310, "y2": 200, "typ": "run"},
+        {"x1": 310, "y1": 240, "x2": 380, "y2": 240, "typ": "run"}
       ],
       "zoner": ["slott"]
     }
