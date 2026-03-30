@@ -484,7 +484,8 @@ async function ritaUppPaTavlan(){
       body:JSON.stringify({
         mode:'viz',
         ovningsnamn:sistaOvning.namn,
-        format:sistaOvning.format,
+        spelform:state.spelform,
+        formation:state.formation,
         beskrivning:sistaOvning.beskrivning
       })
     });
