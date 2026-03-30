@@ -429,15 +429,7 @@ F – LEDARSKAP & KOMMUNIKATION:
 ${state.fritext?'- Fritext från tränaren: '+state.fritext:''}
 
 G – AI-BETEENDE:
-Föreslå ett komplett träningspass med max 3 övningar. För varje övning:
-1. Namn och kort beskrivning
-2. Tid, antal spelare, nivå (🟢🔵🔴⚫)
-3. Smart Träning-poäng (Matchlikhet × Frekvens × Svårighet × Motivation = totalpoäng)
-4. CLA-regel (konkret formulerad)
-5. En coachingfråga (INTE en instruktion)
-6. Koppling till lagets svaghet eller träningsfokus
-
-Avsluta med ett tidsschema som minimerar dötid.`;
+Föreslå EXAKT 1 övning. Håll texten kort – max 15 rader totalt. Inkludera Smart Träning-poäng (Matchlikhet × Frekvens × Svårighet × Motivation = totalpoäng), CLA-regel och coachingfråga. Avsluta med ett fullständigt VIZ-block.`;
 }
 
 const TAVLA_URL='https://spontaneous-beijinho-d0522f.netlify.app';
