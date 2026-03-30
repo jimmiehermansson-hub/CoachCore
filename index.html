@@ -440,6 +440,9 @@ Föreslå ett komplett träningspass med max 3 övningar. För varje övning:
 Avsluta med ett tidsschema som minimerar dötid.`;
 }
 
+const TAVLA_URL='https://spontaneous-beijinho-d0522f.netlify.app';
+let currentVisualizations=[];
+
 async function generera(){
   const btn=document.getElementById('gen-btn');
   btn.disabled=true;
@@ -452,16 +455,17 @@ async function generera(){
       body:JSON.stringify({mode:'chat',history:[{role:'user',content:byggPrompt()}]})
     });
     const data=await res.json();
-    visaSvar(data.response||data.error||'Inget svar');
+    currentVisualizations=data.visualizations||[];
+    visaSvar(data.response||data.error||'Inget svar',currentVisualizations);
   }catch(e){
-    visaSvar('Kunde inte nå CoachCore: '+e.message);
+    visaSvar('Kunde inte nå CoachCore: '+e.message,[]);
   }finally{
     btn.disabled=false;
     document.getElementById('loading').style.display='none';
   }
 }
 
-function visaSvar(text){
+function visaSvar(text,vizs){
   const el=document.getElementById('svar-innehall');
   const fmt=text
     .replace(/###\s(.+)/g,'<h3 style="font-size:13px;color:#ff4d57;margin:12px 0 4px;font-weight:600">$1</h3>')
@@ -469,7 +473,21 @@ function visaSvar(text){
     .replace(/CLA-regel:/g,'<span style="color:#93c5fd;font-weight:500">CLA-regel:</span>')
     .replace(/Coachingfråga:/g,'<span style="color:#86efac;font-weight:500">Coachingfråga:</span>')
     .replace(/Smart Träning:/g,'<span style="color:#fde68a;font-weight:500">Smart Träning:</span>');
-  el.innerHTML=`<div class="raw-svar">${fmt}</div>`;
+
+  let vizHtml='';
+  if(vizs&&vizs.length>0){
+    vizHtml='<div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:8px">';
+    vizs.forEach((viz,i)=>{
+      const encoded=btoa(unescape(encodeURIComponent(JSON.stringify(viz))));
+      const url=`${TAVLA_URL}/?ovning=${encoded}`;
+      vizHtml+=`<a href="${url}" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:#4f46e5;border:none;border-radius:8px;color:white;font-size:12px;font-weight:600;cursor:pointer;text-decoration:none;font-family:var(--font)">
+        🎯 Rita upp: ${viz.namn||'Övning '+(i+1)} på tavlan
+      </a>`;
+    });
+    vizHtml+='</div>';
+  }
+
+  el.innerHTML=`<div class="raw-svar">${fmt}</div>${vizHtml}`;
   document.getElementById('svar').style.display='block';
   document.getElementById('svar').scrollIntoView({behavior:'smooth',block:'start'});
 }
