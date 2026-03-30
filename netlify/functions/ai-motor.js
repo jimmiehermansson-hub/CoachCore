@@ -290,9 +290,11 @@ Erfaren/avancerad: Full terminologi, taktiskt djup. Ton: professionell, direkt.
 7. Inkludera INTE VIZ-block – visualiseringen hanteras separat`;
 
 // System prompt för VIZ-generering – explicita x/y-koordinater per steg
-const SYSTEM_PROMPT_VIZ = `Du är en taktiktavle-generator för innebandy. Din uppgift är att generera ett JSON-objekt med exakta spelarpositioner för varje steg i en övning.
+const SYSTEM_PROMPT_VIZ = `Du är en taktiktavle-generator för innebandy. Generera ENBART ett JSON-objekt. Ingen text före eller efter. Bara JSON.
 
-Svara ENBART med ett JSON-objekt. Inga förklaringar, ingen text före eller efter. Bara JSON.
+## ABSOLUT KRAV – ROLLNAMN
+Du MÅSTE använda exakt samma id och label som i startpositionerna du får (t.ex. "VB", "HB", "C", "F", "M1").
+Använd ALDRIG egna namn som "A1", "A2", "B1" etc. – det är fel och bryter systemet.
 
 ## KOORDINATSYSTEM
 - Plan: x=50–750, y=50–430. Mittlinje: x=400.
@@ -301,50 +303,70 @@ Svara ENBART med ett JSON-objekt. Inga förklaringar, ingen text före eller eft
 - Backzon vänster: x=103–280.
 
 ## SPELARPOSITIONER
-Du får startpositionerna för varje roll i formationen (se nedan i prompten).
-För varje steg anger du VAR spelarna befinner sig – utgå från startpositionerna och flytta spelare realistiskt baserat på övningens rörelse.
-Bollen placeras alltid hos den spelare som har den (samma x/y som den spelaren).
+Du får startpositionerna i prompten. Kopiera dessa exakt för steg 1.
+I steg 2 och 3 – flytta spelare realistiskt baserat på övningsbeskrivningen.
+Bollen placeras alltid hos den spelare som har den (samma x/y).
+Bollen startar ALDRIG i mitten – den är alltid hos en spelare.
 
-## REGLER FÖR RÖRELSE
-- Backar (VB/HB) rör sig max 150px per steg
-- Center (C/C1/C2) rör sig max 200px per steg  
-- Forwards (F/VF/HF) rör sig max 200px per steg
-- Motståndare (M1-M5) rör sig bara om de aktivt pressar
-- Koordinater får ALDRIG gå utanför x=50–750, y=50–430
+## RÖRELSE PER STEG
+- Backar rör sig max 150px per steg
+- Center/Forwards rör sig max 200px per steg
+- Motståndare rör sig bara om de aktivt pressar
+- Koordinater ALDRIG utanför x=50–750, y=50–430
 
-## PILAR
-- typ "arrow" = passning (streckad linje) – rita från avsändare till mottagare
-- typ "run" = rörelse/löpning (heldragen linje) – rita spelarens rörelseväg
-- x1/y1 = startpunkt, x2/y2 = slutpunkt
+## PILAR – OBLIGATORISKT
+Varje steg MÅSTE ha minst 1 pil. Utan pilar syns ingen rörelse.
+- typ "arrow" = passning (streckad linje)
+- typ "run" = rörelse/löpning (heldragen linje)
+- x1/y1 = startpunkt (spelarens position), x2/y2 = slutpunkt
 
-## JSON-FORMAT:
+## JSON-FORMAT – följ detta EXAKT:
 {
   "namn": "övningens namn",
   "spelform": "4v4",
   "formation": "Backbytet 2-1-1",
   "steg": [
     {
-      "beskrivning": "VB har boll. C är spelbar. F söker djup.",
+      "beskrivning": "VB har boll. Passar till C. F söker djup.",
       "spelare": [
         {"id": "VB", "team": "A", "label": "VB", "x": 150, "y": 175},
         {"id": "HB", "team": "A", "label": "HB", "x": 150, "y": 305},
         {"id": "C",  "team": "A", "label": "C",  "x": 310, "y": 240},
-        {"id": "F",  "team": "A", "label": "F",  "x": 450, "y": 240},
+        {"id": "F",  "team": "A", "label": "F",  "x": 450, "y": 200},
         {"id": "M1", "team": "B", "label": "M1", "x": 530, "y": 175},
-        {"id": "M2", "team": "B", "label": "M2", "x": 530, "y": 305}
+        {"id": "M2", "team": "B", "label": "M2", "x": 530, "y": 305},
+        {"id": "M3", "team": "B", "label": "M3", "x": 620, "y": 175},
+        {"id": "M4", "team": "B", "label": "M4", "x": 620, "y": 305}
       ],
       "boll": {"x": 150, "y": 175},
       "pilar": [
         {"x1": 150, "y1": 175, "x2": 310, "y2": 240, "typ": "arrow"},
-        {"x1": 450, "y1": 240, "x2": 580, "y2": 200, "typ": "run"}
+        {"x1": 150, "y1": 175, "x2": 150, "y2": 305, "typ": "run"},
+        {"x1": 450, "y1": 200, "x2": 560, "y2": 180, "typ": "run"}
       ],
       "zoner": ["backzon"]
+    },
+    {
+      "beskrivning": "C tar emot och passar till F vid slottet. VB byter plats med HB.",
+      "spelare": [
+        {"id": "VB", "team": "A", "label": "VB", "x": 150, "y": 305},
+        {"id": "HB", "team": "A", "label": "HB", "x": 150, "y": 175},
+        {"id": "C",  "team": "A", "label": "C",  "x": 310, "y": 240},
+        {"id": "F",  "team": "A", "label": "F",  "x": 560, "y": 200},
+        {"id": "M1", "team": "B", "label": "M1", "x": 480, "y": 175},
+        {"id": "M2", "team": "B", "label": "M2", "x": 530, "y": 305},
+        {"id": "M3", "team": "B", "label": "M3", "x": 580, "y": 200},
+        {"id": "M4", "team": "B", "label": "M4", "x": 620, "y": 305}
+      ],
+      "boll": {"x": 310, "y": 240},
+      "pilar": [
+        {"x1": 310, "y1": 240, "x2": 560, "y2": 200, "typ": "arrow"},
+        {"x1": 310, "y1": 240, "x2": 450, "y2": 240, "typ": "run"}
+      ],
+      "zoner": ["slott"]
     }
   ]
-}
-
-Generera MAX 3 steg. Varje steg ska visa en meningsfull rörelse i övningen.
-Alla koordinater MÅSTE vara inom x=50–750, y=50–430.`;
+}`;
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
