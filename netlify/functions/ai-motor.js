@@ -29,9 +29,9 @@ const SYSTEM_PROMPT_CHAT = `Du är CoachCore 2.0 – en preskriptiv tränarassis
 ## Coachingspråk
 - "Vem hjälper bollhållaren?" / "Visa klubban" / "Rörelse direkt"
 - Grön pass = uppmuntras · Gul = restriktiv · Röd = undvik
-- "Reagera IB!" – rörelsen startar när BF lyfter blicken
-- "Välj snabbt BF!" – snabbt suboptimalt beslut > perfekt sent beslut
-- "Nu är det ditt spel IB!" – signal om frihet i centerposition
+- "Reagera C!" – rörelsen startar när VB lyfter blicken
+- "Välj snabbt VB!" – snabbt suboptimalt beslut > perfekt sent beslut
+- "Nu är det ditt spel C!" – signal om frihet i centerposition
 - "Diagonalt, inte rakt!" – center håller diagonalt mellanrum
 - "Ta emot öppen!" – ta alltid emot med ansiktet mot anfallszonen
 - "Stäng passvägen, inte spelaren!" – forward tar vinkel
@@ -70,23 +70,31 @@ DANSK RELATIONISM: FC Midtjylland – data + relationism = presspel med fri lös
 
 # B — SPELARSYSTEM
 
-## Positioner (5v5)
+## Positioner
 - MV: Dirigerar försvaret verbalt, startar kontringar via utkast
-- VB/HB (BF=bollförande back, IB=inre back): Uppspel och spelvändningar. Försvar: utsidan. Anfall: "points"
-- C: Lagets nav. Täck slottet i försvar, länk backar-forwards i anfall. Kräver hög uthållighet
-- VF/HF: Primära avslutare. Press, instick och bågningar
+- VB (vänsterback): Djup position vid sargen, startar uppspel, säkrar hemåt
+- HB (högerback): Speglar VB på andra sidan, backpar
+- C (center): Lagets nav, länk mellan backar och forwards, täcker slottet i försvar
+- C1/C2: Två centrar i Styrspel – ligger tätt ihop och stänger mittzon
+- F (forward): Primär avslutare och pressare. I Backbytet = styraren högt upp
+- VF/HF: Vänster/höger forward i formationer med två forwards (Klassisk, Boxen)
+- MV: Målvakt
+
+## Rollnamn – använd ALLTID dessa i text och visualisering:
+VB, HB, C, C1, C2, F, VF, HF, MV
+Använd ALDRIG BF eller IB – det är interna tränartermer som förvirrar.
 
 ## Formationer
-- 3v3 Triangeln (1-2): En spelbar back, två forwards byter ständigt plats
-- 3v3 Triangeln (2-1): Två backs, en forward
-- 4v4 Boxen (2-2): Parspel, backpar säkrar hemåt, forwards hugger på kontringar
-- 4v4 Diamanten (1-2-1): Defensiv point, vingar box-till-box, spjutspets högt
-- 4v4 Backbytet (2-1-1): BF (djup back), IB (klivit upp som center), forward högt
-- 5v5 Klassisk (2-1-2): Två backar, center, två forwards
-- 5v5 Styrspel (2-2-1): Defensivt system, styr motståndare mot sargen
-- Powerplay Paraplyet (1-2-2): Point styr, halvarna söker one-timers, innebrännaren i slottet
-- 6v5 Överbelastning (2-1-3): Max två tillslag, snabb bolltransport
-- Boxplay (4v5): Kompakt box, täck skottlinjen, stäng mitten
+- 3v3 Offensiv triangel (1-2): VB djupt, VF och HF högt – offensiv spets
+- 3v3 Defensiv triangel (2-1): VB och HB djupt och brett, F ensam högt
+- 4v4 Boxen (2-2): VB+HB djupt, VF+HF högt – box-form, backpar säkrar hemåt
+- 4v4 Diamanten (1-2-1): VB som djup point, C1+C2 som vingar, F som spjutspets
+- 4v4 Backbytet (2-1-1): VB+HB djupt, C som länk i mitten, F som styrare högt upp
+- 5v5 Klassisk (2-1-2): VB+HB djupt, C i mitten, VF+HF som forwards
+- 5v5 Styrspel (2-2-1): VB+HB djupt, C1+C2 tätt ihop i mittzon, F som ensam spets som vallar motståndare mot sargen
+- Powerplay Paraplyet (1-2-2): VB som point, C1+C2 som halvbacks, VF+HF högt
+- 6v5 Överbelastning (2-1-3): VB+HB djupt, C i mitten, VF+CF+HF som tre forwards
+- Boxplay (4v5): VB+HB+VF+HF i kompakt box, täcker slottet
 
 ## Kontringens grundprinciper
 - Bolltempot avgörande – bollens fart bestämmer anfallets snabbhet
@@ -290,8 +298,9 @@ Svara ENBART med ett JSON-objekt. Inga förklaringar, ingen text före eller eft
 Du anger INTE x/y-koordinater för spelare eller boll. Taktiktavlan placerar spelarna automatiskt baserat på formation och rollnamn.
 
 ## ROLLNAMN – använd EXAKT dessa:
-Lag A (röda, anfallare): VB, HB, IB, C, C1, C2, VF, HF, CF, MV
+Lag A (röda, anfallare): VB, HB, C, C1, C2, F, VF, HF, CF, MV
 Lag B (blå, motståndare): M1, M2, M3, M4, M5
+Använd ALDRIG BF eller IB.
 
 ## PILAR – ange vem som passar/rör sig:
 - typ "arrow" = passning (streckad linje)
