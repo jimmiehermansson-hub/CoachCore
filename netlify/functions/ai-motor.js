@@ -323,7 +323,7 @@ JSON-format:
   ]
 }
 
-Generera 3-4 steg som visar övningens progression tydligt.
+Generera MAX 3 steg som visar övningens progression. Håll varje steg kompakt.
 Placera spelarna realistiskt på en innebandyplan.
 Alla koordinater MÅSTE vara inom x=40–760, y=40–440.`;
 
@@ -359,11 +359,11 @@ Namn: ${ovningsnamn || "okänd övning"}
 Spelform: ${format || "4v4"}
 Beskrivning: ${beskrivning || ""}
 
-Generera ett komplett JSON-objekt med 3-4 steg som visar övningens progression.`;
+Generera ett komplett JSON-objekt med MAX 3 steg. Håll varje steg kompakt.`;
 
       const response = await client.messages.create({
         model: "claude-sonnet-4-5",
-        max_tokens: 2000,
+        max_tokens: 2500,
         system: SYSTEM_PROMPT_VIZ,
         messages: [{ role: "user", content: prompt }],
       });
