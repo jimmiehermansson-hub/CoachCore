@@ -286,7 +286,7 @@ const SYSTEM_PROMPT_VIZ = `Du är en taktiktavle-generator för innebandy. Din e
 
 Svara ENBART med ett JSON-objekt. Inga förklaringar, ingen text före eller efter. Bara JSON.
 
-Koordinatsystem:
+## KOORDINATSYSTEM
 - Plan: x=40–760, y=40–440
 - Vänster mål: x≈103, Höger mål: x≈697, Mittlinje: x=400
 - Slottet vänster: x=103–193, y=200–280
@@ -294,37 +294,67 @@ Koordinatsystem:
 - Backzon vänster: x=103–300, y=40–440
 - Backzon höger: x=500–697, y=40–440
 
-Spelare: team "A" = röd (anfallare/hemmalag), team "B" = blå (motståndare/försvarare)
-Pilar: typ "arrow" = passning (heldragen), typ "run" = rörelse (streckad)
-Koner: orange prickar, label "K"
-Zoner: farg = "blue" (backzon), "red" (slott), "green" (mittzon), "yellow" (neutral)
+## POSITIONSFÖRKORTNINGAR – använd ALLTID dessa:
+- VB = vänsterback (startar djupt i backzon, x=120–160)
+- HB = högerback (startar djupt i backzon, x=120–160)
+- C = center (rör sig i mittzon, x=280–520)
+- VF = vänsterforward (anfallszon, x=450–650)
+- HF = högerforward (anfallszon, x=450–650)
+- MV = målvakt (vid mål, x=103 eller x=697)
+- M = motståndare (team B)
+Använd ALDRIG BF, IB eller andra interna förkortningar.
 
-JSON-format:
+## BOLLPLACERING – KRITISKA REGLER:
+- Bollen startar ALLTID i backzonen (x=103–280) eller bakom mål (x=103–120)
+- Bollen placeras ALDRIG vid mittlinjen (x=380–420) i startposition
+- Bollen är alltid hos en spelare – samma koordinat som bollhållaren
+- Motståndare placeras på ANDRA SIDAN av bollen – de markerar spelare, inte bollen direkt
+- I uppspelsövningar: bollen startar bakom mål (x=110–120) eller vid sargen i backzon
+
+## REALISTISK SPELARPLACERING:
+- VB/HB startar i backzonen (x=120–200), inte i mitten
+- C rör sig diagonalt, söker spelbarhet – aldrig rakt bakom bollhållaren
+- VF/HF söker djup i anfallszon (x=500–680)
+- Motståndare täcker spelaren, inte rummet – placera dem nära anfallarna de markerar
+- Spelare på samma lag ska ha spridning på hela planens bredd (y=80–400)
+
+## SPELARE OCH PILAR
+Spelare: team "A" = röd (anfallare), team "B" = blå (försvarare/motståndare)
+Pilar: typ "arrow" = passning (röd heldragen), typ "run" = rörelse (vit streckad)
+Koner: orange prickar, label "K" – placeras vid sargen eller i backzon
+Zoner: farg = "blue" (backzon), "red" (slott/farlig zon), "green" (mittzon), "yellow" (neutral)
+
+## JSON-FORMAT:
 {
   "namn": "övningens namn",
   "format": "spelform t.ex. 3v2",
   "steg": [
     {
-      "beskrivning": "kort beskrivning av momentet",
+      "beskrivning": "kort beskrivning av momentet – använd VB/HB/C/VF/HF/MV",
       "spelare": [
-        {"id": "unik_id", "team": "A", "label": "BF", "x": 120, "y": 240}
+        {"id": "vb", "team": "A", "label": "VB", "x": 130, "y": 180},
+        {"id": "hb", "team": "A", "label": "HB", "x": 130, "y": 300},
+        {"id": "c", "team": "A", "label": "C", "x": 320, "y": 200},
+        {"id": "vf", "team": "A", "label": "VF", "x": 520, "y": 160},
+        {"id": "m1", "team": "B", "label": "M", "x": 380, "y": 240}
       ],
-      "boll": {"x": 120, "y": 240},
+      "boll": {"x": 130, "y": 180},
       "pilar": [
-        {"fran": "spelar_id", "till": "spelar_id", "typ": "arrow"}
+        {"fran": "vb", "till": "c", "typ": "arrow"},
+        {"fran": "hb", "till": "hb", "typ": "run"}
       ],
       "koner": [
-        {"x": 160, "y": 180, "label": "K"}
+        {"x": 160, "y": 140, "label": "K"},
+        {"x": 160, "y": 340, "label": "K"}
       ],
       "zoner": [
-        {"typ": "rect", "x1": 103, "y1": 160, "x2": 250, "y2": 320, "farg": "blue", "namn": "Backzon"}
+        {"typ": "rect", "x1": 103, "y1": 80, "x2": 280, "y2": 400, "farg": "blue", "namn": "Backzon"}
       ]
     }
   ]
 }
 
-Generera MAX 3 steg som visar övningens progression. Håll varje steg kompakt.
-Placera spelarna realistiskt på en innebandyplan.
+Generera MAX 3 steg. Håll varje steg kompakt.
 Alla koordinater MÅSTE vara inom x=40–760, y=40–440.`;
 
 const corsHeaders = {
