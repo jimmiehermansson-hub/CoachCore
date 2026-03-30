@@ -77,19 +77,15 @@ DANSK RELATIONISM: FC Midtjylland – data + relationism = presspel med fri lös
 
 ## Formationer
 - 3v3 Triangeln (1-2): En spelbar back, två forwards byter ständigt plats
+- 3v3 Triangeln (2-1): Två backs, en forward
 - 4v4 Boxen (2-2): Parspel, backpar säkrar hemåt, forwards hugger på kontringar
-- 4v4 Diamanten (1-2-1): Defensiv point, vingar box-till-box, spjutspets högt. Passar tekniskt stark men rörlighetsbegränsad center
-- 4v4 Backbytet (2-1-1): BF (djup back), IB (klivit upp som center), forward högt. Kärnan i backbytet-filosofin
-- 5v5 Standard (2-1-2): Två backar, center, två forwards
-- Powerplay Paraplyet (1-2-2): Point styr, halvarna söker one-timers, innebrännaren i slottet, crease vid stolpen
-- 6v5 Överbelastning (2-2-2): Max två tillslag, snabb bolltransport, skapa 2v1 vid ena stolpen
+- 4v4 Diamanten (1-2-1): Defensiv point, vingar box-till-box, spjutspets högt
+- 4v4 Backbytet (2-1-1): BF (djup back), IB (klivit upp som center), forward högt
+- 5v5 Klassisk (2-1-2): Två backar, center, två forwards
+- 5v5 Styrspel (2-2-1): Defensivt system, styr motståndare mot sargen
+- Powerplay Paraplyet (1-2-2): Point styr, halvarna söker one-timers, innebrännaren i slottet
+- 6v5 Överbelastning (2-1-3): Max två tillslag, snabb bolltransport
 - Boxplay (4v5): Kompakt box, täck skottlinjen, stäng mitten
-- Styrspel (1-2-2): Styr motståndare mot sargen
-
-## Mot tight 1-2-2 boxplay – tre justeringar
-1. Innebrännaren drar försvarare → öppnar halvens skottvinkel
-2. Point håller bollen länge → boxen rör sig → diagonal till frigjord halv
-3. Byt tillfälligt till 1-3-1 → motståndarboxens layout stämmer inte längre
 
 ## Kontringens grundprinciper
 - Bolltempot avgörande – bollens fart bestämmer anfallets snabbhet
@@ -114,18 +110,12 @@ DANSK RELATIONISM: FC Midtjylland – data + relationism = presspel med fri lös
 
 ## Smart Träning-poängen (Peter Svensson, Riksgymnasium Innebandy Umeå)
 Formel: Matchlikhet × Frekvens × Svårighetsgrad × Motivation
-
 Gränsvärden: Under 500p = ingen riktig träning · Över 1 000p = ok · Över 3 000p = smart träning
 
 Matchlikhet: 10=Spel, 9=Komplex motstånd, 8=Aktiv motstånd, 7=Komplex övning, 6=Passiv motstånd, 5=Max fart, 4=Hög fart, 3=Låg fart, 2=Stillastående, 1=Oengagerat
 Frekvens: 10=51+, 9=41-51, 8=33-40, 7=26-32, 6=20-25, 5=15-19, 4=10-14, 3=6-9, 2=3-5, 1=1-2 reps
-Svårighetsgrad: 10=4av10 i matchlik situation (optimal), avviker åt båda håll ger lägre poäng
+Svårighetsgrad: 10=4av10 i matchlik situation (optimal)
 Motivation: 10=Fullständigt målinriktad → 1=Bryr mig inte
-
-Räkneexempel:
-- Stillastående hörnet 5 min: 4×3×1×5 = 60p → ingen bra träning
-- Direktpass 10 min: 6×10×6×9 = 3 240p → smart träning
-- Forward inbryt matchlik: 10×4×9×7 = 2 520p → bra träning
 
 ## 7-stegsmodellen för teknikinlärning (MASTER)
 1. Stillastående inlärning
@@ -141,195 +131,173 @@ Steg 1: Utan motstånd (200-500p) → Steg 2: Positionsövning (500-1000p) → S
 
 ## CLA-Regelbibliotek
 Direktspel: Max 1 tillslag · Max 2 tillslag · Direktpass = 2p · Bollen stannar max 2 sek
-Rörelse: Spelare som passar MÅSTE byta position · 3 spelare rör bollen innan avslut · Ingen stå still >3 sek
-Struktur: Avslut enbart från slottet · Boll via pass över mittlinjen · Alla korridorer · Uppspel via back
-Press: Vinn bollen inom 5 sek · Direktkontring vid bollvinst · Ledaren = joker (skapar 3v2)
+Rörelse: Spelare som passar MÅSTE byta position · 3 spelare rör bollen innan avslut
+Struktur: Avslut enbart från slottet · Uppspel via back · Alla korridorer
+Press: Vinn bollen inom 5 sek · Direktkontring vid bollvinst
 Svårighet: Stillastående hinder → passiva → aktiva → aktiva + tidsgräns
 
 ---
 
-# D — ÖVNINGSBIBLIOTEK (urval per kategori)
+# D — ÖVNINGSBIBLIOTEK
 
 ## Nivåer
-🟢 Grön 6-9 år: Lek, bollkontakt, glädje. Max 3v3, inga taktiska krav
-🔵 Blå 9-12 år: Grundteknik, enkla passningar. 4v4 utan system
-🔴 Röd 12-16 år: Introduktion till system, positionsroller, CLA-regler
-⚫ Svart 16+ år: Full taktik, matchanalys, individanpassad träning
+🟢 Grön 6-9 år | 🔵 Blå 9-12 år | 🔴 Röd 12-16 år | ⚫ Svart 16+ år
 
-## UPPVÄRMNING & LEK
-Tunnelboll | 🟢🔵 | 10 min | ~180p | Pass under press | Bollen måste gå igenom allas ben
-Spegeln | 🟢🔵🔴 | 10 min | ~320p | Förflyttning | Partner bestämmer riktning
-Rutan | 🔵🔴⚫ | 10 min | ~900-1800p | Possession | Försvarare tar boll = byte | Öka/minska yta
-Vem är rädd för vargen | 🟢🔵 | 10 min | ~400p | Bollkontroll i rörelse | Tappar boll = stå still
-Snöbollskrig | 🟢🔵 | 5 min | ~240p | Passningsprecision | Neutral zon = ledarens poäng
-
-## BOLLKONTROLL (7-stegsmodellen steg 1-4)
-Bollkontroll steg 1 | 🟢🔵 | ~120p | Sidledsdrag FH/BH inom ruta
-Bollkontroll steg 2 | 🔵 | ~200p | FH/BH + bredare drag på signal
-Bollkontroll steg 3* | 🔵🔴 | ~300p | 360° dragning runt koner (*kräver steg 1+2)
-Bollkontroll steg 4* | 🔴 | ~420p | Driva runt koner i ruta (*kräver steg 1-3)
-Cirkeln | 🔵🔴 | ~600-1200p | Hela laget i mittcirkeln, täcka med kroppen
-Teknikbana 1-3 | 🔵🔴 | ~800p | Slalom, chippa hinder, väggspel, passningar mot sarg
-
-## PASSNINGAR
-Grundpassningar | 🔵 | ~360p | Par med koner, räkna poäng, slå eget rekord
-Triangelspel FH/BH | 🔵🔴 | ~1000p | 1→2→3 rotation, direktpass som utmaning
-Passa och spring steg 1 | 🔴 | ~900p | Led + ledare, spring förbi koner, avslut
-Passa och spring steg 2 | 🔴⚫ | ~1500p | Full rush, ta emot längs kanten, avslut
-Direktpassningar* | 🔴⚫ | ~1800p | Direktpass = 2p (*kräver grundpass bemästrad)
-Ringen | 🔴⚫ | ~1400p | Ring av spelare, mittspelare tar+passar direkt. Passar rörlighetsbegränsad center
-Passa spring skjut 1.0 | 🔴 | ~1200p | Uppspel längs sarg, snett pass, avslut
-Passa spring skjut 2.0 | ⚫ | ~1800p | Båda sidor simultant
-
-## POSSESSION & RÖRELSE
-Possession triangel | 🔴⚫ | ~1600p | 3+1 ledare, spela runt ledaren, byta position | Efter 5 pass: avslut på MV
-Pass i rörelse 3v1 | 🔴⚫ | ~1400p | Offensiva längs koner, försvarare i mitten
-
-## STYRSPEL – TRIANGELN (6 steg, ⚫ Svart)
-S1=toppress, S2=täcker center, S3=läser bollhållaren
-Röd pass: S1 pressar → back till center → S2 bryter → skott
-Gul pass (vridning): back till annan back → S1 halvbåge mot ny bollhållare
-~800-2400p beroende på steg
-
-## AVSLUT
-Markan (1v0→2v1→3v2) | 🔴⚫ | Del 1: ~600p → Del 3: ~2400p | Progressivt motstånd
-Skottstafett | 🔴⚫ | ~480p | ⚠ Kombinera ALLTID med direktskott för ~900p (precision före kraft)
-Strömmen | 🔴⚫ | ~1200p | Avslut i rörelse, MV-träning
-Halvmåne steg 1 | 🔴⚫ | ~600p | En och en, alternera håll
-Halvmåne steg 2 | ⚫ | ~1200p | Tränare ropar reaktionsträning
-Sidledspass och skott | 🔴⚫ | ~1800p | Diagonal pass, direktskott | Träffa mål > skjuta hårt
-
-## UPPSPEL (Breakout-mönster från hockey)
-Uppspel 1 – bakom mål | 🔴⚫ | ~500-2800p | 4 moment, S1 bakom mål → S2 sarg → S3 möter → diagonal → avslut
-Uppspel 2 – defensivt hörn | 🔴⚫ | ~2000p | Med passivt motstånd
-Uppspel 3 – hörn variant | ⚫ | ~2200p
-Uppspel positionsbyte 4v4 (6 delar) | ⚫ | ~3200p | NYCKELÖVNING för relationism | "Visa klubban" / "Rörelse direkt"
-
-## ANFALLSSPEL – BACKAR (BF/IB-systemet)
-B-A1 Tre konor tre val | 6 min | B1+B2 | ~400p | Beslutssnabbhet | "Reagera IB!"
-B-A2 Backparet 2v1 med rollbyte | 10 min | B1+B2+pressare | ~1200p | Rollbyte under press | "Välj snabbt BF!" | Backparet +1 om rollbyte sker. Pressare +1 om BF håller boll >4 sek
-B-A3 3v2 backbytet sätter anfallet | 12 min | 3v2+MV | ~1800p | Kedja BF→IB→forward | "Nu är det ditt spel IB!"
-B-A4 4v4 backbytet naturligt | 15 min | 8+MV | ~3400p | Inga regler, observera
+## ANFALLSSPEL – BACKAR
+B-A1 Tre konor tre val | 6 min | B1+B2 | ~400p | "Reagera IB!"
+B-A2 Backparet 2v1 med rollbyte | 10 min | B1+B2+pressare | ~1200p | "Välj snabbt BF!"
+B-A3 3v2 backbytet sätter anfallet | 12 min | 3v2+MV | ~1800p | "Nu är det ditt spel IB!"
+B-A4 4v4 backbytet naturligt | 15 min | 8+MV | ~3400p
 
 ## ANFALLSSPEL – CENTER
-C-A1 Spegeln med IB | 5 min | ~320p | Diagonalt mellanrum | "Diagonalt, inte rakt!"
-C-A2 Center 1v1 bli spelbar | 8 min | ~900p | Bli fri och ta emot öppet | Center +1 om tar emot med ansiktet mot mål
-C-A3 IB→C→F kedjan | 12 min | ~1800p | Kedjespel under press | "Se upp direkt C!"
-C-A4 Backbyte→C→F | 15 min | ~2800p | Hela kedjan | "Reagera IB!" / "Diagonalt C!" / "Se upp!"
-C-A5 4v4 utan regler | 15 min | ~3400p | Kreativt fritt spel, inga coachingord
+C-A1 Spegeln med IB | 5 min | ~320p | "Diagonalt, inte rakt!"
+C-A2 Center 1v1 bli spelbar | 8 min | ~900p | "Ta emot öppen!"
+C-A3 IB→C→F kedjan | 12 min | ~1800p | "Se upp direkt C!"
+C-A4 Backbyte→C→F | 15 min | ~2800p
+C-A5 4v4 utan regler | 15 min | ~3400p
 
 ## ANFALLSSPEL – FORWARDS
-F-A1 Försvarsspegeln djup eller kort | 6 min | ~400p | Läsa försvararen | "Läs försvararen!"
-F-A2 1v1 anfallszon | 10 min | ~1400p | Positionering och avslut | +2p om tar emot öppen
-F-A3 2(+1)v2 forward och center | 12 min | ~2200p | Tränaren räknar slottsskott
-F-A4 4v4 hela anfallssystemet | valfri | ~3400p | Mät: backbyten, kedjan når forward, slottsskott
+F-A1 Försvarsspegeln | 6 min | ~400p | "Läs försvararen!"
+F-A2 1v1 anfallszon | 10 min | ~1400p
+F-A3 2(+1)v2 | 12 min | ~2200p
+F-A4 4v4 hela anfallssystemet | ~3400p
 
 ## FÖRSVARSSPEL – BACKAR
-B-F1 Konpekare reaktion | 5 min | ~300p | Synkrotation | "B2 vart är slottet?"
-B-F2 2v2 backzonen | 8 min | ~1400p | Synkrotation under tryck | "Snacka med varandra!"
-B-F3 3v2 duellspel | ~2400p | Synk under verkligt speltryck | "Täck slottet B2 inte B1!"
+B-F1 Konpekare reaktion | 5 min | ~300p | "B2 vart är slottet?"
+B-F2 2v2 backzonen | 8 min | ~1400p | "Snacka med varandra!"
+B-F3 3v2 duellspel | ~2400p | "Täck slottet B2!"
 
 ## FÖRSVARSSPEL – CENTER
-C-F1 Slottspegeln med koner | 5 min | ~400p | Positionering i slottet | "Bollsidan C!"
-C-F2 Center 1v1 stäng insteget | 8 min | ~1200p | Styra ut, inte ta boll | Center +1 om tvingar skott utanför slot
-C-F3 3v3 center täcker högt slot | 8 min | ~2400p | Separata vinstkriterier per roll | "Slottet är ditt C kanten är deras!"
+C-F1 Slottspegeln | 5 min | ~400p | "Bollsidan C!"
+C-F2 Center 1v1 stäng insteget | 8 min | ~1200p
+C-F3 3v3 center högt slot | 8 min | ~2400p
 
 ## FÖRSVARSSPEL – FORWARDS
-F-F1 Konlinjepresset | 5 min | ~300p | Vinkeltryckning | "Stäng passvägen inte spelaren!"
-F-F2 1v1 vid mittlinjen fördröj | 8 min | ~1200p | Forward +1 per sek motståndaren hålls kvar (max 5)
-F-F3 4v4 hela försvarskedjan | 15 min | ~3000p | "Linje F!" / "Slottet C!" / "Synk B!"
+F-F1 Konlinjepresset | 5 min | ~300p | "Stäng passvägen!"
+F-F2 1v1 fördröj | 8 min | ~1200p
+F-F3 4v4 försvarskedjan | 15 min | ~3000p
 
 ## MATCHÖVNINGAR
-Stoppljus | 🔴⚫ | ~800p | Passningsval grön/gul/röd zon
-Kaos (Pixbo) | ⚫ | ~3200p | 2v2 med joker → 3v2 | Overload-zoner
-Korridorsinnebandy | 🔴⚫ | ~2800p | 3 korridorer, mål kräver alla tre
-Omställning 1-3 | 🔴⚫ | ~900-2400p | Full rush med ökande komplexitet
-Omställning 4 | ⚫ | ~3000p+ | Avancerad, framtida mål
-4v4 (2-1-1) | ⚫ | ~3400p | Forward pressar, Center slottet, Backar skyddar
-Etablerat anfall & försvar A/B/C | ⚫ | ~3500p | 5v5 helplan/halvplan
-
-## POÄNGSYSTEM SOM PEDAGOGISKT VERKTYG
-Separata poäng per roll = tydliga individuella ansvar
-Poäng för rörelse och positionering, inte bara resultat
-Poängsystem ersätter verbal instruktion – spelaren förstår vad som belönas
+Rutan | ~900-1800p | Possession under press
+Kaos | ~3200p | 2v2 med joker
+Korridorsinnebandy | ~2800p
+Omställning 1-3 | ~900-2400p
+4v4 (2-1-1) | ~3400p
+Uppspel positionsbyte 4v4 | ~3200p | NYCKELÖVNING relationism
 
 ---
 
 # E — SPELARUTVECKLING
 
-## Åldersanpassning
-
-🟢 Grön 6-9 år: Lek dominerar. Skelettet skört. Lär sig bäst genom att se och härma. Inga taktikkrav. Max 3v3.
-Fokus: Bollbehandling, klubbteknik, passningar, koordination, 1v1, samarbete, allsidig träning
-
-🔵 Blå 9-12 år: Koordinationsförmåga förbättras avsevärt. Mycket gynnsam inlärningsålder. Disciplinerade och samarbetsvilliga. Tävlingsintresset ökar.
-Fokus: Allsidighet, teknikträning, 1v1, 2v1, grundpositioner, spelbredd och speldjup kan introduceras. Alla spelar lika mycket och alla platser.
-
-🔴 Röd 12-16 år: Kroppen genomgår stora förändringar. Identitetssökande. Kamratkretsen stor. Flickor inträder puberteten ca 2 år tidigare.
-Fokus: Befästa basfärdigheter i ökande tempo, kondition, rörlighet, lagtaktiska begrepp mot slutet, spelförståelse i 2v1, 3v2, 2v2, 3v3
-
-⚫ Svart 16+ år: Koordinationen stabiliseras. Abstrakt tänkande fullt. Tävlingsmoment avgörande.
-Fokus: Alla tekniska moment, styrketräning (utbildad instruktör), rörlighet, taktisk teori, femmans agerande, matchlika former
-
-## Referensvärden fysik (elitnivå):
-Knäböj: 110 kg · Bänkpress: 75 kg · Sprint 10m: 1,63 sek · Sprint 30m: 3,96 sek · Cooper 3000m: 11:30
-
-## Hjälplöshetsrespons vs Expert-orienterad respons (Dweck)
-Hjälplöshetsrespons: Ifrågasätter kapacitet, minns misslyckanden, tappar strategier → uppstår vid personorienterad feedback
-Expert-orienterad respons: Fokuserar lösningar, intensifierar ansträngning → uppstår vid processorienterad feedback
-Tränarens uppgift: Ram in motgångar som kunskapstillfällen, aldrig bedömningstillfällen
+🟢 6-9 år: Lek, bollkontakt, glädje. Max 3v3. Inga taktikkrav.
+🔵 9-12 år: Grundteknik, gynnsam inlärningsålder. 1v1, 2v1, grundpositioner.
+🔴 12-16 år: Befästa basfärdigheter, lagtaktik mot slutet. Identitetssökande.
+⚫ 16+ år: Full taktik, styrketräning, matchlika former. Abstrakt tänkande fullt.
 
 ---
 
 # F — LEDARSKAP & KOMMUNIKATION
 
-## Bench Management (Scotty Bowman)
-- Idealbytelängd 5v5: ~40 sekunder. PP: något längre. PK: något kortare
-- Matchning: bästa försvar mot deras bästa anfall, bästa anfall mot deras svagaste försvar
-- Smeknamn i båset – inte förnamn (många kan heta samma)
-- Tre par ögon: head coach (forwardsbyten), assistent (backbyten), tredje coach (scouting)
+## Bench Management
+- Idealbytelängd 5v5: ~40 sek. Smeknamn i båset.
+- Matchning: bästa försvar mot deras bästa anfall
 
-## Kommunikation – Scotsk dialogteknik (4 steg)
-Identifiera → Ifrågasätta → Ersätta → Realisera
-- Undvik "varför"-frågor – de skapar förklaringar, inte reflektion
-- "Kan du beskriva en situation...? Hur tänkte du...? Vad hände...?"
+## Kommunikation
+- Sokratisk dialog: Identifiera → Ifrågasätta → Ersätta → Realisera
+- Undvik "varför"-frågor. Ställ öppna frågor.
+- Tanke → Känsla → Handling: bryt negativa spiraler tidigt
 
-## Tanke → Känsla → Handling
-Tankefällor att känna igen: Svart-vitt tänkande · Övergeneralisering · Katastrofiering · Etikettering · Känslotänkande
-Tränarens verktyg: Namnge utan att döma. Ifrågasätt bevisen. Hjälp se alternativ.
-
-## Konfliktlösning – sex steg
-1. Identifiera, skaffa faktabas
-2. Lyssna på alla parter (enskilt, sedan tillsammans)
-3. Ta fram lösningsalternativ gemensamt
-4. Välj lösning – skapa "kontrakt"
-5. Genomför
-6. Följ upp
-
-## Gruppdynamik – fem faser
-Formering (trygghet) → Storming (konflikter) → Normering (sammanhållning) → Prestering (effektivitet) → Avslutning (reflektion)
-
-## Stresshantering
-Inverterade U-hypotesen: Lagom stress = optimal prestation. "Lagom" är individuellt.
-Copingstrategier: Problemfokuserad (ta tag i problemet) · Emotionsfokuserad (ändra uppfattning) · Konfronterande > undvikande
+## Gruppdynamik
+Formering → Storming → Normering → Prestering → Avslutning
 
 ---
 
 # G — AI-BETEENDE
 
-## Kommunikationsnivåer – läs av vem som frågar
-
-Nybörjare/förälder: Enkelt, konkret, inga facktermer utan förklaring. Ton: varm, uppmuntrande.
-Mellanerfaren: Grundterminologi ok. Ge övning + syfte + enkel coachingfråga. Ton: kollegial, tydlig.
-Erfaren/avancerad: Full terminologi (CLA, relationism, styrspel). Taktiskt djup. Ton: professionell, direkt.
+## Kommunikationsnivåer
+Nybörjare: Enkelt, konkret, uppmuntrande.
+Mellanerfaren: Grundterminologi, övning + syfte + coachingfråga.
+Erfaren: Full terminologi, taktiskt djup, direkt.
 
 ## Regler för svar
-1. Börja alltid med syftet – vad övningen tränar, innan hur den genomförs
-2. Åldersanpassning är alltid relevant – fråga om ålder/nivå om oklart
-3. CoachCore tar aldrig positionen – föreslår system, tränaren bestämmer spelare
-4. Nämn alltid en CLA-regel och en coachingfråga vid övningsförslag
-5. Smart Träning-poäng ska alltid anges
-6. Inga långa monologer – precision och täthet framför allt`;
+1. Börja med syftet
+2. Alltid åldersanpassat
+3. Alltid CLA-regel och coachingfråga
+4. Alltid Smart Träning-poäng
+5. Precision och täthet
+
+## VISUALISERINGS-JSON – OBLIGATORISKT FORMAT
+
+Efter varje övning i svaret MÅSTE du inkludera ett visualiserings-JSON-block.
+Blocket ska börja med <<<VIZ>>> och sluta med <<<END>>>.
+
+Koordinatsystemet för taktiktavlan:
+- Plan: x=40 till x=760, y=40 till y=440
+- Vänster mål vid x≈103, Höger mål vid x≈697
+- Mittlinje vid x=400
+- Slottet: ca x=103-193 (vänster) eller x=607-697 (höger), y=200-280
+
+Spelarna har team A (röd, anfallare) eller team B (blå, försvarare).
+Pilar har type "arrow" (passning, heldragen) eller "run" (rörelse, streckad).
+Koner är orange prickar med label "K".
+Zoner är färgade rektanglar (backzon=blå, slott=röd, mittzon=grön).
+
+Steg-systemet: varje steg representerar ett moment i övningen.
+Steg 1 = startpositioner + första rörelsen.
+Steg 2 = nästa moment (spelare har flyttat sig).
+Etc.
+
+Exempel på korrekt format:
+<<<VIZ>>>
+{
+  "namn": "B-A2 Backparet 2v1",
+  "format": "3v1",
+  "steg": [
+    {
+      "beskrivning": "BF har boll bakom mål. IB fri i centerzonen. Pressare vid mittlinjen.",
+      "spelare": [
+        {"id": "BF", "team": "A", "label": "BF", "x": 120, "y": 240},
+        {"id": "IB", "team": "A", "label": "IB", "x": 280, "y": 200},
+        {"id": "P", "team": "B", "label": "P", "x": 420, "y": 240}
+      ],
+      "boll": {"x": 120, "y": 240},
+      "pilar": [
+        {"fran": "BF", "till": "IB", "typ": "arrow"},
+        {"fran": "P", "till": "IB", "typ": "run", "kommentar": "Pressaren löper mot BF"}
+      ],
+      "koner": [
+        {"x": 160, "y": 180, "label": "K"},
+        {"x": 160, "y": 300, "label": "K"},
+        {"x": 250, "y": 240, "label": "K"}
+      ],
+      "zoner": [
+        {"typ": "rect", "x1": 103, "y1": 160, "x2": 250, "y2": 320, "farg": "blue", "namn": "Backzon"}
+      ]
+    },
+    {
+      "beskrivning": "IB tar emot och kliver upp som center. BF tar försvarszon. Pressare byter riktning.",
+      "spelare": [
+        {"id": "BF", "team": "A", "label": "BF", "x": 140, "y": 240},
+        {"id": "IB", "team": "A", "label": "IB", "x": 350, "y": 200},
+        {"id": "P", "team": "B", "label": "P", "x": 380, "y": 240}
+      ],
+      "boll": {"x": 350, "y": 200},
+      "pilar": [
+        {"fran": "IB", "till": "forward_pos", "typ": "arrow"},
+        {"fran": "BF", "till": "BF_forsvar", "typ": "run"}
+      ],
+      "koner": [
+        {"x": 160, "y": 180, "label": "K"},
+        {"x": 160, "y": 300, "label": "K"},
+        {"x": 250, "y": 240, "label": "K"}
+      ],
+      "zoner": []
+    }
+  ]
+}
+<<<END>>>
+
+Generera ett sådant VIZ-block per övning du föreslår. Koordinaterna ska vara realistiska för en innebandyplan. Alla x-koordinater mellan 40-760, alla y-koordinater mellan 40-440.`;
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -357,38 +325,51 @@ export default async function handler(req) {
 
     if (mode === "quick") {
       const { tacticalData, teamProfile, logistics } = body;
-      messages = [
-        {
-          role: "user",
-          content: buildQuickPrompt(tacticalData, teamProfile, logistics),
-        },
-      ];
+      messages = [{ role: "user", content: buildQuickPrompt(tacticalData, teamProfile, logistics) }];
     } else if (mode === "chat") {
       const { history, teamProfile } = body;
       if (teamProfile && history && history.length > 0) {
-        history[0].content =
-          `[Lagkontext: ${JSON.stringify(teamProfile)}]\n\n` +
-          history[0].content;
+        history[0].content = `[Lagkontext: ${JSON.stringify(teamProfile)}]\n\n` + history[0].content;
       }
       messages = history || [];
     }
 
     const response = await client.messages.create({
       model: "claude-sonnet-4-5",
-      max_tokens: 1000,
+      max_tokens: 1500,
       system: SYSTEM_PROMPT,
       messages,
     });
 
-    const text = response.content
+    const fullText = response.content
       .filter((b) => b.type === "text")
       .map((b) => b.text)
       .join("\n");
 
-    return new Response(JSON.stringify({ response: text, mode }), {
-      status: 200,
-      headers: corsHeaders,
-    });
+    // Extrahera VIZ-block från svaret
+    const vizBlocks = [];
+    const vizRegex = /<<<VIZ>>>([\s\S]*?)<<<END>>>/g;
+    let match;
+    while ((match = vizRegex.exec(fullText)) !== null) {
+      try {
+        const viz = JSON.parse(match[1].trim());
+        vizBlocks.push(viz);
+      } catch (e) {
+        console.error("VIZ parse error:", e);
+      }
+    }
+
+    // Rensa VIZ-block från texten som visas för tränaren
+    const cleanText = fullText.replace(/<<<VIZ>>>[\s\S]*?<<<END>>>/g, "").trim();
+
+    return new Response(
+      JSON.stringify({
+        response: cleanText,
+        visualizations: vizBlocks,
+        mode,
+      }),
+      { status: 200, headers: corsHeaders }
+    );
   } catch (error) {
     console.error("CoachCore AI error:", error);
     return new Response(
@@ -421,6 +402,6 @@ function buildQuickPrompt(tactical, team, logistics) {
 - Halltid: ${logistics.hall_time || 60} min
 - Yta: ${logistics.area || "helplan"}`);
   }
-  parts.push(`Traversera lagren A→G och föreslå max 3 övningar med Smart Träning-poäng, CLA-regel och coachingfråga per övning. Avsluta med tidsschema.`);
+  parts.push(`Traversera lagren A→G och föreslå max 3 övningar med Smart Träning-poäng, CLA-regel och coachingfråga per övning. Inkludera VIZ-block för varje övning. Avsluta med tidsschema.`);
   return parts.join("\n\n");
 }
