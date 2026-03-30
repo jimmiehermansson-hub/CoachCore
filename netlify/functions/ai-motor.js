@@ -281,81 +281,62 @@ Erfaren/avancerad: Full terminologi, taktiskt djup. Ton: professionell, direkt.
 6. Föreslå EXAKT 1 övning – håll texten kort och konkret (max 20 rader)
 7. Inkludera INTE VIZ-block – visualiseringen hanteras separat`;
 
-// System prompt för VIZ-generering – bara JSON
-const SYSTEM_PROMPT_VIZ = `Du är en taktiktavle-generator för innebandy. Din enda uppgift är att generera ett korrekt JSON-objekt för visualisering av en innebandyövning.
+// System prompt för VIZ-generering – roller och pilar, INGA koordinater
+const SYSTEM_PROMPT_VIZ = `Du är en taktiktavle-generator för innebandy. Din uppgift är att generera ett JSON-objekt som beskriver en övning med roller och pilar.
 
 Svara ENBART med ett JSON-objekt. Inga förklaringar, ingen text före eller efter. Bara JSON.
 
-## KOORDINATSYSTEM
-- Plan: x=40–760, y=40–440
-- Vänster mål: x≈103, Höger mål: x≈697, Mittlinje: x=400
-- Slottet vänster: x=103–193, y=200–280
-- Slottet höger: x=607–697, y=200–280
-- Backzon vänster: x=103–300, y=40–440
-- Backzon höger: x=500–697, y=40–440
+## VIKTIGT – INGA KOORDINATER
+Du anger INTE x/y-koordinater för spelare eller boll. Taktiktavlan placerar spelarna automatiskt baserat på formation och rollnamn.
 
-## POSITIONSFÖRKORTNINGAR – använd ALLTID dessa:
-- VB = vänsterback (startar djupt i backzon, x=120–160)
-- HB = högerback (startar djupt i backzon, x=120–160)
-- C = center (rör sig i mittzon, x=280–520)
-- VF = vänsterforward (anfallszon, x=450–650)
-- HF = högerforward (anfallszon, x=450–650)
-- MV = målvakt (vid mål, x=103 eller x=697)
-- M = motståndare (team B)
-Använd ALDRIG BF, IB eller andra interna förkortningar.
+## ROLLNAMN – använd EXAKT dessa:
+Lag A (röda, anfallare): VB, HB, IB, C, C1, C2, VF, HF, CF, MV
+Lag B (blå, motståndare): M1, M2, M3, M4, M5
 
-## BOLLPLACERING – KRITISKA REGLER:
-- Bollen startar ALLTID i backzonen (x=103–280) eller bakom mål (x=103–120)
-- Bollen placeras ALDRIG vid mittlinjen (x=380–420) i startposition
-- Bollen är alltid hos en spelare – samma koordinat som bollhållaren
-- Motståndare placeras på ANDRA SIDAN av bollen – de markerar spelare, inte bollen direkt
-- I uppspelsövningar: bollen startar bakom mål (x=110–120) eller vid sargen i backzon
+## PILAR – ange vem som passar/rör sig:
+- typ "arrow" = passning (streckad linje)
+- typ "run" = rörelse/löpning (heldragen linje)
+- "fran" och "till" = rollnamn (t.ex. "VB", "C", "VF")
+- "till" kan också vara en riktningsbeskrivning: "framåt", "höger", "vänster", "djup", "backzon"
 
-## REALISTISK SPELARPLACERING:
-- VB/HB startar i backzonen (x=120–200), inte i mitten
-- C rör sig diagonalt, söker spelbarhet – aldrig rakt bakom bollhållaren
-- VF/HF söker djup i anfallszon (x=500–680)
-- Motståndare täcker spelaren, inte rummet – placera dem nära anfallarna de markerar
-- Spelare på samma lag ska ha spridning på hela planens bredd (y=80–400)
+## KONER – ange antal och placering relativt planen:
+- placering: "backzon-vänster", "backzon-höger", "mittzon", "slott", "sargen-vänster", "sargen-höger"
 
-## SPELARE OCH PILAR
-Spelare: team "A" = röd (anfallare), team "B" = blå (försvarare/motståndare)
-Pilar: typ "arrow" = passning (röd heldragen), typ "run" = rörelse (vit streckad)
-Koner: orange prickar, label "K" – placeras vid sargen eller i backzon
-Zoner: farg = "blue" (backzon), "red" (slott/farlig zon), "green" (mittzon), "yellow" (neutral)
+## ZONER:
+- typ: "backzon", "slott", "mittzon" – taktiktavlan ritar dem på rätt plats automatiskt
 
 ## JSON-FORMAT:
 {
   "namn": "övningens namn",
-  "format": "spelform t.ex. 3v2",
+  "spelform": "4v4",
+  "formation": "Boxen 2-2",
   "steg": [
     {
-      "beskrivning": "kort beskrivning av momentet – använd VB/HB/C/VF/HF/MV",
-      "spelare": [
-        {"id": "vb", "team": "A", "label": "VB", "x": 130, "y": 180},
-        {"id": "hb", "team": "A", "label": "HB", "x": 130, "y": 300},
-        {"id": "c", "team": "A", "label": "C", "x": 320, "y": 200},
-        {"id": "vf", "team": "A", "label": "VF", "x": 520, "y": 160},
-        {"id": "m1", "team": "B", "label": "M", "x": 380, "y": 240}
-      ],
-      "boll": {"x": 130, "y": 180},
+      "beskrivning": "VB har boll i backzon. IB klivar upp som center. VF söker djup.",
+      "bollhos": "VB",
       "pilar": [
-        {"fran": "vb", "till": "c", "typ": "arrow"},
-        {"fran": "hb", "till": "hb", "typ": "run"}
+        {"fran": "VB", "till": "IB", "typ": "arrow"},
+        {"fran": "VB", "till": "backzon", "typ": "run"},
+        {"fran": "IB", "till": "framåt", "typ": "run"},
+        {"fran": "VF", "till": "djup", "typ": "run"}
       ],
-      "koner": [
-        {"x": 160, "y": 140, "label": "K"},
-        {"x": 160, "y": 340, "label": "K"}
+      "koner": ["backzon-vänster", "backzon-vänster"],
+      "zoner": ["backzon"]
+    },
+    {
+      "beskrivning": "IB tar emot som center och spelar till VF i anfallszonen.",
+      "bollhos": "IB",
+      "pilar": [
+        {"fran": "IB", "till": "VF", "typ": "arrow"},
+        {"fran": "VB", "till": "framåt", "typ": "run"}
       ],
-      "zoner": [
-        {"typ": "rect", "x1": 103, "y1": 80, "x2": 280, "y2": 400, "farg": "blue", "namn": "Backzon"}
-      ]
+      "koner": [],
+      "zoner": ["slott"]
     }
   ]
 }
 
-Generera MAX 3 steg. Håll varje steg kompakt.
-Alla koordinater MÅSTE vara inom x=40–760, y=40–440.`;
+Generera MAX 3 steg. Fokusera på att beskriva rörelsen korrekt med rätt rollnamn och pilriktningar.`;
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -382,14 +363,16 @@ export default async function handler(req) {
 
     // VIZ-läge: generera bara JSON för taktiktavlan
     if (mode === "viz") {
-      const { ovningsnamn, format, beskrivning } = body;
+      const { ovningsnamn, spelform, formation, beskrivning } = body;
       const prompt = `Generera en taktiktavle-visualisering för följande innebandyövning:
 
 Namn: ${ovningsnamn || "okänd övning"}
-Spelform: ${format || "4v4"}
+Spelform: ${spelform || "4v4"}
+Formation: ${formation || "Boxen 2-2"}
 Beskrivning: ${beskrivning || ""}
 
-Generera ett komplett JSON-objekt med MAX 3 steg. Håll varje steg kompakt.`;
+Inkludera "spelform" och "formation" exakt som angivna ovan i JSON-svaret.
+Generera MAX 3 steg med rollnamn och pilar.`;
 
       const response = await client.messages.create({
         model: "claude-sonnet-4-5",
