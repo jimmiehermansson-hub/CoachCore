@@ -331,6 +331,44 @@ Målvaktens positionering styrs av bollens placering på planen.
 - "Hur tidigt läste du att bollen var på väg mot Täckzonen?"
 - "Vad såg du från Ståzonen som du inte sett från grundställning?"
 
+### Grundposition – Triangelmodellen (SIBF, blå nivå)
+
+*Källa: SIBF "Tips och övningar för ledare på blå nivå"*
+
+Grundpositionen byggs med hjälp av två trianglar:
+
+**Triangel 1 — Knä, fot, höft:**
+- Knäavstånd ungefär axelbrett
+- Håll ihop fötterna så att det bildas en triangel mellan knän och fötter
+- MV ska INTE sitta med rumpan på fötterna — försvårar förflyttning kraftigt
+
+**Triangel 2 — Knä, höft, näsa:**
+- MV lutar överkroppen lite framåt
+- Ger kontroll på vart skott som tar i bröstet tar vägen
+
+**Armarnas position:**
+- Armbågen framför kroppen — gör armarna rörligare
+- Underlättar grepp med båda händerna
+- Träningsknep: låt MV hålla fast en klubba/pinne mellan armarna och överkroppen för att få fram händerna
+
+### Förflyttningar för målvakten
+
+**Förflyttning vid bollförare som rör sig längsmed (kort förflyttning):**
+- Gå på knäna för att följa med spelaren
+- Håll grundpositionen under hela förflyttningen
+- Håll ihop fötterna under rörelsen
+
+**Pull-förflyttning (längre förflyttning):**
+- Dra med det ben som är i den riktning MV ska röra sig
+- Träna på att anpassa kraftinsatsen för att glida rätt långt
+- Fokus: balans i kroppen när positionen nås
+
+**Push-förflyttning (längre förflyttning, alternativ):**
+- Tryck med motsatt ben i förhållande till rörelseriktningen
+- Samma krav på kraftanpassning och balans vid ankomst
+
+**Notering:** Många MV föredrar ett ben — tillåt det men uppmuntra aktivt att träna båda benen för att maximera handlingsfriheten.
+
 ---
 
 # C — TRÄNINGSDESIGN
@@ -557,13 +595,259 @@ Smart Träning-poäng anges som referensvärde per övning i grundformat.
 **Snöbollskrig**
 - Nivå: 🟢 Grön · 🔵 Blå
 - Tid: 5 min | Två lag
-- Syfte: Passningsprecision, hitta luckor, glädje
-- CLA-regel: Neutral zon = ledarens poäng
+- Syfte: Passningsprecision, hitta luckor, glädje, splitvision och rumsuppfattning
+- Organisation: Tre zoner — lag på varsin planhalva, neutral zon vid mittlinjen. Lagen passa bollarna till motståndarens sida. Ledaren blåser av — minst bollar på sin sida vinner
 - Smart Träning: ~240p
 
 ---
 
-## D2. Bollkontroll
+## D1b. Lekbank – Grön nivå (SIBF)
+
+*23 lekar och övningar från SIBF:s "Ny som ledare"-material för grön nivå. Kategoriserade efter syfte.*
+
+### Förberedelseträning / Uppvärmning
+
+**Skeppsbrott**
+- Nivå: 🟢 Grön
+- Tid: 5–10 min | 2–4 lag
+- Syfte: Aktivering, splitvision, taktik, kommunikation med lagkamrater
+- Hur: Placera ut så många föremål som möjligt i hallen. Sätt ut mål och dela in i lag. Spela innebandy trots alla hinder. Spelarna måste lyfta blicken och skapa strategi för att göra mål
+- Smart Träning: ~400p
+
+**Koordinationslek**
+- Nivå: 🟢 Grön
+- Tid: 5–10 min | Individuell och par
+- Syfte: Koordination, reaktion, balans
+- Hur: Med klubba och boll — spring framåt/bakåt, snurra ett varv, fortsätt. Sitt ned, kasta upp bollen, ställ dig upp och fånga. Par: en sitter, en bakom släpper bollen; den sittande försöker ta den
+- Smart Träning: ~200p
+
+**Snabba Konan**
+- Nivå: 🟢 Grön
+- Tid: 5 min | Par vid koner
+- Syfte: Reaktionssnabbhet
+- Hur: Två och två sitter på huk med en kon emellan. Ledaren ropar "huvud", "axlar" eller "kon" — vid "kon" ska spelaren knycka konen fortast. Den som tar konen vinner
+- Smart Träning: ~180p
+
+**Kom alla mina små kycklingar**
+- Nivå: 🟢 Grön
+- Tid: 5–10 min | 3–4 lag
+- Syfte: Passningsspel, bollkontroll under press, samarbete
+- Hur: En ledare = höna, en = varg. Lagen (3–4 spelare) försöker föra bollen förbi vargen med minst 2 passningar. Vargen tar bollen → den spelaren blir varg. Fortsätt tills bara 2 kvar i laget
+- Variant: Barnen driver varsin boll förbi vargen
+- Smart Träning: ~480p
+
+### Lekövningar – Bollkontroll och Finter
+
+**Under hökens alla vingar**
+- Nivå: 🟢 Grön
+- Tid: 5–7 min | Hela laget
+- Syfte: Bollkontroll i rörelse, driva boll, reaktion på signal
+- Hur: Barnen med klubba och boll längs kortsidan. En i mitten ropar "under alla hökens vingar kom" + en färg. De med den färgen på kläderna driver fritt förbi. Höken försöker kulla de övriga. Kullade hjälper till i mitten
+- Smart Träning: ~360p
+
+**Svanskull**
+- Nivå: 🟢 Grön · 🔵 Blå
+- Tid: 5–7 min | Hela laget
+- Syfte: Förflyttning, rumsuppfattning, kroppskontroll
+- Hur: Varje barn sätter ett band som "svans" i byxorna. Samla andras svansar — skydda din egen. Varieras med svansen på vänster/höger sida
+- Smart Träning: ~300p
+
+**Kull med passning**
+- Nivå: 🟢 Grön · 🔵 Blå
+- Tid: 5–7 min | Hela laget
+- Syfte: Passningar under press, hjälpa lagkamrater, bollkontroll i rörelse
+- Hur: Alla har boll. Tagaren touchar i ryggen → spelaren stannar och dribblar stillastående. För att bli fri: passa med en fri spelare och byt boll
+- Smart Träning: ~480p
+
+**Sommarskuggan**
+- Nivå: 🟢 Grön · 🔵 Blå
+- Tid: 5–7 min | Sida till sida
+- Syfte: Driva boll, skydda bollen, se ytor i kaotisk miljö (CLA: problemlösning i förändrad miljö)
+- Hur: En jägare i mitten. Spelarna skyddar sina bollar och svansar
+- Svårighetsgrader: 1) Jägaren tar bollen 2) Jägaren tar både boll och svans (svansen = extraliv) 3) Jägaren har ingen klubba, tar bara svansen
+- Smart Träning: ~480p
+
+**Kull med vändning**
+- Nivå: 🟢 Grön · 🔵 Blå
+- Tid: ~5 min | 4 i ruta ~10×10 m
+- Syfte: Bollkontroll i alla riktningar, tempoväxling, vändningar
+- Hur: En jägare utan boll. De andra skyddar sina bollar. Blir spelaren av med bollen försöker den återerövra från annan
+- Coachingfrågor: "När är det svårt att behålla bollen?" / "När blir det svårt att återerövra?"
+- Smart Träning: ~500p
+
+**Vända – Vändningen**
+- Nivå: 🟢 Grön · 🔵 Blå
+- Tid: 5–7 min | Hela laget
+- Syfte: Vändningar 180° med boll — ger bollföraren tid, yta och separation från försvararen
+- Hur: Spring och säg hej till så många som möjligt. När du sagt hej — vänd med klubba och boll åt andra hållet
+- Variation: Vända med en hand / bara backhands vändning
+- Coachingfrågor: "Hur nära kan du komma innan ni krockar?" / "Vilket håll är enklast att vända åt?"
+- Smart Träning: ~350p
+
+### Spelövningar – Färdigheter
+
+**Slalomfys**
+- Nivå: 🟢 Grön · 🔵 Blå
+- Tid: 5–10 min | Grupper om 3–4
+- Syfte: Samarbete, fysisk träning, koordination, gruppledarskap
+- Hur: Koppla ihop i armkrok, ryggarna mot varandra, ta sig igenom slalombana (benböj, upphopp vid varje kon). Variant: hinderbana med tjockmatta/rockringar — en gruppledare leder, övriga blundar
+- Smart Träning: ~280p
+
+**Passningar i kvadrat**
+- Nivå: 🟢 Grön · 🔵 Blå
+- Tid: 5–7 min | Par i kvadrater
+- Syfte: Passningar i rörelse på begränsad yta
+- Hur: Sprid ut kvadrater på planen. Par passar under rörelse. 1 poäng per 5 lyckade passningar. Ingen stillastående = poängen dras av
+- Smart Träning: ~480p
+
+**Skottövning**
+- Nivå: 🟢 Grön · 🔵 Blå
+- Tid: 5–7 min | Flödesövning från hörnen
+- Syfte: Avslut med spelförståelse — precision och läsning av situation, inte skottkraft
+- Hur: Börja i hörnet, spring med boll i båge mot mål, skjut. Testa: dragskott, handledskott, backhandskott
+- Coachingfrågor: "Hur siktar man?" / "Hur hårt behöver man skjuta?"
+- Notering: De bästa målskyttarna har inte skjutit hårdast — utan smartast. Spelförståelse och precision före kraft
+- Smart Träning: ~360p
+
+**Passningsleken**
+- Nivå: 🟢 Grön · 🔵 Blå
+- Tid: 5–7 min | Grupper om 3
+- Syfte: Passningar i rörelse, kommunikation, timing (pass kräver alltid en passare OCH en mottagare)
+- Hur: Tre och tre flytta bollen i turordning → fria pass → 2v1 (en jagar de andra) → byt jagare
+- Coachingfrågor: "Var ska jag passa?" / "När ska jag passa?"
+- Smart Träning: ~480p
+
+**Speluppbyggnad (3v1)**
+- Nivå: 🟢 Grön · 🔵 Blå
+- Tid: 5–7 min | 3 mot 1 i zoner
+- Syfte: Possession, rörelse, behålla boll under press
+- Hur: Bollförande lag behåller bollen via passningar i begränsad yta. Motståndaren tar bollen → bär den till "sin" yta → andra lag skickar en ny försvarare
+- Smart Träning: ~600p
+
+### Spelövningar – Matchformer
+
+**1 mot 1**
+- Nivå: 🟢 Grön
+- Tid: ~1 min per match | Planyta 5×5 m
+- Syfte: Rörelse i alla riktningar, bollkontroll i ständigt förändrad matchmiljö
+- Hur: 1v1 på liten plan. Målet i mitten (2 koner) — poäng oavsett från vilket håll bollen drivers igenom. Spela ~1 min, byt för jämnare matcher. Kan byggas till 2v2
+- Coachingfrågor: "Hur skapar du yta för att nå målet?" / "När är det enkelt att försvara?"
+- Smart Träning: ~900p
+
+**Skjuta – Målen i mitten**
+- Nivå: 🟢 Grön (tidig: 2v2, 3v3 · senare: 3v3, 4v4)
+- Tid: 5–10 min | Planyta: 10×10 m (grön), 15×10 m (blå), 20×10 m (röd)
+- Syfte: Avslut, hitta avslutsmöjligheter, försvarsspel mot avslut
+- Hur: Vanligt matchspel, två mål i mitten vända mot varandra — avslut från planens kortsidor. Med målvakter: bygg tre parallella matcher (utespelare vs MV, lagvis, MV vs MV)
+- Smart Träning: ~1 200p
+
+**Trillingmatchen (Utmana, Finta, Dribbla)**
+- Nivå: 🟢 Grön · 🔵 Blå
+- Tid: 5–10 min | Planyta 15×10 m
+- Syfte: Dribbling och finter i 1v1, kaotisk matchmiljö
+- Hur: Tre 1v1-matcher spelas simultant. Spelarna tränar på att utmana, finta och driva förbi motståndare. Dribbling föregås av fint → avslutas med tempoväxling
+- Anpassa ytan: Liten yta = svårare (lättare försvara). Stor yta = mer driva-med-boll, svårare duellspel
+- Coachingfrågor: "Vad behöver man tänka på i anfall 1v1?" / "I försvar 1v1?"
+- Smart Träning: ~1 400p
+
+### Avslutningslekar
+
+**Stjäla Skatten**
+- Nivå: 🟢 Grön
+- Tid: 5–7 min | Hela laget
+- Syfte: Bollkontroll, rörelse under press, glädje
+- Hur: Barnen ska driva/bära bollar ("skatten") över till "skattkistan" (mål). Pirater i mitten kullar — kullade lämnar bollen och hämtar ny
+- Smart Träning: ~300p
+
+**Lagstafett**
+- Nivå: 🟢 Grön · 🔵 Blå
+- Tid: 5–7 min | Grupper om 4–5
+- Syfte: Samarbete, problemlösning i grupp
+- Hur: Ledaren bestämmer hur många fötter (och ev. händer) laget får använda för att ta sig runt konen. Laget löser det själva
+- Smart Träning: ~200p
+
+**Tjuva Koner**
+- Nivå: 🟢 Grön · 🔵 Blå
+- Tid: 30–60 sek intervaller | Två lag
+- Syfte: Korta intensiva intervaller, rumsuppfattning
+- Hur: Varje lag försöker samla motståndarens koner bakom sin linje. En kon åt gången. Räkna koner efter varje intervall
+- Smart Träning: ~300p
+
+**Hajen**
+- Nivå: 🟢 Grön · 🔵 Blå
+- Tid: 5–10 min | Fyra hörn som bon
+- Syfte: Bollkontroll, driva boll, tempoväxling, splitvision, finter
+- Hur: Fyra lag med hörn som "bon" och lagnamn (t.ex. fisksläkten). Ledaren ropar ett lagnamn eller "fisksoppa" (= alla ut). Lagen springer runt hajens bo med boll. "Hajen kommer" = hajarna ut för att ta bollar. Av med bollen = ny haj. Fortsätt tills ett fåtal kvar
+- Smart Träning: ~600p
+
+---
+
+## D1c. Lekbank – Blå nivå (SIBF)
+
+*Övningar från SIBF:s "Tips och övningar för ledare på blå nivå". Tar vid där grön nivå slutar — mer rörelse, mer speluppbyggnad och mer duellspel.*
+
+**Svansjakt**
+- Nivå: 🔵 Blå · 🔴 Röd
+- Tid: 5–7 min | Hela laget
+- Syfte: Splitvision, riktningsförändringar, snabbhet — mer innebandyspecifik variant av svanskull
+- Hur: Alla sätter en väst som "svans" baktill i byxorna (med reservväst). Samla andras svansar, skydda din egen. Den som förlorat sina svansar tar en ny från annan
+- Variation: Sätt svansen på vänster/höger sida av höften — liknar hur spelaren skyddar bollen
+- Smart Träning: ~350p
+
+**Kvadraten**
+- Nivå: 🔵 Blå · 🔴 Röd
+- Tid: 5–7 min | 5 spelare
+- Syfte: Passningsspel, spelbarhet, rörelse utan boll
+- Hur: En spelare i mitten, en på varje sida av kvadraten. Sidospelarna rör sig längs sin sida för att bli spelbara. Mittspelaren byter antingen efter bestämd tid, eller direkt när hen tar bollen — byter med den spelaren hen tog bollen från
+- Smart Träning: ~800p
+
+**Spel 3 mot 1 – med sarg**
+- Nivå: 🔵 Blå · 🔴 Röd
+- Tid: 5–7 min | 3+1 i zon
+- Syfte: Possession, hålla bollen inom laget, använda sargen som passningsalternativ
+- Hur: 3 mot 1 på begränsad yta. Tar försvararen bollen ger spelaren tillbaka den. Uppmuntra att använda hörnen och sargen för att spela förbi motståndaren — tränar sargpass och passningsvinklar
+- Smart Träning: ~700p
+
+**Gladiatorerna**
+- Nivå: 🔵 Blå · 🔴 Röd
+- Tid: 5–10 min | Flöde
+- Syfte: Ta sig förbi en försvarare med dribbling eller väggpassning
+- Hur: Spelaren utmanar en försvarare i begränsad yta — dribblar förbi eller använder väggpassare/sargen för att ta sig igenom
+- Försvararen kan vara: fast hinder (pallplint, stol), rörlig passiv (ledare/förälder som anpassar svårighetsgraden), eller aktiv försvarare
+- Väggpassaren kan ersättas med en sargbit eller bänk
+- Smart Träning: ~1 200p
+
+**Ajax**
+- Nivå: 🔵 Blå · 🔴 Röd
+- Tid: 5–10 min | 4+2 | Planyta ~20×10 m
+- Syfte: Hitta ytorna på planen, involvera alla i anfallet, spelbarhet
+- Hur: Laget med 4 anfallare får poäng när alla fyra har rört bollen — alla ska ha varit delaktiga. Försvararna (2) försöker erövra bollen och anfalla mot ett av de två målen
+- CLA-regel: Poäng kräver att alla 4 anfallare rört bollen
+- Smart Träning: ~1 600p
+
+**Tampa**
+- Nivå: 🔵 Blå · 🔴 Röd
+- Tid: 5–10 min | 2 led från stolpe
+- Syfte: Duellspel intensivt, avslut under press
+- Hur: Målet vänds med öppningen mot hörnet. Två lag på led från stolpe ut mot sargen. De två närmaste från varje lag startar — ledaren kastar in boll → spel 2v2. Spelarna vid sidan agerar vägg och håller bollen i spel. Spelet pågår tills mål eller bollen lämnar planen
+- Smart Träning: ~1 800p
+
+**2 mot 2 – Give n' Go**
+- Nivå: 🔵 Blå · 🔴 Röd
+- Tid: 5–10 min | Par på begränsad yta
+- Syfte: Väggpassningsspel, rörelse efter pass, kombinationsspel
+- Varianter: a) Utan mål — tränar possession b) Med mål/koner — tränar avslut c) Give n' go — två väggpassare längs långsidorna, spelarna kombinerar sig fram
+- Smart Träning: ~1 200–1 800p (beroende på variant)
+
+**Spela på olika sätt – variationsbank**
+- Nivå: 🔵 Blå · 🔴 Röd
+- Syfte: Göra matchspelet mer dynamiskt och atletiskt
+- Varianter att rotera in:
+  - Starta spelet på annat sätt än tekning: sittandes på golvet, på andra sidan sargen, liggandes på mage
+  - Ta bort målen — "mål" = tre passningar på raken inom laget
+  - Konmål — passa bollen mellan koner till en lagkamrat
+  - **Sifferboll:** Lagen uppställda längs sargen. Ledaren rullar in boll och ropar en siffra. Motsvarande antal spelare per lag springer in och spelar. Spela tills mål, utanför sargen, eller stopp
+- Smart Träning: ~1 000–2 200p (beroende på variant)
 
 **Bollkontroll steg 1**
 - Nivå: 🟢 Grön · 🔵 Blå
@@ -941,10 +1225,45 @@ Avslut · Bollbehandling · Driva boll · Duellspel · Koordination och kroppsko
 **Träningsinriktning:**
 - Lek dominerar — samarbete, inte utslagning
 - Allsidighet: hoppa, springa, kasta, fånga, krypa, rulla
-- Rätt anpassad klubblängd (naveln som referens)
-- Rakt blad — undvik att barnen "hookar"
-- Smålagsspel: 2v2, 3v3 på liten plan
+- Rätt anpassad klubblängd (naveln som referens, ±5 cm)
+- Rakt blad — bladets vinkel max 3 cm, helst mindre för att underlätta teknikinlärning
+- Hög flex på klubban — ju högre siffra, desto mjukare. Yngre spelare bör alltid ha hög flex
+- Träna att hålla klubban med både en och två händer
+- **IFF-märke på skaftet** = klubban är godkänd för tävlingsspel (obligatoriskt krav)
+- Smålagsspel: 2v2, 3v3 på liten plan — max 3 utespelare i match på grön nivå
 - Inga tävlingsmoment i början
+- Könsdispens gäller generellt på grön nivå — alla kön spelar i alla matcher utan separat ansökan
+
+**Fokustid och struktur:**
+- Spelarna tappar fokus snabbt — **5–7 minuter är lämplig arbetstid per moment**
+- Dela gärna upp i **3–4 zoner** i hallen, max 10 min per zon, spelarna roterar
+- Starta och avsluta träningen med en gemensam lek för alla
+- Hallen kan med fördel delas diagonalt eller i tre delar för att köra parallella moment
+
+**Träningens 5-stegsuppbyggnad (SIBF):**
+1. Inledande samling — kort genomgång av temat, syfte och mål
+2. Förberedelse (uppvärmning) — atletiska moment, rörlighet
+3. Färdighetsövningar — i mindre zoner på planen
+4. Avslutande lek — rolig och engagerande
+5. Avslutande samling utanför planen — "vad tränade vi på?" / "vad tyckte ni?"
+
+**Rörelseförståelse — 12 grundrörelser (Riksidrottsförbundet):**
+Balansera · Gå · Springa · Rulla · Kasta · Stödja · Hänga · Fånga · Krypa · Hoppa · Klättra · Åla
+
+Hinderbanor och lekar är det bästa verktyget för att träna alla grundrörelser. Ju fler rörelser barnen behärskar, desto roligare och enklare är det att vara fysiskt aktiv.
+
+**Ready Position:**
+Utgångspositionen för att genomföra tekniska moment. Lätt böjda ben, tyngden på främre delen av foten — ger bättre förflyttningsförmåga och stabilitet i närkamp. Ready position ser liknande ut i de flesta idrotter, vilket underlättar förklaringen för spelarna.
+
+**Domarroll på grön nivå:**
+Domarna kallas ungdomsdomare eller matchledare — ofta unga och nya i sitt uppdrag. Tränaren ska stötta, hjälpa och stärka dem. Hjälp spelarna förstå vad de ska göra på planen och förstärk det domarna visar — aldrig ifrågasätt domar inför barnen.
+
+**Matchprotokoll grön nivå:**
+- Registrera spelarna i iBIS före match
+- Hälsa på motståndare och matchledare innan tekning
+- Alla spelare spelar lika mycket — alltid
+- Resultat och tabeller publiceras inte på hemsidor eller sociala medier
+- Respektera domarens domslut. Tacka motståndare, domare och publik efteråt.
 
 **Rekommenderade övningsområden:** Bollbehandling · Klubbteknik · Passningar · Passingsmottagningar · Rytmträning · Koordination och balans · 1v1 · Samarbetsövningar · Allsidig träning
 
@@ -955,12 +1274,31 @@ Avslut · Bollbehandling · Driva boll · Duellspel · Koordination och kroppsko
 
 **Psykosocialt:** Disciplinerade och samarbetsvilliga. Tävlingsintresset ökar. Börjar förstå abstrakt resonemang.
 
+**Motivationspsykologi — Självbestämmandeteorin:**
+Stark inre motivation skapas när spelaren upplever tre saker: att få lyckas och utvecklas utifrån sina egna förutsättningar, att få vara med och påverka och bli lyssnad på, och att trivas och ha kul i gruppen. Som ledare på blå nivå: ge alla lika mycket feedback och uppmärksamhet, låt spelarna utvecklas i sin egen takt, och undvik resultatfokus. Målsättningen är att behålla spelarna så länge som möjligt — det kräver ökad trygghet och glädje kopplat till spelet.
+
+**Skadeförebyggande:**
+Vanligaste skadorna inom innebandy är knä- och fotledsskador. SIBF:s program **Knäkontroll+** rekommenderas genomföras innan varje träning. Allsidig träning ökar skadeförebyggande effekt.
+
 **Träningsinriktning:**
-- Allsidighet och lek fortfarande viktigt
+- Allsidighet och lek fortfarande viktigt — variera mellan "träning" och "lek"
 - Mycket teknikträning
 - 1v1 och 2v1 — introducera grundpositioner
 - Spelbredd, speldjup och triangelspel kan introduceras
 - Alla spelar lika mycket och på alla platser
+- Intresset för att vara MV minskar i denna ålder — hjälp MV med grundläggande färdigheter för att fler ska vilja stå
+- Träna en/tvåhandsgrepp på klubban — och *när* varje är fördelaktigt: tvåhands ger mer kontroll och kraft, enhands ger räckvidd och rörlighet
+
+**Daylight:**
+Den som har bollen ska sträva efter att hamna i "daylight" — höja blicken och få god uppsikt över var motspelare och medspelare befinner sig på planen. Daylight är en förutsättning för spelbarhet och bra passningsval. Tränas naturligt i matchlika övningar med rörelse.
+
+**Matchregler blå nivå:**
+- 4 utespelare + målvakt
+- Gemensamma nationella spelformer
+- Resultat och tabeller publiceras inte på hemsidor eller sociala medier
+
+**Tränarbeteende i båset (blå nivå):**
+Du är en förebild — ditt beteende sätter normen för trygg matchmiljö. Agera med lugn och trygghet, håll styr på dina känslor. Uppmuntra spelarna oavsett vad som händer. Hälsa på motståndare och domare. Respektera och stötta domarens beslut.
 
 **Rekommenderade övningsområden:** Bollbehandling · Skottekniker inkl. backhand · Passningar inkl. backhand · Koordination · Tvåmålsspel · Smålagsspel · 1v1 och 2v1
 
