@@ -1,5 +1,5 @@
 # KNOWLEDGE.md – CoachCore AI-motorns kunskapsbas
-## Version 2.0 – Strukturerad med röd tråd
+## Version 2.1 – Uppdaterad med SIBF/SIU Ledarskap & Lärande
 
 ---
 
@@ -1129,6 +1129,203 @@ Planen delas i 8 numrerade zoner. Visar var laget vinner och förlorar boll.
 
 # F — LEDARSKAP & KOMMUNIKATION
 
+## F0. Ledarskaps- och lärandeteori (SIBF/SIU)
+
+*Källa: Svenska Innebandyförbundets Utvecklingsmodell (SIU) – Ledarskap och lärande*
+
+### Ledarskapsprocessens tre delar
+
+Ledarskap är ett mellanmänskligt skeende som syftar till att påverka och motivera spelares tankar, känslor och beteende. Processen består alltid av tre delar som samspelar:
+
+- **Tränaren** — påverkar spelarna via instruktioner, feedback och attityder
+- **Spelarna** — påverkar tränaren tillbaka (samspelet är alltid ömsesidigt)
+- **Sammanhanget** — ålder, nivå, ambition och miljö formar vilket ledarskap som passar
+
+⚠ En tränare som fungerar utmärkt på elitnivå kan behöva anpassa sitt ledarskap helt när hen tränar barn och ungdomar — och vice versa.
+
+---
+
+### Full Range Leadership Model (FRLM)
+
+*Vetenskapligt förankrad modell med tre nivåer. Källa: SIBF/SIU.*
+
+#### Låt-gå-ledarskap
+- Karaktäriseras av bristande ledning och lågt engagemang
+- Skapar osäkerhet hos spelarna
+- Träningarna upplevs ostrukturerade och förvirrande
+- Uppstår ofta när tränaren saknar erfarenhet eller är osäker på sin roll
+
+**CoachCore-signal:** Om tränaren verkar osäker eller ger vaga frågor — ge tydlig struktur och konkreta förslag, inte öppna alternativ.
+
+#### Transaktionellt ledarskap
+- Tränaren sätter tydliga mål, vill ha resultat på kort sikt
+- Bygger på transaktion: proaktiv (organiserar, klargör) och reaktiv (uppmuntrar/kritiserar)
+- Risk: spelarna blir osjälvständiga och utvecklar inte förmågan att lösa problem själva
+- Effektivt kortsiktigt men begränsar långsiktig spelarutveckling
+
+**CoachCore-signal:** Passar vid inlärning av specifika moment med tydligt rätt/fel. Inte optimalt som ensam strategi för hela säsongen.
+
+#### Transformerande ledarskap
+- Höjer spelarnas inre motivation, skapar positiv miljö, utvecklar spelaren som person
+- Fyra faktorer — de **fyra I:na:**
+
+| Faktor | Vad det innebär i praktiken |
+|---|---|
+| **Idealiserat inflytande** | Tränaren föregår med gott exempel — alltid i tid, förberedd, koncentrerad |
+| **Intellektuell stimulans** | Förklarar syftet med övningar, ställer frågor: "Vad händer om du gör så här?" |
+| **Inspirerande motivation** | Påminner om uppsatta mål, uppmuntrar att testa sig själv och nå nya nivåer |
+| **Individualiserad anpassning** | Uppmärksammar alla spelare, ger beröm för "det goda försöket", inte bara resultat |
+
+**CoachCore-signal:** Transformerande ledarskap är idealmodellen för långsiktig spelarutveckling på alla nivåer. Kopplar direkt till Dwecks growth mindset (Sek A4) och relationistisk filosofi (Sek A3).
+
+---
+
+### Delat ledarskap
+
+Fördelen med ett tränarteam med komplementerande kompetenser:
+- Lättare att rekrytera tränare när ansvaret delas
+- Assistenttränare = naturlig instegsväg för orutinerade tränare
+- Minskar personberoendet — kompetensen finns i gruppen, inte hos en person
+- Skapar hållbarhet och gemenskap i tränarrollen över tid
+
+**Krav:** Samsyn, prestigelöshet och vilja att lära av varandra.
+
+**CoachCore-koppling:** Bowmans första princip — "omgärda dig med bästa möjliga personal" (Sek A1). Tränarstabens roll i matchledning (Sek F1).
+
+---
+
+### Tränarens anpassning efter grupp och sammanhang
+
+Centralt SIU-budskap: **Behandla spelarna olika beroende på var de befinner sig i sin utveckling.**
+
+- Ge tillit och ökat ansvar gradvis → spelarna blir mer självständiga och tar egna beslut
+- Mål: spelare som förstår spelet och vill ta ansvar på träning och match
+- "Så förtroende så får du skörda ansvar" — klassisk princip som gäller alla nivåer
+
+| Spelarnivå | Lämpligt ledarskap |
+|---|---|
+| Ung/oerfaren | Mer strukturerad och tydlig (transaktionellt inslag) |
+| Medelerfaren | Balans — instruktion + utrymme för egna lösningar |
+| Mogen/erfaren | Delegera, involvera, ställ frågor |
+
+---
+
+## F0b. Lärandeteori – Tre perspektiv och Guided Discovery
+
+*Källa: Svenska Innebandyförbundets Utvecklingsmodell (SIU) – Ledarskap och lärande*
+
+### Tre perspektiv på lärande
+
+Ingen lärandemodell är alltid bäst — välj utifrån situation, spelarnas ålder och momentets karaktär.
+
+#### Beteendestyrande
+- Tränaren har kunskap och styr spelaren mot "rätt beteende" via upprepning och korrektion
+- Lärande sker genom repetition tills rörelsen/beslutet sitter
+- Passar vid: tydliga tekniska moment med klart rätt/fel (ex. grundläggande skotteknik, specifika rörelsemönster)
+- Risk: kan skapa passiva spelare som väntar på tränarens godkännande
+
+#### Problemlösande
+- Spelaren har drivkraft att lära — tränaren behöver inte styra och kontrollera
+- Tränaren är "vägvisare": utformar miljön, låter spelaren experimentera
+- Passar vid: rörligare situationer där det finns flera rätt (ex. val i offensiva zoner)
+- Kopplar direkt till CLA (Sek A2) och relationism (Sek A3)
+
+#### Samspelande
+- Drivkraften finns i gruppen — spelaren utvecklas tillsammans med och av andra
+- Lärande sker via interaktion: spelare påverkar varandra, ser varandra, reflekterar gemensamt
+- Passar vid: taktik, lagspel, spelförståelse — allt som kräver social kontext för att fungera
+- Tränaren skapar situationer för lärande, inte instruerar ut lösningar
+
+**Praktisk tumregel för CoachCore:**
+- Teknisk inlärning (steg 1–3 i 7-stegsmodellen) → Beteendestyrande eller problemlösande
+- Spelförståelse och taktik → Problemlösande eller samspelande
+- Lagkultur och motivation → Samspelande
+
+---
+
+### Guided Discovery
+
+*Centralt metodkoncept från SIBF/SIU — förlängning av problemlösande och samspelande perspektiv.*
+
+**Kärnan:** Istället för att ge direkta instruktioner sätter tränaren ramar och ställer frågor som hjälper spelaren att själv upptäcka lösningen.
+
+**Syftet är trefaldig:**
+1. Spelaren utvecklar förmåga att lära sig spelet på djupet
+2. Spelaren får ökad kunskap om sin egen utveckling
+3. Spelaren utvecklar motivation att utvecklas på ett sätt som passar dem
+
+**Fem principer för Guided Discovery:**
+1. Skapa övningar som liknar matchsituationer så mycket som möjligt
+2. Uppmuntra och ge positiv feedback — aldrig peka ut vad som är fel
+3. Led träningen genom att låta spelarna "lösa problem" — tränaren är vägvisare
+4. Fråga och ge feedback på lösningar istället för att rätta utförandet
+5. Uppmuntra spelarnas egna initiativ — när de hittar egna lösningar, lyft fram det
+
+**Coachingfrågor i Guided Discovery-anda:**
+- "Hur tänkte du när du gjorde så?"
+- "Vad händer om du gör på det här sättet istället?"
+- "Vad finns det för fördelar och nackdelar med den lösningen?"
+- "Vad kunde du ha gjort istället?"
+
+**Mål på sikt:** Spelarna, allt eftersom de mognar, ska gradvis kunna påverka sin egen träning — delta i planeringen och ta ansvar för lärandet.
+
+**CoachCore-koppling:** Guided Discovery är den praktiska tillämpningen av Sokratisk dialog (Sek A5), CLA (Sek A2) och relationistisk filosofi (Sek A3). CoachCore bör aldrig ge direkta svar på "vad ska spelaren göra" — formulera alltid som en fråga eller ett alternativ att utforska.
+
+---
+
+### Feedback – principer per ålder och nivå
+
+*Källa: SIBF/SIU*
+
+**Grundprincipen:** Positiv feedback för ansträngning och goda försök ökar sannolikheten för att spelaren upprepar det positiva beteendet.
+
+| Grupp | Feedbackstil | Fokus |
+|---|---|---|
+| Yngre spelare | Regelbunden, omedelbar, enkel | Självkänsla, kompetens, det goda försöket |
+| Äldre/erfarenare | Mer sporadisk, konkret och specifik | Tydlighet, kommunikation inom laget |
+| Alla nivåer | Aldrig enbart på resultat | Process, ansträngning, strategi |
+
+**Tre nycklar:**
+1. Ge feedback direkt — vänta inte
+2. Ge feedback på "det goda försöket" — inte bara när det lyckas
+3. Konkret feedback förbättrar kommunikation i hela laget — alla förstår vad som menas
+
+**CoachCore-koppling:** Matchar Dwecks teori om growth mindset (Sek A4) och F3:s principer om kunskapsmål vs prestationsmål.
+
+---
+
+### Lärande i och genom spelet
+
+*Källa: SIBF/SIU — ett av de viktigaste koncepten i SIU-modellen.*
+
+**Kärntanken:** Lärande pågår ständigt — inte bara under organiserad träning. Spontanspel, att titta på innebandy och matchupplevelser är alla en del av lärprocessen.
+
+**Överföringseffekt:** Det som tränas ska kunna tillämpas direkt i match. Isolerade tekniska moment utan matchkontext ger låg överföringseffekt.
+
+**Traditionell träning vs. spelbaserad träning:**
+
+| Traditionell träning | Spelbaserad träning |
+|---|---|
+| Isolerade moment tränas var för sig | Moment tränas i spel- och matchliknande situationer |
+| Teknik separeras från sammanhang | Tekniken kopplas till det sammanhang där den används |
+| Låg överföringseffekt | Hög överföringseffekt |
+| Snabbt synbart resultat | Tar längre tid, men ger bättre och bestående resultat |
+
+**Coachingprinciper för matchnära träning:**
+1. Gör övningar så matchlika som möjligt — anpassat till spelarnas nivå och ålder
+2. Använd övningar med valmöjligheter eller oförutsedda händelser
+3. Feedback ska fokusera på vilka val som gjordes och vad de ledde till — inte på det tekniska utförandet i sig
+4. Under match: gå gradvis från att ge direktiv → diskutera → fråga "vad tycker ni?" — varje match är en del av lärandet
+
+**Tränarens roll utanför planen:**
+- Stimulera spelarna att utöva spontanspel
+- Uppmuntra att titta på innebandy — live eller via plattformar
+- En ökad spelförståelse gör att spelarna lär sig mer av att se andra spela
+
+**CoachCore-koppling:** Direkt länk till Smart Träning-modellens matchlikhetsvariabel (Sek C1) och 4-stegsmodellens krav på att steg 4 alltid ska vara matchlikt (Sek C2). Hög överföringseffekt = högt Smart Träning-poäng.
+
+---
+
 ## F1. Matchledning – Bench Management
 
 *Källa: "Coaching by Scotty" – Scotty Bowman/Barry Smith, Svenska Ishockeyförbundet, 2005*
@@ -1360,6 +1557,8 @@ CoachCore är byggt för **alla som leder ett innebandylag** — oavsett erfaren
 5. **Nämn alltid en CLA-regel och en coachingfråga** vid övningsförslag
 6. **Smart Träning-poäng** kan alltid anges vid övningsförslag som referens
 7. **Inga långa monologer** — avancerade tränare vill ha täthet och precision
+8. **Guided Discovery i alla svar** — formulera alltid coachingfrågor som öppna utforskningar, aldrig direkta svar på "vad spelaren ska göra"
+9. **Ledarstil matchas mot tränarnivå** — nybörjartränare får mer struktur (transaktionellt inslag), erfarna tränare får frågor och alternativ (transformerande)
 
 ---
 
@@ -1466,5 +1665,6 @@ CLA-regel att träna: 'Avslut enbart från insidan av halvlinjerna' — tvingar 
 
 ---
 
-*KNOWLEDGE.md v2.0 — CoachCore AI-motor*
+*KNOWLEDGE.md v2.1 — CoachCore AI-motor*
 *Struktur: A Filosofi · B Spelarsystem · C Träningsdesign · D Övningsbibliotek · E Spelarutveckling · F Ledarskap · G AI-beteende*
+*Uppdaterad med SIBF/SIU Ledarskap och lärande: FRLM, Delat ledarskap, Tre lärandeperspektiv, Guided Discovery, Feedbackteori, Lärande i och genom spelet*
