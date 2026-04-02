@@ -86,13 +86,97 @@ select option{background:var(--surface2)}
 #loading{display:none;text-align:center;padding:32px;color:var(--text2);font-size:14px}
 .spinner{width:28px;height:28px;border:2px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 12px}
 @keyframes spin{to{transform:rotate(360deg)}}
+
+/* ── ÖVNINGSKORT (nytt) ── */
 #svar{display:none;margin-top:4px}
-.svar-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+
+.ovning-kort{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+  margin-bottom:12px;
+}
+
+.ovning-header{
+  padding:18px 18px 14px;
+  border-bottom:1px solid var(--border);
+}
+.ovning-meta{
+  display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;
+}
+.meta-pill{
+  font-size:10px;font-weight:600;padding:2px 9px;border-radius:10px;
+  background:var(--surface2);color:var(--text2);border:1px solid var(--border);
+}
+.meta-pill.tema{background:rgba(29,78,216,0.15);color:#93c5fd;border-color:rgba(59,130,246,0.3)}
+.meta-pill.niva{background:rgba(34,197,94,0.1);color:#86efac;border-color:rgba(34,197,94,0.3)}
+.meta-pill.smart{background:rgba(245,158,11,0.1);color:#fde68a;border-color:rgba(245,158,11,0.3)}
+.ovning-rubrik{font-size:17px;font-weight:600;color:var(--text);margin-bottom:8px;line-height:1.3}
+.ovning-intro{font-size:13px;color:var(--text2);line-height:1.7}
+
+/* Flikar */
+.flik-nav{
+  display:flex;border-bottom:1px solid var(--border);
+}
+.flik-btn{
+  flex:1;padding:11px 8px;font-size:12px;font-weight:500;
+  color:var(--text3);background:none;border:none;cursor:pointer;
+  border-bottom:2px solid transparent;transition:all 0.15s;
+  font-family:var(--font);
+}
+.flik-btn:hover{color:var(--text2)}
+.flik-btn.active{color:var(--text);border-bottom-color:var(--accent)}
+
+.flik-content{display:none;padding:16px 18px;font-size:13px;line-height:1.75;color:var(--text2)}
+.flik-content.active{display:block}
+.flik-content strong{color:var(--text)}
+.flik-content p{margin-bottom:8px}
+.flik-content p:last-child{margin-bottom:0}
+
+/* CLA + coachingfråga highlightar i syfte-fliken */
+.highlight-cla{color:#93c5fd;font-weight:500}
+.highlight-coaching{color:#86efac;font-weight:500}
+
+/* Färdigheter-chips i kortet */
+.fardighet-chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.fardighet-chip{font-size:10px;padding:2px 9px;border-radius:10px;background:rgba(16,185,129,0.1);color:#6ee7b7;border:1px solid rgba(16,185,129,0.25)}
+
+/* Material-lista */
+.material-lista{list-style:none;padding:0}
+.material-lista li{padding:4px 0;display:flex;align-items:center;gap:8px;color:var(--text2)}
+.material-lista li::before{content:'→';color:var(--text3);font-size:11px;flex-shrink:0}
+
+/* Övningens action-rad */
+.ovning-actions{
+  display:flex;gap:8px;padding:14px 18px;
+  border-top:1px solid var(--border);background:var(--surface2);
+}
+.btn-rita{
+  display:flex;align-items:center;gap:7px;
+  background:var(--accent);color:white;border:none;
+  padding:9px 18px;border-radius:var(--radius);
+  font-size:13px;font-weight:600;cursor:pointer;
+  font-family:var(--font);transition:background 0.15s;flex:1;justify-content:center;
+}
+.btn-rita:hover{background:var(--accent2)}
+.btn-rita:disabled{opacity:0.4;cursor:default}
+.btn-kopiera{
+  background:var(--surface);color:var(--text2);
+  border:1px solid var(--border);padding:9px 14px;
+  border-radius:var(--radius);font-size:12px;cursor:pointer;
+  font-family:var(--font);transition:all 0.15s;
+}
+.btn-kopiera:hover{color:var(--text);border-color:#64748b}
+
+/* Nytt pass-knapp */
+.svar-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
 .svar-header h3{font-size:15px;font-weight:600}
-.svar-actions{display:flex;gap:8px}
-.raw-svar{background:var(--surface2);border-radius:var(--radius);padding:14px;font-size:13px;line-height:1.7;color:var(--text2);white-space:pre-wrap}
-.raw-svar strong{color:var(--text)}
+
+/* Toast */
 #toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:rgba(15,23,42,0.96);color:var(--text);padding:8px 18px;border-radius:20px;font-size:12px;pointer-events:none;opacity:0;transition:opacity 0.3s;white-space:nowrap;z-index:100;border:1px solid var(--border)}
+
+/* FAQ */
 .faq-section{margin-top:20px;border-top:1px solid var(--border);padding-top:16px}
 .faq-titel{font-size:12px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px}
 .faq-item{margin-bottom:8px;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
@@ -123,43 +207,23 @@ select option{background:var(--surface2)}
     <div class="leader-level-grid">
       <div class="leader-option" data-val="assistent" onclick="valjLedarNiva(this)">
         <div class="leader-icon">🤝</div>
-        <div>
-          <div class="leader-name">Assistenten</div>
-          <div class="leader-desc">Ny i rollen, stöttar en huvudledare. Fokus på glädje och inkludering.</div>
-          <span class="leader-badge">Alla åldrar</span>
-        </div>
+        <div><div class="leader-name">Assistenten</div><div class="leader-desc">Ny i rollen, stöttar en huvudledare. Fokus på glädje och inkludering.</div><span class="leader-badge">Alla åldrar</span></div>
       </div>
       <div class="leader-option" data-val="aktivitetsledare" onclick="valjLedarNiva(this)">
         <div class="leader-icon">🏃</div>
-        <div>
-          <div class="leader-name">Aktivitetsledaren</div>
-          <div class="leader-desc">Driver träningar med färdiga mallar. Förstår spelformer och engagerar yngre spelare.</div>
-          <span class="leader-badge">Grön / Blå nivå</span>
-        </div>
+        <div><div class="leader-name">Aktivitetsledaren</div><div class="leader-desc">Driver träningar med färdiga mallar. Förstår spelformer och engagerar yngre spelare.</div><span class="leader-badge">Grön / Blå nivå</span></div>
       </div>
       <div class="leader-option" data-val="instruktionsledare" onclick="valjLedarNiva(this)">
         <div class="leader-icon">📋</div>
-        <div>
-          <div class="leader-name">Instruktionsledaren</div>
-          <div class="leader-desc">Lär ut tekniska detaljer och kan individanpassa. Har spelat eller läst på.</div>
-          <span class="leader-badge">Blå / Röd nivå</span>
-        </div>
+        <div><div class="leader-name">Instruktionsledaren</div><div class="leader-desc">Lär ut tekniska detaljer och kan individanpassa. Har spelat eller läst på.</div><span class="leader-badge">Blå / Röd nivå</span></div>
       </div>
       <div class="leader-option" data-val="taktikledare" onclick="valjLedarNiva(this)">
         <div class="leader-icon">🧠</div>
-        <div>
-          <div class="leader-name">Match- & Taktikledaren</div>
-          <div class="leader-desc">Erfaren ledare som läser matchbilder och gör taktiska justeringar.</div>
-          <span class="leader-badge">Röd / Svart nivå</span>
-        </div>
+        <div><div class="leader-name">Match- & Taktikledaren</div><div class="leader-desc">Erfaren ledare som läser matchbilder och gör taktiska justeringar.</div><span class="leader-badge">Röd / Svart nivå</span></div>
       </div>
       <div class="leader-option" data-val="elitutvecklare" onclick="valjLedarNiva(this)">
         <div class="leader-icon">🏆</div>
-        <div>
-          <div class="leader-name">Elitutvecklaren</div>
-          <div class="leader-desc">Licensierad elittränare med ETU-utbildning. Videoanalys och långsiktig elitförberedelse.</div>
-          <span class="leader-badge">Svart / Guld — Licenskrav</span>
-        </div>
+        <div><div class="leader-name">Elitutvecklaren</div><div class="leader-desc">Licensierad elittränare med ETU-utbildning. Videoanalys och långsiktig elitförberedelse.</div><span class="leader-badge">Svart / Guld — Licenskrav</span></div>
       </div>
     </div>
   </div>
@@ -169,22 +233,10 @@ select option{background:var(--surface2)}
     <div class="layer-badge">B — Åldernivå <span>Steg 2 av 7</span></div>
     <div class="layer-title">Vilken åldersgrupp tränar du?</div>
     <div class="niva-grid">
-      <div class="niva-option" data-val="Grön nivå 6-9 år" onclick="valjNiva(this)">
-        <div class="niva-dot">🟢</div>
-        <div><div class="niva-label">Grön</div><div class="niva-sub">6–9 år</div></div>
-      </div>
-      <div class="niva-option" data-val="Blå nivå 9-12 år" onclick="valjNiva(this)">
-        <div class="niva-dot">🔵</div>
-        <div><div class="niva-label">Blå</div><div class="niva-sub">9–12 år</div></div>
-      </div>
-      <div class="niva-option active" data-val="Röd nivå 12-16 år" onclick="valjNiva(this)">
-        <div class="niva-dot">🔴</div>
-        <div><div class="niva-label">Röd</div><div class="niva-sub">12–16 år</div></div>
-      </div>
-      <div class="niva-option" data-val="Svart nivå 16+ år" onclick="valjNiva(this)">
-        <div class="niva-dot">⚫</div>
-        <div><div class="niva-label">Svart</div><div class="niva-sub">16+ år</div></div>
-      </div>
+      <div class="niva-option" data-val="Grön nivå 6-9 år" onclick="valjNiva(this)"><div class="niva-dot">🟢</div><div><div class="niva-label">Grön</div><div class="niva-sub">6–9 år</div></div></div>
+      <div class="niva-option" data-val="Blå nivå 9-12 år" onclick="valjNiva(this)"><div class="niva-dot">🔵</div><div><div class="niva-label">Blå</div><div class="niva-sub">9–12 år</div></div></div>
+      <div class="niva-option active" data-val="Röd nivå 12-16 år" onclick="valjNiva(this)"><div class="niva-dot">🔴</div><div><div class="niva-label">Röd</div><div class="niva-sub">12–16 år</div></div></div>
+      <div class="niva-option" data-val="Svart nivå 16+ år" onclick="valjNiva(this)"><div class="niva-dot">⚫</div><div><div class="niva-label">Svart</div><div class="niva-sub">16+ år</div></div></div>
     </div>
   </div>
 
@@ -207,11 +259,10 @@ select option{background:var(--surface2)}
     </div>
   </div>
 
-  <!-- D: TRÄNINGSINRIKTNING (Tema + Färdighet) -->
+  <!-- D: TRÄNINGSINRIKTNING -->
   <div class="layer-card">
     <div class="layer-badge">D — Träningsinriktning <span>Steg 4 av 7</span></div>
     <div class="layer-title">Vad ska träningen fokusera på?</div>
-
     <span class="sibf-label">Tema <span style="color:var(--text3);font-weight:400;text-transform:none;letter-spacing:0">(välj ett)</span></span>
     <div class="chip-grid" id="tema-chips">
       <div class="chip tema" data-val="Defensiv omställning">Defensiv omställning</div>
@@ -228,9 +279,7 @@ select option{background:var(--surface2)}
       <div class="chip tema" data-val="Speluppbyggnad">Speluppbyggnad</div>
       <div class="chip tema" data-val="Teknikträning">Teknikträning</div>
     </div>
-
     <div class="divider" style="margin:10px 0"></div>
-
     <span class="sibf-label">Färdigheter <span style="color:var(--text3);font-weight:400;text-transform:none;letter-spacing:0">(välj en eller flera)</span></span>
     <div class="chip-grid" id="fardighet-chips">
       <div class="chip fardighet" data-val="Avslut">Avslut</div>
@@ -251,7 +300,6 @@ select option{background:var(--surface2)}
       <div class="chip fardighet" data-val="Utmana och dribbla">Dribbla</div>
       <div class="chip fardighet" data-val="Vända med boll">Vända med boll</div>
     </div>
-
     <div class="filter-summary" id="filter-summary" style="display:none"></div>
   </div>
 
@@ -259,33 +307,14 @@ select option{background:var(--surface2)}
   <div class="layer-card">
     <div class="layer-badge">E — Träningsdesign <span>Steg 5 av 7</span></div>
     <div class="layer-title">Praktiska förutsättningar</div>
-
     <div class="row3" style="margin-bottom:10px">
-      <div class="field">
-        <label>Halltid (min)</label>
-        <input type="number" id="halltid" value="60" min="20" max="120">
-      </div>
-      <div class="field">
-        <label>Antal spelare</label>
-        <input type="number" id="antal" value="8" min="3" max="20">
-      </div>
-      <div class="field">
-        <label>Yta</label>
-        <select id="yta">
-          <option value="helplan">Helplan</option>
-          <option value="halvplan">Halvplan</option>
-          <option value="tredjedel">1/3 plan</option>
-        </select>
-      </div>
+      <div class="field"><label>Halltid (min)</label><input type="number" id="halltid" value="60" min="20" max="120"></div>
+      <div class="field"><label>Antal spelare</label><input type="number" id="antal" value="8" min="3" max="20"></div>
+      <div class="field"><label>Yta</label><select id="yta"><option value="helplan">Helplan</option><option value="halvplan">Halvplan</option><option value="tredjedel">1/3 plan</option></select></div>
     </div>
-
     <div class="field" style="margin-bottom:10px">
-      <label>Önskat CLA-fokus (valfritt)
-        <span class="help-btn" onclick="toggleHelp('cla-help')">?</span>
-      </label>
-      <div class="help-popup" id="cla-help">
-        <strong>Constraint-Led Approach (CLA)</strong> innebär att du designar regler i övningen som tvingar fram rätt beteende utan att behöva instruera verbalt. Istället för "passa snabbare" — lägg till regeln "max 2 tillslag". Spelaren hittar lösningen själv.
-      </div>
+      <label>Önskat CLA-fokus (valfritt) <span class="help-btn" onclick="toggleHelp('cla-help')">?</span></label>
+      <div class="help-popup" id="cla-help"><strong>Constraint-Led Approach (CLA)</strong> innebär att du designar regler i övningen som tvingar fram rätt beteende utan att behöva instruera verbalt. Istället för "passa snabbare" — lägg till regeln "max 2 tillslag". Spelaren hittar lösningen själv.</div>
       <div class="chip-grid" id="cla-chips" style="margin-top:8px">
         <div class="chip" data-val="Direktspel – max 2 tillslag">Direktspel</div>
         <div class="chip" data-val="Rörelse utan boll – spelare som passar byter position">Rörelse utan boll</div>
@@ -294,16 +323,9 @@ select option{background:var(--surface2)}
         <div class="chip" data-val="Snabb omställning – direktkontring vid bollvinst">Snabb omställning</div>
       </div>
     </div>
-
     <div class="field">
-      <label>Smart Träning-prioritet
-        <span class="help-btn" onclick="toggleHelp('smart-help')">?</span>
-      </label>
-      <div class="help-popup" id="smart-help">
-        <strong>Smart Träning-poängen</strong> (Peter Svensson, Riksgymnasium Innebandy Umeå):<br><br>
-        <strong>Formel:</strong> Matchlikhet × Frekvens × Svårighetsgrad × Motivation<br><br>
-        Under 500p = ingen riktig träning · Över 1 000p = ok · Över 3 000p = smart träning
-      </div>
+      <label>Smart Träning-prioritet <span class="help-btn" onclick="toggleHelp('smart-help')">?</span></label>
+      <div class="help-popup" id="smart-help"><strong>Smart Träning-poängen</strong> (Peter Svensson, Riksgymnasium Innebandy Umeå):<br><br><strong>Formel:</strong> Matchlikhet × Frekvens × Svårighetsgrad × Motivation<br><br>Under 500p = ingen riktig träning · Över 1 000p = ok · Över 3 000p = smart träning</div>
       <select id="smart-prio" style="margin-top:8px">
         <option value="balans">Balanserat (mix av progression)</option>
         <option value="hog">Hög matchlikhet (3 000p+)</option>
@@ -317,7 +339,6 @@ select option{background:var(--surface2)}
   <div class="layer-card">
     <div class="layer-badge">F — Spelarutveckling <span>Steg 6 av 7</span></div>
     <div class="layer-title">Berätta om laget</div>
-
     <div class="field" style="margin-bottom:8px"><label>Lagets svagheter</label></div>
     <div class="chip-grid" id="svaghet-chips">
       <div class="chip" data-val="Spelbarhet utan boll">Spelbarhet utan boll</div>
@@ -330,18 +351,16 @@ select option{background:var(--surface2)}
       <div class="chip" data-val="Defensivt slottsspel">Slottsspel defensivt</div>
       <div class="chip" data-val="Kommunikation och lagspel">Kommunikation</div>
     </div>
-
     <div class="field" style="margin-top:10px">
       <label>Beskriv laget (valfritt)</label>
-      <textarea id="lag-beskrivning" placeholder="Ex: Vi har en tekniskt stark center men med låg uthållighet. Backparet är bra på bollkontroll men saknar beslutssnabbhet under press..."></textarea>
+      <textarea id="lag-beskrivning" placeholder="Ex: Vi har en tekniskt stark center men med låg uthållighet..."></textarea>
     </div>
   </div>
 
-  <!-- G: LEDARSKAP & KOMMUNIKATION -->
+  <!-- G: LEDARSKAP -->
   <div class="layer-card">
     <div class="layer-badge">G — Ledarskap & Kommunikation <span>Steg 7 av 7</span></div>
     <div class="layer-title">Vad vill du kommunicera idag?</div>
-
     <div class="field" style="margin-bottom:10px"><label>Träningens stämning och syfte</label></div>
     <div class="chip-grid" id="stamning-chips">
       <div class="chip" data-val="Bygga lagkänsla och glädje">Bygga lagkänsla</div>
@@ -351,10 +370,9 @@ select option{background:var(--surface2)}
       <div class="chip" data-val="Återuppbyggnad efter förlust">Efter förlust</div>
       <div class="chip" data-val="Fira framgång och bekräfta det som fungerar">Fira framgång</div>
     </div>
-
     <div class="field" style="margin-top:10px">
       <label>Fritext till CoachCore (valfritt)</label>
-      <textarea id="fritext" placeholder="Ex: Vi förlorade senast och spelarna är nedstämda. Jag vill ha övningar som skapar energi men ändå tränar uppspelet vi jobbat med..."></textarea>
+      <textarea id="fritext" placeholder="Ex: Vi förlorade senast och spelarna är nedstämda..."></textarea>
     </div>
   </div>
 
@@ -365,65 +383,43 @@ select option{background:var(--surface2)}
     CoachCore analyserar och bygger ditt träningspass...
   </div>
 
+  <!-- SVAR-SEKTION (nytt övningskort) -->
   <div id="svar">
     <div class="svar-header">
       <h3>Träningsförslag</h3>
-      <div class="svar-actions">
-        <button class="btn-secondary" onclick="kopiera()">Kopiera</button>
-        <button class="btn-secondary" onclick="resetForm()">Nytt pass</button>
-      </div>
+      <button class="btn-secondary" onclick="resetForm()">Nytt pass</button>
     </div>
-    <div id="svar-innehall"></div>
-    <button id="rita-btn" class="ai" onclick="ritaUppPaTavlan()" style="display:none;margin-top:12px;align-items:center;gap:8px;padding:10px 20px;font-size:13px">🎯 Rita upp på tavlan</button>
+    <div id="ovning-kort-container"></div>
   </div>
 
   <div class="faq-section">
     <div class="faq-titel">Vanliga frågor</div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Vad är Smart Träning-poängen?<span class="arrow">▼</span></div>
-      <div class="faq-a">Smart Träning-poängen är ett kvalitetsmått utvecklat av Peter Svensson vid Riksgymnasium Innebandy i Umeå. Formeln är: Matchlikhet × Frekvens × Svårighetsgrad × Motivation. Under 500p = ingen riktig träning. Över 1 000p = ok. Över 3 000p = smart träning.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Vad är CLA – Constraint-Led Approach?<span class="arrow">▼</span></div>
-      <div class="faq-a">CLA innebär att du designar övningens regler för att tvinga fram önskat beteende utan verbal instruktion. Istället för "passa snabbare" lägger du till regeln "max 2 tillslag". Spelaren hittar lösningen själv. Källa: Keith Davids, Manchester Metropolitan University.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Vad är 7-stegsmodellen?<span class="arrow">▼</span></div>
-      <div class="faq-a">7-stegsmodellen styr inlärningsordningen: 1) Stillastående → 2) Rörelse utan motstånd → 3) Hastig rörelse → 4) Passiva motståndare → 5) Aktiva motståndare → 6) Spel med CLA-regler → 7) Fritt matchspel. Precision före kraft alltid.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Vad innebär relationism och "opdag det selv"?<span class="arrow">▼</span></div>
-      <div class="faq-a">Relationism är en dansk träningsfilosofi (Roland Andersson, DBU, FC Midtjylland). "Opdag det selv" – tränaren instruerar minimalt och designar övningen så att spelaren hittar lösningen. CoachCore prioriterar alltid en coachingfråga framför en instruktion.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Hur väljer CoachCore vilket system som passar?<span class="arrow">▼</span></div>
-      <div class="faq-a">CoachCore rekommenderar formations- och systemval baserat på lagets egenskaper. Tränaren bestämmer alltid – CoachCore föreslår aldrig en specifik spelare till en specifik roll.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Vad är Backbytet (2-1-1)?<span class="arrow">▼</span></div>
-      <div class="faq-a">Backbytet är kärnan i 4v4-filosofin: VB håller djup position och säkrar hemåt. HB kliver upp och agerar center med boll och spelbarhet. F söker anfallszon högt. Rollerna roterar naturligt vid varje passning. Coachingord: "Reagera C!" och "Nu är det ditt spel C!"</div>
-    </div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Vad är Smart Träning-poängen?<span class="arrow">▼</span></div><div class="faq-a">Smart Träning-poängen är ett kvalitetsmått av Peter Svensson, Riksgymnasium Innebandy Umeå. Formel: Matchlikhet × Frekvens × Svårighetsgrad × Motivation. Under 500p = ingen riktig träning. Över 3 000p = smart träning.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Vad är CLA – Constraint-Led Approach?<span class="arrow">▼</span></div><div class="faq-a">CLA innebär att du designar övningens regler för att tvinga fram önskat beteende utan verbal instruktion. Istället för "passa snabbare" lägger du till regeln "max 2 tillslag". Spelaren hittar lösningen själv. Källa: Keith Davids, Manchester Metropolitan University.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Vad är 7-stegsmodellen?<span class="arrow">▼</span></div><div class="faq-a">7-stegsmodellen styr inlärningsordningen: 1) Stillastående → 2) Rörelse utan motstånd → 3) Hastig rörelse → 4) Passiva motståndare → 5) Aktiva motståndare → 6) Spel med CLA-regler → 7) Fritt matchspel.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Vad innebär relationism och "opdag det selv"?<span class="arrow">▼</span></div><div class="faq-a">Relationism (Roland Andersson, DBU, FC Midtjylland): "Opdag det selv" – tränaren instruerar minimalt och designar övningen så att spelaren hittar lösningen. CoachCore prioriterar alltid en coachingfråga framför en instruktion.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Vad är Backbytet (2-1-1)?<span class="arrow">▼</span></div><div class="faq-a">VB håller djup position och säkrar hemåt. HB kliver upp och agerar center med boll och spelbarhet. F söker anfallszon högt. Rollerna roterar naturligt vid varje passning. Coachingord: "Reagera C!" och "Nu är det ditt spel C!"</div></div>
   </div>
 
 </div>
-
 <div id="toast"></div>
 
 <script>
 const AI_URL='/.netlify/functions/ai-motor';
+const TAVLA_URL='https://spontaneous-beijinho-d0522f.netlify.app';
 
 const LEDAR_NIVA_MAP={
-  assistent:{label:'Assistenten',prompt:'Tränaren är en assistent utan djup innebandybakgrund. Använd enkelt, uppmuntrande språk. Undvik teknisk terminologi. Fokusera på roliga, enkla övningar.',detaljniva:'minimal'},
-  aktivitetsledare:{label:'Aktivitetsledaren',prompt:'Tränaren är en engagerad aktivitetsledare med viss erfarenhet. Tillgängligt men strukturerat språk. Förklara syftet. Enkla coachingfrågor.',detaljniva:'grundläggande'},
-  instruktionsledare:{label:'Instruktionsledaren',prompt:'Tränaren är en instruktionsledare med god teknisk förståelse. Inkludera tekniska detaljer, 7-stegsmodellen och CLA-regler.',detaljniva:'standard'},
-  taktikledare:{label:'Match- & Taktikledaren',prompt:'Tränaren är erfaren och taktisk. Full innebandyterminologi. Systemanalys, taktiska variationer, avancerade coachingfrågor.',detaljniva:'avancerad'},
-  elitutvecklare:{label:'Elitutvecklaren',prompt:'Licensierad elittränare. Maximal teknisk djup. ETU-ramverk, periodisering, prestandaanalys.',detaljniva:'expert'}
+  assistent:{label:'Assistenten',prompt:'Tränaren är en assistent utan djup innebandybakgrund. Använd enkelt, uppmuntrande språk. Inga facktermer.',detaljniva:'minimal'},
+  aktivitetsledare:{label:'Aktivitetsledaren',prompt:'Tränaren är en engagerad aktivitetsledare. Tillgängligt men strukturerat språk. Förklara syftet.',detaljniva:'grundläggande'},
+  instruktionsledare:{label:'Instruktionsledaren',prompt:'Tränaren har god teknisk förståelse. Normal innebandyterminologi, CLA-regler, 7-stegsmodellen ok.',detaljniva:'standard'},
+  taktikledare:{label:'Match- & Taktikledaren',prompt:'Erfaren taktisk ledare. Full innebandyterminologi, systemanalys, taktiska variationer.',detaljniva:'avancerad'},
+  elitutvecklare:{label:'Elitutvecklaren',prompt:'Licensierad elittränare. ETU-ramverk, periodisering, prestandaanalys.',detaljniva:'expert'}
 };
 
 const FORMATIONS={
   '3v3':[{val:'Triangeln 1-2',label:'Triangeln (1-2)'},{val:'Triangeln 2-1',label:'Triangeln (2-1)'}],
   '4v4':[{val:'Boxen 2-2',label:'Boxen (2-2)'},{val:'Diamanten 1-2-1',label:'Diamanten (1-2-1)'},{val:'Backbytet 2-1-1',label:'Backbytet (2-1-1)'}],
-  '5v5':[{val:'Klassisk 2-1-2',label:'Klassisk (2-1-2)'},{val:'Styrspel 2-2-1',label:'Styrspel (2-2-1) – defensivt'}],
+  '5v5':[{val:'Klassisk 2-1-2',label:'Klassisk (2-1-2)'},{val:'Styrspel 2-2-1',label:'Styrspel (2-2-1)'}],
   '5v4 Powerplay':[{val:'Paraplyet 1-2-2',label:'Paraplyet (1-2-2)',auto:true}],
   '4v5 Boxplay':[{val:'Boxplay',label:'Boxplay',auto:true}],
   '6v5':[{val:'Överbelastning 2-1-3',label:'Överbelastning (2-1-3)',auto:true}],
@@ -432,129 +428,84 @@ const FORMATIONS={
 let state={
   ledarNiva:localStorage.getItem('cc_ledarNiva')||'',
   niva:'Röd nivå 12-16 år',
-  spelform:'4v4',
-  formation:'Boxen 2-2',
-  tema:'',
-  fardigheter:[],
-  cla:[],
-  halltid:60,
-  antal:8,
-  yta:'helplan',
-  smart_prio:'balans',
-  svagheter:[],
-  lag_beskrivning:'',
-  stamning:[],
-  fritext:''
+  spelform:'4v4',formation:'Boxen 2-2',
+  tema:'',fardigheter:[],cla:[],
+  halltid:60,antal:8,yta:'helplan',smart_prio:'balans',
+  svagheter:[],lag_beskrivning:'',stamning:[],fritext:''
 };
 
-function initLedarNiva(){
-  if(!state.ledarNiva) return;
-  document.querySelectorAll('.leader-option').forEach(o=>{
-    if(o.dataset.val===state.ledarNiva) o.classList.add('active');
-  });
-}
+let sistaOvning=null; // sparar senaste JSON-övning
 
+// ── Init ──
+function initLedarNiva(){
+  if(!state.ledarNiva)return;
+  document.querySelectorAll('.leader-option').forEach(o=>{if(o.dataset.val===state.ledarNiva)o.classList.add('active');});
+}
 function valjLedarNiva(el){
   document.querySelectorAll('.leader-option').forEach(o=>o.classList.remove('active'));
-  el.classList.add('active');
-  state.ledarNiva=el.dataset.val;
+  el.classList.add('active');state.ledarNiva=el.dataset.val;
   localStorage.setItem('cc_ledarNiva',state.ledarNiva);
-  const ind=document.getElementById('saved-indicator');
-  ind.classList.add('show');
+  const ind=document.getElementById('saved-indicator');ind.classList.add('show');
   setTimeout(()=>ind.classList.remove('show'),2000);
 }
-
 function valjNiva(el){
   document.querySelectorAll('.niva-option').forEach(o=>o.classList.remove('active'));
-  el.classList.add('active');
-  state.niva=el.dataset.val;
+  el.classList.add('active');state.niva=el.dataset.val;
 }
-
 function initTemaChips(){
   document.querySelectorAll('#tema-chips .chip').forEach(chip=>{
     chip.addEventListener('click',()=>{
       const already=chip.classList.contains('active');
       document.querySelectorAll('#tema-chips .chip').forEach(c=>c.classList.remove('active'));
-      if(!already){chip.classList.add('active');state.tema=chip.dataset.val;}
-      else state.tema='';
+      if(!already){chip.classList.add('active');state.tema=chip.dataset.val;}else state.tema='';
       uppdateraFilterSummary();
     });
   });
 }
-
 function initFardighetChips(){
   document.querySelectorAll('#fardighet-chips .chip').forEach(chip=>{
     chip.addEventListener('click',()=>{
-      chip.classList.toggle('active');
-      const val=chip.dataset.val;
-      if(chip.classList.contains('active')){
-        if(!state.fardigheter.includes(val)) state.fardigheter.push(val);
-      } else {
-        state.fardigheter=state.fardigheter.filter(v=>v!==val);
-      }
+      chip.classList.toggle('active');const val=chip.dataset.val;
+      if(chip.classList.contains('active')){if(!state.fardigheter.includes(val))state.fardigheter.push(val);}
+      else state.fardigheter=state.fardigheter.filter(v=>v!==val);
       uppdateraFilterSummary();
     });
   });
 }
-
 function uppdateraFilterSummary(){
-  const summary=document.getElementById('filter-summary');
+  const s=document.getElementById('filter-summary');
   const tags=[];
-  if(state.tema) tags.push(`<span class="filter-tag">${state.tema}</span>`);
+  if(state.tema)tags.push(`<span class="filter-tag">${state.tema}</span>`);
   state.fardigheter.forEach(f=>tags.push(`<span class="filter-tag ft">${f}</span>`));
-  if(tags.length>0){summary.innerHTML=tags.join('');summary.style.display='flex';}
-  else summary.style.display='none';
+  if(tags.length){s.innerHTML=tags.join('');s.style.display='flex';}else s.style.display='none';
 }
-
 function renderFormations(spelform){
-  const container=document.getElementById('formation-chips');
-  const formations=FORMATIONS[spelform]||[];
-  container.innerHTML='';state.formation='';
+  const c=document.getElementById('formation-chips');const formations=FORMATIONS[spelform]||[];
+  c.innerHTML='';state.formation='';
   formations.forEach((f,i)=>{
-    const chip=document.createElement('div');
-    chip.className='chip'+(f.auto?' auto':'');
-    chip.textContent=f.label;
+    const chip=document.createElement('div');chip.className='chip'+(f.auto?' auto':'');chip.textContent=f.label;
     if(f.auto||i===0){chip.classList.add('active');state.formation=f.val;}
-    if(!f.auto){
-      chip.addEventListener('click',()=>{
-        container.querySelectorAll('.chip:not(.auto)').forEach(c=>c.classList.remove('active'));
-        chip.classList.add('active');state.formation=f.val;
-      });
-    }
-    container.appendChild(chip);
+    if(!f.auto){chip.addEventListener('click',()=>{c.querySelectorAll('.chip:not(.auto)').forEach(ch=>ch.classList.remove('active'));chip.classList.add('active');state.formation=f.val;});}
+    c.appendChild(chip);
   });
   const lbl=document.getElementById('formation-section').querySelector('.formation-label');
   lbl.innerHTML=(formations.length===1&&formations[0].auto)?'Formation <span class="auto-tag">— automatisk</span>':'Formation';
 }
-
 function initChips(id,key,multi=true){
-  const c=document.getElementById(id);
-  if(!c) return;
+  const c=document.getElementById(id);if(!c)return;
   c.querySelectorAll('.chip').forEach(chip=>{
     chip.addEventListener('click',()=>{
       const val=chip.dataset.val;
-      if(!multi){
-        c.querySelectorAll('.chip').forEach(ch=>ch.classList.remove('active'));
-        chip.classList.add('active');state[key]=val;
-        if(key==='spelform') renderFormations(val);
-      } else {
-        chip.classList.toggle('active');
-        if(chip.classList.contains('active')){if(!state[key].includes(val))state[key].push(val);}
-        else state[key]=state[key].filter(v=>v!==val);
-      }
+      if(!multi){c.querySelectorAll('.chip').forEach(ch=>ch.classList.remove('active'));chip.classList.add('active');state[key]=val;if(key==='spelform')renderFormations(val);}
+      else{chip.classList.toggle('active');if(chip.classList.contains('active')){if(!state[key].includes(val))state[key].push(val);}else state[key]=state[key].filter(v=>v!==val);}
     });
   });
 }
-
 initChips('spelform-chips','spelform',false);
 initChips('cla-chips','cla',true);
 initChips('svaghet-chips','svagheter',true);
 initChips('stamning-chips','stamning',true);
-initTemaChips();
-initFardighetChips();
-renderFormations('4v4');
-initLedarNiva();
-
+initTemaChips();initFardighetChips();renderFormations('4v4');initLedarNiva();
 document.getElementById('halltid').addEventListener('input',e=>state.halltid=parseInt(e.target.value)||60);
 document.getElementById('antal').addEventListener('input',e=>state.antal=parseInt(e.target.value)||8);
 document.getElementById('yta').addEventListener('change',e=>state.yta=e.target.value);
@@ -562,14 +513,7 @@ document.getElementById('smart-prio').addEventListener('change',e=>state.smart_p
 document.getElementById('lag-beskrivning').addEventListener('input',e=>state.lag_beskrivning=e.target.value);
 document.getElementById('fritext').addEventListener('input',e=>state.fritext=e.target.value);
 
-function toggleHelp(id){document.getElementById(id).classList.toggle('open');}
-function toggleFaq(el){
-  const a=el.nextElementSibling;const wasOpen=el.classList.contains('open');
-  document.querySelectorAll('.faq-q').forEach(q=>q.classList.remove('open'));
-  document.querySelectorAll('.faq-a').forEach(a=>a.classList.remove('open'));
-  if(!wasOpen){el.classList.add('open');a.classList.add('open');}
-}
-
+// ── Prompt ──
 function byggPrompt(){
   const ledar=LEDAR_NIVA_MAP[state.ledarNiva]||LEDAR_NIVA_MAP['instruktionsledare'];
   const ledarLabel=state.ledarNiva?ledar.label:'ej angiven';
@@ -587,12 +531,12 @@ C – SPELARSYSTEM:
 - Spelform: ${state.spelform}
 - Formation: ${state.formation}
 
-D – TRÄNINGSINRIKTNING (SIBF-kategorier):
+D – TRÄNINGSINRIKTNING (SIBF):
 - Tema: ${state.tema||'ej valt – CoachCore väljer lämpligt tema'}
-- Färdigheter: ${state.fardigheter.join(', ')||'ej valda – CoachCore väljer lämpliga färdigheter'}
+- Färdigheter: ${state.fardigheter.join(', ')||'ej valda – CoachCore väljer'}
 
 E – TRÄNINGSDESIGN:
-- Önskat CLA-fokus: ${state.cla.join(', ')||'CoachCore väljer passande CLA-regler'}
+- CLA-fokus: ${state.cla.join(', ')||'CoachCore väljer passande CLA-regler'}
 - Halltid: ${state.halltid} minuter
 - Antal spelare: ${state.antal}
 - Yta: ${state.yta}
@@ -602,17 +546,16 @@ F – SPELARUTVECKLING:
 - Lagets svagheter: ${state.svagheter.join(', ')||'ej specificerade'}
 ${state.lag_beskrivning?'- Lagbeskrivning: '+state.lag_beskrivning:''}
 
-G – LEDARSKAP & KOMMUNIKATION:
+G – LEDARSKAP:
 - Träningens stämning: ${state.stamning.join(', ')||'ej specificerad'}
-${state.fritext?'- Fritext från tränaren: '+state.fritext:''}
+${state.fritext?'- Fritext: '+state.fritext:''}
 
 H – AI-BETEENDE:
-Föreslå EXAKT 1 övning som matchar valt Tema och Färdigheter. Anpassa språk och detaljnivå strikt efter ledarrollen. Max 15 rader totalt. Inkludera Smart Träning-poäng, CLA-regel och coachingfråga.`;
+Returnera EXAKT ett JSON-objekt med fälten: rubrik, tema, fardigheter, niva, smart_traning, intro, syfte, genomforande, material, viz_prompt.
+Anpassa språk och detaljnivå strikt efter ledarrollen. Inga backticks, ingen text utanför JSON.`;
 }
 
-const TAVLA_URL='https://spontaneous-beijinho-d0522f.netlify.app';
-let sistaOvning=null;
-
+// ── Generera ──
 async function generera(){
   if(!state.ledarNiva){
     toast('Välj din ledarroll i Steg A först');
@@ -627,53 +570,169 @@ async function generera(){
   try{
     const res=await fetch(AI_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode:'chat',history:[{role:'user',content:byggPrompt()}]})});
     const data=await res.json();
-    const namn=extraheraOvningsnamn(data.response||'');
-    sistaOvning={namn,format:state.spelform,beskrivning:data.response||''};
-    visaSvar(data.response||data.error||'Inget svar');
+    if(data.ovning){
+      sistaOvning=data.ovning;
+      visaOvningskort(data.ovning);
+    } else if(data.response){
+      // Fallback: fritext-svar (chat_raw)
+      visaRaaSvar(data.response);
+    } else {
+      visaRaaSvar(data.error||'Inget svar');
+    }
   }catch(e){
-    visaSvar('Kunde inte nå CoachCore: '+e.message);
+    visaRaaSvar('Kunde inte nå CoachCore: '+e.message);
   }finally{
     btn.disabled=false;
     document.getElementById('loading').style.display='none';
   }
 }
 
-function extraheraOvningsnamn(text){
-  const m=text.match(/##\s*([^\n]+)/)||text.match(/Övning[:\s]+([^\n]+)/i)||text.match(/^([^\n]+)/);
-  return m?m[1].trim().slice(0,80):'Övning från CoachCore';
+// ── Rendera övningskortet ──
+function visaOvningskort(o){
+  const container=document.getElementById('ovning-kort-container');
+
+  // Bygg färdighets-chips
+  const fardighetChips=(o.fardigheter||[]).map(f=>`<span class="fardighet-chip">${f}</span>`).join('');
+
+  // Formattera syfte-text med highlights
+  const syfteHtml=formateraText(o.syfte||'');
+  const genomforandeHtml=formateraText(o.genomforande||'');
+
+  // Material som lista
+  const materialHtml=byggMateriallista(o.material||'');
+
+  // Smart träning-pill
+  const smartPill=o.smart_traning
+    ?`<span class="meta-pill smart">⚡ ${o.smart_traning}</span>`:'';
+
+  container.innerHTML=`
+    <div class="ovning-kort">
+      <div class="ovning-header">
+        <div class="ovning-meta">
+          ${o.niva?`<span class="meta-pill niva">${o.niva}</span>`:''}
+          ${o.tema?`<span class="meta-pill tema">${o.tema}</span>`:''}
+          ${smartPill}
+        </div>
+        <div class="ovning-rubrik">${o.rubrik||'Övning'}</div>
+        <div class="ovning-intro">${o.intro||''}</div>
+        ${fardighetChips?`<div class="fardighet-chips" style="margin-top:10px">${fardighetChips}</div>`:''}
+      </div>
+
+      <div class="flik-nav">
+        <button class="flik-btn active" onclick="byttFlik(this,'syfte')">Syfte / Fokus</button>
+        <button class="flik-btn" onclick="byttFlik(this,'genomforande')">Genomförande</button>
+        <button class="flik-btn" onclick="byttFlik(this,'material')">Material</button>
+      </div>
+
+      <div id="flik-syfte" class="flik-content active">${syfteHtml}</div>
+      <div id="flik-genomforande" class="flik-content">${genomforandeHtml}</div>
+      <div id="flik-material" class="flik-content">${materialHtml}</div>
+
+      <div class="ovning-actions">
+        <button class="btn-rita" id="rita-btn" onclick="ritaUppPaTavlan()">🎯 Rita upp på tavlan</button>
+        <button class="btn-kopiera" onclick="kopieraOvning()">Kopiera</button>
+      </div>
+    </div>`;
+
+  document.getElementById('svar').style.display='block';
+  document.getElementById('svar').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
+function byttFlik(btn, flikId){
+  // Avaktivera alla flik-knappar och innehåll i samma kort
+  const nav=btn.closest('.flik-nav');
+  nav.querySelectorAll('.flik-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  // Hitta alla flik-content-divs (syskon till nav)
+  const kort=nav.closest('.ovning-kort');
+  kort.querySelectorAll('.flik-content').forEach(f=>f.classList.remove('active'));
+  document.getElementById('flik-'+flikId).classList.add('active');
+}
+
+function formateraText(text){
+  if(!text)return'';
+  // Highlight CLA och coachingfråga
+  let html=text
+    .replace(/CLA-regel:/g,'<span class="highlight-cla">CLA-regel:</span>')
+    .replace(/Coachingfråga:/g,'<span class="highlight-coaching">Coachingfråga:</span>')
+    .replace(/Smart Träning:/g,'<strong>Smart Träning:</strong>');
+  // Radbrytningar → paragrafer
+  const stycken=html.split(/\n{2,}/).filter(s=>s.trim());
+  if(stycken.length>1) return stycken.map(s=>`<p>${s.replace(/\n/g,'<br>')}</p>`).join('');
+  return`<p>${html.replace(/\n/g,'<br>')}</p>`;
+}
+
+function byggMateriallista(text){
+  if(!text)return'<p>—</p>';
+  const rader=text.split(/[\n,·•]+/).map(r=>r.trim()).filter(r=>r.length>2);
+  if(rader.length===0)return`<p>${text}</p>`;
+  return`<ul class="material-lista">${rader.map(r=>`<li>${r}</li>`).join('')}</ul>`;
+}
+
+// Fallback för fritext-svar
+function visaRaaSvar(text){
+  const container=document.getElementById('ovning-kort-container');
+  container.innerHTML=`<div class="layer-card" style="white-space:pre-wrap;font-size:13px;line-height:1.7;color:var(--text2)">${text}</div>`;
+  document.getElementById('svar').style.display='block';
+  document.getElementById('svar').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+// ── Rita upp på tavlan ──
 async function ritaUppPaTavlan(){
   if(!sistaOvning){toast('Generera ett förslag först');return;}
   const btn=document.getElementById('rita-btn');
   btn.textContent='⏳ Genererar visualisering...';btn.disabled=true;
   try{
-    const res=await fetch(AI_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode:'viz',ovningsnamn:sistaOvning.namn,spelform:state.spelform,formation:state.formation,beskrivning:sistaOvning.beskrivning})});
+    const res=await fetch(AI_URL,{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        mode:'viz',
+        ovningsnamn:sistaOvning.rubrik,
+        spelform:state.spelform,
+        formation:state.formation,
+        viz_prompt:sistaOvning.viz_prompt,     // ← strukturerad VIZ-prompt
+        beskrivning:sistaOvning.intro          // ← fallback
+      })
+    });
     const data=await res.json();
     if(data.visualization){
       const encoded=btoa(unescape(encodeURIComponent(JSON.stringify(data.visualization))));
       window.open(`${TAVLA_URL}/?ovning=${encoded}`,'_blank');
       toast('✓ Taktiktavlan öppnas!');
-    } else toast('Kunde inte generera visualisering – försök igen');
+    }else toast('Kunde inte generera visualisering – försök igen');
   }catch(e){toast('Fel: '+e.message);}
   finally{btn.textContent='🎯 Rita upp på tavlan';btn.disabled=false;}
 }
 
-function visaSvar(text){
-  const fmt=text
-    .replace(/###\s(.+)/g,'<h3 style="font-size:13px;color:#ff4d57;margin:12px 0 4px;font-weight:600">$1</h3>')
-    .replace(/\*\*(.+?)\*\*/g,'<strong style="color:#f1f5f9">$1</strong>')
-    .replace(/CLA-regel:/g,'<span style="color:#93c5fd;font-weight:500">CLA-regel:</span>')
-    .replace(/Coachingfråga:/g,'<span style="color:#86efac;font-weight:500">Coachingfråga:</span>')
-    .replace(/Smart Träning:/g,'<span style="color:#fde68a;font-weight:500">Smart Träning:</span>');
-  document.getElementById('svar-innehall').innerHTML=`<div class="raw-svar">${fmt}</div>`;
-  document.getElementById('svar').style.display='block';
-  document.getElementById('rita-btn').style.display='flex';
-  document.getElementById('svar').scrollIntoView({behavior:'smooth',block:'start'});
+// ── Kopiera ──
+function kopieraOvning(){
+  if(!sistaOvning){return;}
+  const o=sistaOvning;
+  const text=[
+    o.rubrik,
+    o.niva&&`Nivå: ${o.niva}`,
+    o.tema&&`Tema: ${o.tema}`,
+    o.smart_traning&&`Smart Träning: ${o.smart_traning}`,
+    '',
+    o.intro,
+    '',
+    'SYFTE/FOKUS',o.syfte,
+    '',
+    'GENOMFÖRANDE',o.genomforande,
+    '',
+    'MATERIAL',o.material
+  ].filter(r=>r!==null&&r!==undefined).join('\n');
+  navigator.clipboard.writeText(text).then(()=>toast('Kopierat!'));
 }
 
-function kopiera(){navigator.clipboard.writeText(document.getElementById('svar-innehall').innerText).then(()=>toast('Kopierat!'));}
 function resetForm(){document.getElementById('svar').style.display='none';window.scrollTo({top:0,behavior:'smooth'});}
+function toggleHelp(id){document.getElementById(id).classList.toggle('open');}
+function toggleFaq(el){
+  const a=el.nextElementSibling;const wasOpen=el.classList.contains('open');
+  document.querySelectorAll('.faq-q').forEach(q=>q.classList.remove('open'));
+  document.querySelectorAll('.faq-a').forEach(a=>a.classList.remove('open'));
+  if(!wasOpen){el.classList.add('open');a.classList.add('open');}
+}
 function toast(m){const t=document.getElementById('toast');t.textContent=m;t.style.opacity=1;setTimeout(()=>t.style.opacity=0,2500);}
 </script>
 </body>
