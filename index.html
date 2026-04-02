@@ -434,7 +434,8 @@ let state={
   svagheter:[],lag_beskrivning:'',stamning:[],fritext:''
 };
 
-let sistaOvning=null; // sparar senaste JSON-övning
+let sistaOvning=null;        // sparar senaste JSON-övning
+let sistaVisualization=null; // sparar inbyggd visualization (grid→pixel konverterad)
 
 // ── Init ──
 function initLedarNiva(){
@@ -567,14 +568,24 @@ async function generera(){
   document.getElementById('loading').style.display='block';
   document.getElementById('svar').style.display='none';
   sistaOvning=null;
+  sistaVisualization=null;
   try{
-    const res=await fetch(AI_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode:'chat',history:[{role:'user',content:byggPrompt()}]})});
+    const res=await fetch(AI_URL,{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        mode:'chat',
+        spelform:state.spelform,
+        formation:state.formation,
+        history:[{role:'user',content:byggPrompt()}]
+      })
+    });
     const data=await res.json();
     if(data.ovning){
       sistaOvning=data.ovning;
+      // Visualization är nu inbyggd i chat-svaret (grid→pixel konverterat av backend)
+      sistaVisualization=data.visualization||null;
       visaOvningskort(data.ovning);
     } else if(data.response){
-      // Fallback: fritext-svar (chat_raw)
       visaRaaSvar(data.response);
     } else {
       visaRaaSvar(data.error||'Inget svar');
@@ -678,30 +689,43 @@ function visaRaaSvar(text){
 }
 
 // ── Rita upp på tavlan ──
-async function ritaUppPaTavlan(){
-  if(!sistaOvning){toast('Generera ett förslag först');return;}
+function ritaUppPaTavlan(){
+  if(!sistaVisualization&&!sistaOvning){toast('Generera ett förslag först');return;}
   const btn=document.getElementById('rita-btn');
+
+  // Om visualization redan är klar (från chat-svaret) — öppna direkt
+  if(sistaVisualization){
+    try{
+      const encoded=btoa(unescape(encodeURIComponent(JSON.stringify(sistaVisualization))));
+      window.open(`${TAVLA_URL}/?ovning=${encoded}`,'_blank');
+      toast('✓ Taktiktavlan öppnas!');
+    }catch(e){toast('Fel vid öppning: '+e.message);}
+    return;
+  }
+
+  // Fallback: separat VIZ-anrop (legacy, om visualization saknas)
   btn.textContent='⏳ Genererar visualisering...';btn.disabled=true;
-  try{
-    const res=await fetch(AI_URL,{
-      method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        mode:'viz',
-        ovningsnamn:sistaOvning.rubrik,
-        spelform:state.spelform,
-        formation:state.formation,
-        viz_prompt:sistaOvning.viz_prompt,     // ← strukturerad VIZ-prompt
-        beskrivning:sistaOvning.intro          // ← fallback
-      })
-    });
-    const data=await res.json();
+  fetch(AI_URL,{
+    method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({
+      mode:'viz',
+      ovningsnamn:sistaOvning.rubrik,
+      spelform:state.spelform,
+      formation:state.formation,
+      viz_prompt:sistaOvning.viz_prompt||'',
+      beskrivning:sistaOvning.intro||''
+    })
+  })
+  .then(r=>r.json())
+  .then(data=>{
     if(data.visualization){
       const encoded=btoa(unescape(encodeURIComponent(JSON.stringify(data.visualization))));
       window.open(`${TAVLA_URL}/?ovning=${encoded}`,'_blank');
       toast('✓ Taktiktavlan öppnas!');
     }else toast('Kunde inte generera visualisering – försök igen');
-  }catch(e){toast('Fel: '+e.message);}
-  finally{btn.textContent='🎯 Rita upp på tavlan';btn.disabled=false;}
+  })
+  .catch(e=>toast('Fel: '+e.message))
+  .finally(()=>{btn.textContent='🎯 Rita upp på tavlan';btn.disabled=false;});
 }
 
 // ── Kopiera ──
