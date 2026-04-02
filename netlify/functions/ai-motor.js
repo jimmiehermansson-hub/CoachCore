@@ -18,36 +18,6 @@ function gridToPixel(col, row) {
   };
 }
 
-function clampPixel(x, y) {
-  return {
-    x: Math.min(Math.max(x, 50), 750),
-    y: Math.min(Math.max(y, 50), 430),
-  };
-}
-
-// Konvertera ett helt steg från grid-koordinater till pixlar
-function convertStepToPixels(steg) {
-  const spelare = (steg.spelare || []).map((s) => {
-    const px = gridToPixel(s.col ?? s.x ?? 10, s.row ?? s.y ?? 10);
-    const clamped = clampPixel(px.x, px.y);
-    return { team: s.team || "A", x: clamped.x, y: clamped.y, label: s.label || s.id || "?" };
-  });
-
-  const bollGrid = steg.boll || { col: 6, row: 10 };
-  const bollPx = gridToPixel(bollGrid.col ?? bollGrid.x ?? 6, bollGrid.row ?? bollGrid.y ?? 10);
-  const boll = clampPixel(bollPx.x, bollPx.y);
-
-  const pilar = (steg.pilar || []).map((p) => {
-    const start = gridToPixel(p.col1 ?? p.x1 ?? 6, p.row1 ?? p.y1 ?? 10);
-    const end = gridToPixel(p.col2 ?? p.x2 ?? 15, p.row2 ?? p.y2 ?? 10);
-    const cs = clampPixel(start.x, start.y);
-    const ce = clampPixel(end.x, end.y);
-    return { type: p.typ === "run" ? "run" : "arrow", x1: cs.x, y1: cs.y, x2: ce.x, y2: ce.y };
-  });
-
-  return { spelare, boll, pilar, zoner: steg.zoner || [] };
-}
-
 // ─────────────────────────────────────────────────────────────────
 // STARTPOSITIONER PER FORMATION (i grid-koordinater)
 // ─────────────────────────────────────────────────────────────────
@@ -273,14 +243,53 @@ Bench Management: ~40 sek bytelängd. Sokratisk dialog. Gruppdynamik 5 faser.
   "intro": "1–3 meningar om VAD och VARFÖR. Anpassas till ledarroll.",
   "syfte": "Träningssyfte + CLA-regel + coachingfråga. Anpassas till ledarroll.",
   "genomforande": "Steg-för-steg. Inga rollnamn på specifika spelare.",
-  "material": "Koner, bollar, mål, västar etc.",
-  "viz_sekvens": [
+  "material": "Koner, bollar, mål, västar etc."
+}
+
+## REGLER:
+1. Returnera BARA JSON – noll text utanför, inga backticks
+2. smart_traning=null för Assistent/Aktivitetsledare
+3. genomforande nämner ALDRIG rollnamn för specifika spelare
+4. Max 15 rader totalt i svaret`;
+
+// ─────────────────────────────────────────────────────────────────
+// SYSTEM PROMPT – VIZ (grid-baserad, separerat anrop)
+// ─────────────────────────────────────────────────────────────────
+const SYSTEM_PROMPT_VIZ_GRID = `Du är en taktiktavle-generator för innebandy. Generera ENBART ett JSON-objekt. Ingen text före eller efter. Bara JSON.
+
+## GRID-SYSTEMET
+Planen är 40 kolumner (vänster→höger) × 20 rader (topp→botten).
+- col 0 = vänster kant · col 40 = höger kant · col 20 = mittlinje
+- row 0 = övre kant · row 20 = nedre kant · row 10 = mittrad
+
+NYCKELZONER:
+- Vänster backzon (anfallande lag): col 1–8, row 2–18
+- Mittzon: col 9–31, row 2–18
+- Höger backzon (försvarande lag): col 32–39, row 2–18
+- Höger slott: col 34–39, row 8–13
+- Höger mål: col 38–40, row 8–12
+
+## ABSOLUTA REGLER
+1. Steg 1: Kopiera startpositionerna EXAKT som du fick dem — ändra ingenting
+2. Steg 2–3: Flytta spelare realistiskt — max 8 kolumner / 6 rader per spelare per steg
+3. Varje spelares id och label måste vara identiska i ALLA steg
+4. Bollen är alltid på samma col/row som den spelare som har den
+5. Varje steg MÅSTE ha minst 2 pilar: "arrow"=passning (streckad), "run"=rörelse (heldragen)
+6. Ingen spelare på exakt samma col+row som en annan
+7. Backar (VB/HB) i col 1–15 i steg 1, forwards rör sig mot höger (ökande col)
+8. Motståndare (M1–M5) rör sig mot vänster (minskande col)
+
+## JSON-FORMAT (använd col/row — ALDRIG x/y i pixlar):
+{
+  "namn": "övningens namn",
+  "spelform": "4v4",
+  "formation": "Backbytet 2-1-1",
+  "steg": [
     {
-      "steg_nr": 1,
-      "beskrivning": "Kort beskrivning av vad som händer i detta steg",
+      "beskrivning": "VB har boll i backzon. Passar till C. F söker djup.",
       "spelare": [
-        {"id": "VB", "team": "A", "label": "VB", "col": 6, "row": 7},
-        {"id": "HB", "team": "A", "label": "HB", "col": 6, "row": 13},
+        {"id": "VB", "team": "A", "label": "VB", "col": 6,  "row": 7},
+        {"id": "HB", "team": "A", "label": "HB", "col": 6,  "row": 13},
         {"id": "C",  "team": "A", "label": "C",  "col": 15, "row": 10},
         {"id": "F",  "team": "A", "label": "F",  "col": 23, "row": 10},
         {"id": "M1", "team": "B", "label": "M1", "col": 27, "row": 7},
@@ -292,54 +301,30 @@ Bench Management: ~40 sek bytelängd. Sokratisk dialog. Gruppdynamik 5 faser.
       "pilar": [
         {"col1": 6, "row1": 7, "col2": 15, "row2": 10, "typ": "arrow"},
         {"col1": 23, "row1": 10, "col2": 30, "row2": 8, "typ": "run"}
-      ]
+      ],
+      "zoner": []
+    },
+    {
+      "beskrivning": "C tar emot och passar till F vid slottet. VB kliver framåt.",
+      "spelare": [
+        {"id": "VB", "team": "A", "label": "VB", "col": 10, "row": 7},
+        {"id": "HB", "team": "A", "label": "HB", "col": 6,  "row": 13},
+        {"id": "C",  "team": "A", "label": "C",  "col": 15, "row": 10},
+        {"id": "F",  "team": "A", "label": "F",  "col": 30, "row": 9},
+        {"id": "M1", "team": "B", "label": "M1", "col": 24, "row": 7},
+        {"id": "M2", "team": "B", "label": "M2", "col": 27, "row": 13},
+        {"id": "M3", "team": "B", "label": "M3", "col": 31, "row": 8},
+        {"id": "M4", "team": "B", "label": "M4", "col": 32, "row": 13}
+      ],
+      "boll": {"col": 15, "row": 10},
+      "pilar": [
+        {"col1": 15, "row1": 10, "col2": 30, "row2": 9, "typ": "arrow"},
+        {"col1": 10, "row1": 7,  "col2": 15, "row2": 8, "typ": "run"}
+      ],
+      "zoner": []
     }
   ]
-}
-
-## GRID-SYSTEMET (kritiskt för viz_sekvens):
-
-Planen är ett rutnät: 40 kolumner (vänster→höger) × 20 rader (topp→botten).
-- Kolumn 0 = vänster kant · Kolumn 40 = höger kant · Kolumn 20 = mittlinje
-- Rad 0 = övre kant · Rad 20 = nedre kant · Rad 10 = mittrad
-
-NYCKELZONER:
-- Vänster mål:      col 0–2,  row 8–12
-- Vänster backzon:  col 1–8,  row 2–18  (anfallande lags startzon)
-- Vänster slott:    col 1–6,  row 8–13
-- Mittzon:          col 9–31, row 2–18
-- Höger backzon:    col 32–39,row 2–18  (motståndarlaget)
-- Höger slott:      col 34–39,row 8–13
-- Höger mål:        col 38–40,row 8–12
-
-STARTPOSITIONER per formation (steg 1 MÅSTE använda dessa exakt):
-4v4 Backbytet (2-1-1): VB(6,7) HB(6,13) C(15,10) F(23,10) M1(27,7) M2(27,13) M3(32,7) M4(32,13)
-4v4 Boxen (2-2):       VB(5,7) HB(5,14) VF(17,7) HF(17,14) M1(26,7) M2(26,14) M3(32,7) M4(32,14)
-4v4 Diamanten (1-2-1): VB(5,10) C1(13,6) C2(13,14) F(22,10) M1(27,6) M2(27,14) M3(32,10) M4(34,7)
-5v5 Klassisk (2-1-2):  VB(4,6) HB(4,14) C(12,10) VF(20,6) HF(20,14) M1(26,6) M2(26,14) M3(30,10) M4(33,6) M5(33,14)
-5v5 Styrspel (2-2-1):  VB(4,6) HB(4,14) C1(12,7) C2(12,13) F(19,10) M1(26,6) M2(26,14) M3(30,10) M4(33,6) M5(33,14)
-
-RÖRELSEPRINCIPER (max förflyttning per steg: 8 kolumner / 6 rader):
-- Backar (VB/HB) startar djupt, rör sig max 10 kolumner framåt per steg
-- Forwards rör sig mot motståndarmålet (ökande col-värde)
-- Motståndare (M1-M5) rör sig mot anfallande lag (minskande col-värde)
-- Bollen är alltid hos den spelare som "har" den (samma col/row)
-- Passning = streckad pil (typ "arrow"), löpning = heldragen pil (typ "run")
-- Minst 2 pilar per steg
-- Ingen spelare på samma col+row
-
-STEG-REGLER:
-- Steg 1: Kopiera startpositioner EXAKT (se ovan)
-- Steg 2+: Flytta spelare realistiskt utifrån övningsbeskrivningen
-- Max 3 steg
-- Varje spelares id och label måste vara identiska i alla steg
-
-## REGLER:
-1. Returnera BARA JSON – noll text utanför, inga backticks
-2. smart_traning=null för Assistent/Aktivitetsledare
-3. genomforande nämner ALDRIG rollnamn för specifika spelare
-4. viz_sekvens använder ALLTID col/row (ALDRIG x/y i pixlar)
-5. Steg 1 använder startpositioner exakt som angetts ovan`;
+}`;
 
 // ─────────────────────────────────────────────────────────────────
 // CORS
@@ -377,7 +362,7 @@ export default async function handler(req) {
     if (mode === "chat" || mode === "quick") {
       const chatResponse = await client.messages.create({
         model: "claude-sonnet-4-5",
-        max_tokens: 2000,
+        max_tokens: 1000,
         system: SYSTEM_PROMPT_CHAT,
         messages,
       });
@@ -407,46 +392,49 @@ export default async function handler(req) {
       }
     }
 
-    // ── VIZ-läge (legacy, fortfarande stöttad) ───────────────────
+    // ── VIZ-läge (grid-baserad, triggas av "Rita upp på tavlan") ──
     if (mode === "viz") {
-      const { ovningsnamn, spelform, formation, viz_prompt, beskrivning } = body;
+      const { ovningsnamn, spelform, formation, ovning_beskrivning } = body;
       const gridPos = GRID_POSITIONER[spelform]?.[formation] || GRID_POSITIONER["4v4"]["Boxen 2-2"];
 
-      // Bygg startpositioner som pixlar för legacy VIZ-prompt
-      const startPosPixels = Object.entries(gridPos).map(([id, pos]) => {
-        const px = gridToPixel(pos.col, pos.row);
-        return { id, team: pos.team, label: id, x: px.x, y: px.y };
-      });
+      // Bygg startpositioner i grid-format
+      const startPosGrid = Object.entries(gridPos).map(([id, pos]) => ({
+        id, team: pos.team, label: id, col: pos.col, row: pos.row,
+      }));
 
-      const vizSystemPrompt = buildLegacyVizSystemPrompt();
-      const visualDescription = viz_prompt || beskrivning || "";
+      const prompt = `Generera en taktiktavle-visualisering för följande innebandyövning.
 
-      const prompt = `Generate a tactical board visualization for this floorball drill:
-
-Name: ${ovningsnamn || "drill"}
-Game format: ${spelform || "4v4"}
+Namn: ${ovningsnamn || "Övning"}
+Spelform: ${spelform || "4v4"}
 Formation: ${formation || "Boxen 2-2"}
-Movement description: ${visualDescription}
 
-START POSITIONS FOR THIS FORMATION (copy exactly in step 1):
-${JSON.stringify(startPosPixels, null, 2)}
+Övningsbeskrivning (vad som händer):
+${ovning_beskrivning || "Anfallande lag bygger upp spel från backzon mot motståndarlaget."}
 
-Generate MAX 3 steps. Move players realistically.`;
+STARTPOSITIONER FÖR STEG 1 (kopiera dessa EXAKT):
+${JSON.stringify(startPosGrid, null, 2)}
+
+Generera MAX 3 steg. Inkludera "spelform" och "formation" i JSON-svaret.`;
 
       const vizResponse = await client.messages.create({
         model: "claude-sonnet-4-5",
         max_tokens: 2500,
-        system: vizSystemPrompt,
+        system: SYSTEM_PROMPT_VIZ_GRID,
         messages: [{ role: "user", content: prompt }],
       });
 
       const vizText = vizResponse.content.filter(b => b.type === "text").map(b => b.text).join("\n").trim();
+
       try {
         const clean = vizText.replace(/^```json\n?/, "").replace(/\n?```$/, "").trim();
-        const viz = JSON.parse(clean);
-        return new Response(JSON.stringify({ visualization: viz, mode: "viz" }), { status: 200, headers: corsHeaders });
+        const vizGrid = JSON.parse(clean);
+
+        // Konvertera grid → pixlar
+        const visualization = convertVizToPixels(vizGrid, spelform, formation);
+        return new Response(JSON.stringify({ visualization, mode: "viz" }), { status: 200, headers: corsHeaders });
       } catch (e) {
-        return new Response(JSON.stringify({ error: "Kunde inte generera visualisering", details: vizText }), { status: 500, headers: corsHeaders });
+        console.error("VIZ parse error:", e.message, vizText.slice(0, 200));
+        return new Response(JSON.stringify({ error: "Kunde inte generera visualisering", details: vizText.slice(0, 300) }), { status: 500, headers: corsHeaders });
       }
     }
 
@@ -459,61 +447,64 @@ Generate MAX 3 steps. Move players realistically.`;
 }
 
 // ─────────────────────────────────────────────────────────────────
-// Bygg visualization-objekt från viz_sekvens (grid → pixel)
+// Konvertera VIZ-svar (grid) → pixlar för taktiktavlan
 // ─────────────────────────────────────────────────────────────────
-function buildVisualization(ovning, body) {
-  const spelform = body.spelform || "4v4";
-  const formation = body.formation || "Boxen 2-2";
-
-  // Kontrollera att steg 1 har rätt startpositioner, ersätt om nödvändigt
+function convertVizToPixels(vizGrid, spelform, formation) {
   const gridPos = GRID_POSITIONER[spelform]?.[formation] || GRID_POSITIONER["4v4"]["Boxen 2-2"];
-  const steg = ovning.viz_sekvens.map((s, idx) => {
-    let { spelare, boll, pilar } = convertStepToPixels(s);
 
-    // Steg 1: Tvinga startpositioner från GRID_POSITIONER
+  const steg = (vizGrid.steg || []).map((s, idx) => {
+    // Konvertera spelare
+    let spelare = (s.spelare || []).map(p => {
+      const px = clampPixel(gridToPixel(p.col, p.row));
+      return { team: p.team || "A", x: px.x, y: px.y, label: p.label || p.id || "?" };
+    });
+
+    // Steg 1: Tvinga exakta startpositioner
     if (idx === 0) {
       spelare = Object.entries(gridPos).map(([id, pos]) => {
-        const px = gridToPixel(pos.col, pos.row);
+        const px = clampPixel(gridToPixel(pos.col, pos.row));
         return { team: pos.team, x: px.x, y: px.y, label: id };
       });
+    }
 
-      // Hitta bollen hos VB (eller första A-spelare)
+    // Boll
+    const bollGrid = s.boll || { col: 6, row: 10 };
+    const bollPx = clampPixel(gridToPixel(bollGrid.col ?? 6, bollGrid.row ?? 10));
+
+    // Steg 1: sätt bollen hos VB eller första A-spelare
+    let boll = bollPx;
+    if (idx === 0) {
       const vb = spelare.find(p => p.label === "VB") || spelare.find(p => p.team === "A");
       if (vb) boll = { x: vb.x, y: vb.y };
     }
 
+    // Pilar
+    const pilar = (s.pilar || []).map(p => {
+      const s1 = clampPixel(gridToPixel(p.col1, p.row1));
+      const s2 = clampPixel(gridToPixel(p.col2, p.row2));
+      return { type: p.typ === "run" ? "run" : "arrow", x1: s1.x, y1: s1.y, x2: s2.x, y2: s2.y };
+    });
+
     return {
       beskrivning: s.beskrivning || `Steg ${idx + 1}`,
-      spelare,
-      boll,
-      pilar,
+      spelare, boll, pilar,
       zoner: s.zoner || [],
     };
   });
 
   return {
-    namn: ovning.rubrik || "Övning från CoachCore",
-    spelform,
-    formation,
+    namn: vizGrid.namn || "Övning från CoachCore",
+    spelform: vizGrid.spelform || spelform,
+    formation: vizGrid.formation || formation,
     steg,
   };
 }
 
-// ─────────────────────────────────────────────────────────────────
-// Legacy VIZ system prompt (pixel-baserad, för mode=viz)
-// ─────────────────────────────────────────────────────────────────
-function buildLegacyVizSystemPrompt() {
-  return `Du är en taktiktavle-generator för innebandy. Generera ENBART ett JSON-objekt. Ingen text före eller efter.
-
-REGLER:
-1. Använd exakt samma id/label som i startpositionerna
-2. Plan: x=120-680, y=80-400. Backar startar ALDRIG x<130
-3. Bollen ALLTID hos en spelare (samma x/y)
-4. Varje steg MÅSTE ha minst 2 pilar (typ "arrow"=passning, "run"=rörelse)
-5. Steg 1: kopiera startpositionerna EXAKT
-6. Steg 2-3: max 160px förflyttning per spelare
-
-FORMAT: {"namn":"...","spelform":"4v4","formation":"...","steg":[{"beskrivning":"...","spelare":[{"id":"VB","team":"A","label":"VB","x":150,"y":175}],"boll":{"x":150,"y":175},"pilar":[{"x1":150,"y1":175,"x2":310,"y2":240,"typ":"arrow"}],"zoner":[]}]}`;
+function clampPixel({ x, y }) {
+  return {
+    x: Math.min(Math.max(x, 50), 750),
+    y: Math.min(Math.max(y, 50), 430),
+  };
 }
 
 // ─────────────────────────────────────────────────────────────────
